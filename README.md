@@ -1,4 +1,4 @@
-# Group YY - {Short snappy Title of your project}
+# Group 18 - {Short snappy Title of your project}
 
 - Your title can change over time.
 
@@ -8,7 +8,7 @@
 
 ## Team Members
 
-- Person 1: one sentence about you!
+- Dylan Zhang: Your neighborhood Black Ops III enthusiast.
 - Person 2: one sentence about you!
 - Person 3: one sentence about you!
 - Person 4: one sentence about you!
