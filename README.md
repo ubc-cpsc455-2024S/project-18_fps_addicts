@@ -9,7 +9,7 @@
 ## Team Members
 
 - Dylan Zhang: Your neighborhood Black Ops III enthusiast.
-- Person 2: one sentence about you!
+- Gurmandeep Bal: Minecraft Architect
 - Person 3: one sentence about you!
 - Person 4: one sentence about you!
 
