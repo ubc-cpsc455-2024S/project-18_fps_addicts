@@ -10,9 +10,11 @@
 
 - Dylan Zhang: Your neighborhood Black Ops III enthusiast.
 - Gurmandeep Bal: Minecraft Architect
-- Person 3: one sentence about you!
+- Crystal Yim: Squishmallow connoisseur 
 - Person 4: one sentence about you!
 
+## Project Description:
+The UBC Study Spot Tracker App, designed for students at the University of British Columbia, facilitates the location and reservation of study spots on campus. It will store and display information about study spots, including availability, location, and amenities, allowing users to view maps, reserve spaces, and communicate via local chatboxes for each study location. Users can manage their reservations and navigate to different spots directly within the app. Depending on time availability, the app will focus on core functionalities like mapping and booking, with optional features like user authentication for chatboxes and distance measurements between spots considered as enhancements if time permits.
 
 ## Project task requirements:
 
