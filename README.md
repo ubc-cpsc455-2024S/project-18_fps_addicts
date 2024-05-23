@@ -16,7 +16,17 @@
 
 ## Project task requirements:
 
-- test
+- Minimial requirements:
+  * A map of campus which highlights all known study spots.
+  * The ability to select each study spot and be provided with basic information such as lighting, power port availibilty, etc
+  * A robust interface for desktop users
+- Standard requirements:
+  * A local chatbox for each study spot where users can talk to eachother.
+  * Robustness for mobile browsers
+  * Ability to select distance from one study spot to another point on the map
+- Stretch requirements:
+  * Account creations and authenication via student email to keep chatbox free of bots
+  * Chat auto moderation
 
 
 ## Images
