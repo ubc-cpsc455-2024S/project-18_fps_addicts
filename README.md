@@ -1,4 +1,4 @@
-# Group 18 - {Short snappy Title of your project}
+# Group 18 - StudySpotter: UBC’s hottest study spot finder
 
 - Your title can change over time.
 
