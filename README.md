@@ -33,15 +33,13 @@ The UBC Study Spot Tracker App, designed for students at the University of Briti
 
 ## Images
 ### Landing Page
-<img src="images/sketch_1.png" width="300px">
+<img src="images/sketch_1.jpg" width="300px">
 
 ### Study Spot Details
-<img src="images/sketch_2.png" width="300px">
+<img src="images/sketch_2.jpg" width="300px">
 
 ### Create an Account 
-<img src="images/sketch_3.png" width="300px">
-
-<img src="images/test.png" width="300px">
+<img src="images/sketch_3.jpg" width="300px">
 
 ## References
 
