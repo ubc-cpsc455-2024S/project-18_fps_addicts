@@ -30,6 +30,21 @@ The UBC Study Spot Tracker App, designed for students at the University of Briti
   * Account creations and authenication via student email to keep chatbox free of bots
   * Chat auto moderation
 
+## Two Minial Requirements broken down:
+* A map of campus which highlights all known study spots.
+  1. Set Up the Frontend Environment (using React.js and Node.js).
+  2. Create the necessary backend endpoints to handle study spot data.
+  3. Embed the Google Maps component in the React front end and ensure it displays the map centered on UBC.
+  4. Create React components to display the map and interact with the study spot data.
+  5. Ensure the frontend communicates with the backend to fetch and display study spots dynamically.
+
+* The ability to select each study spot and be provided with basic information such as lighting, power port availibilty, etc
+  1. Determine and Compile information on various study spots such as lighting, availability of power ports, noise level, and seating for each location.
+  2. Set up MongoDB to store study spot data and create an Express.js API to handle CRUD operations for study spots.
+  3. Implement functionality to fetch study spot information from the backend based on user selection and display this information on the frontend.
+  4. Enable users to click or tap on study spots on the map, triggering a request for spot information, which is then displayed in a user-friendly format on the interface.
+ 
+
 
 ## Images
 ### Landing Page
