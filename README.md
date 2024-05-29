@@ -12,13 +12,14 @@ As a UBC student, finding a place to study can be a challenging task. Despite th
 - Gurmandeep Bal: Minecraft Architect
 - Crystal Yim: Squishmallow connoisseur 
 - Allison Kong: Just your average gamer :)
+- Linus Chen: Has an unused Playstation
 
 ## Project Description:
 The UBC Study Spot Tracker App, designed for students at the University of British Columbia, facilitates the location and reservation of study spots on campus. It will store and display information about study spots, including availability, location, and amenities, allowing users to view maps, reserve spaces, and communicate via local chatboxes for each study location. Users can manage their reservations and navigate to different spots directly within the app. Depending on time availability, the app will focus on core functionalities like mapping and booking, with optional features like user authentication for chatboxes and distance measurements between spots considered as enhancements if time permits.
 
 ## Project task requirements:
 
-- Minimial requirements:
+- Minimal requirements:
   * A map of campus which highlights all known study spots.
   * The ability to select each study spot and be provided with basic information such as lighting, power port availibilty, etc
   * A robust interface for desktop users
@@ -30,7 +31,7 @@ The UBC Study Spot Tracker App, designed for students at the University of Briti
   * Account creations and authenication via student email to keep chatbox free of bots
   * Chat auto moderation
 
-## Two Minial Requirements broken down:
+## Two Minimal Requirements broken down:
 * A map of campus which highlights all known study spots.
   1. Set Up the Frontend Environment (using React.js and Node.js).
   2. Create the necessary backend endpoints to handle study spot data.
