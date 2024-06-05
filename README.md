@@ -8,7 +8,7 @@ As a UBC student, finding a place to study can be a challenging task. Despite th
 
 ## Team Members
 
-- Dylan Zhang: Your neighborhood Black Ops III enthusiast.
+- Dylan Zhang: Black Ops III enthusiast.
 - Gurmandeep Bal: Minecraft Architect
 - Crystal Yim: Squishmallow connoisseur 
 - Allison Kong: Just your average gamer :)
@@ -26,9 +26,11 @@ The UBC Study Spot Tracker App, designed for students at the University of Briti
 - Standard requirements:
   * A local chatbox for each study spot where users can talk to eachother.
   * Robustness for mobile browsers
-  * Ability to select distance from one study spot to another point on the map
+  * Ability to select distance from one study spot to another point on the map.
+  * Addition of study spots booking links from various websites, such as the UBC library website.
 - Stretch requirements:
   * Account creations and authenication via student email to keep chatbox free of bots
+  * Implement frequency of study spots display on maps
   * Chat auto moderation
 
 ## Two Minimal Requirements broken down:
