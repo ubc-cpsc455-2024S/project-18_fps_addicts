@@ -40,3 +40,36 @@
 .read-the-docs {
   color: #888;
 }
+
+nav {
+  display: flex;
+  justify-content: flex-start; 
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px; 
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  background-color: transparent;
+}
+
+nav ul li a:hover {
+  color: white;
+  background-color: black;
+}
+
