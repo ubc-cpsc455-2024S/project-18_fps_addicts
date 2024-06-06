@@ -4,9 +4,11 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import About from './pages/About';
 import RoomBookings from './pages/RoomBookings';
+import MapInterface from './components/MapInterface';
 
 const App = () => {
     return (
+        <div>
         <Router>
             <NavBar />
             <Routes>
@@ -15,6 +17,8 @@ const App = () => {
                 <Route path="/room-bookings" element={<RoomBookings />} />
             </Routes>
         </Router>
+      
+        </div>
     );
 };
 
