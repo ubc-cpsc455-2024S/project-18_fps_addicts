@@ -5,7 +5,8 @@ const About = () => {
         <div>
             <h1>About/User Manual</h1>
             {/* Add information about the app and how to use it */}
-            <p>Welcome to StudySpotter! UBC's hottest study spot finder. StudySpotter is an app that facilitates
+            <div className="about">
+            <p >Welcome to StudySpotter! UBC's hottest study spot finder. StudySpotter is an app that facilitates
                 the location and reservation of study spots on campus. Users will be able to view a map, check out amenities, 
                 and reserve spaces that will fit their needs.
 
@@ -13,6 +14,7 @@ const About = () => {
                 Upon selection, a pop-up will appear and display all amenities available at that location along with
                 the option to book private rooms via a link.
             </p>
+            </div>
         </div>
     );
 };
