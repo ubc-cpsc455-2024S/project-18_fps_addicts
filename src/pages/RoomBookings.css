@@ -1,0 +1,62 @@
+.room-bookings-container {
+    padding: 20px;
+    opacity: 0; 
+    animation: fadeIn 2s forwards; 
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  .booking-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .booking-form label {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .booking-form input {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .booking-form button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #957777;
+  }
+  
+  .results-container {
+    text-align: center;
+  }
+  
+  .results-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .results-table th, .results-table td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .results-table th {
+    background-color: #543838;
+  }
