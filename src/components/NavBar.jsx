@@ -1,16 +1,16 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-const NavBar = () => {
+const NavBar = ({display}) => {
     return (
-        <nav>
+        <div className={display ? "navbar active" : "navbar"}>
             <ul>
+                <li><Link to="/login">Login</Link></li>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About/User Manual</Link></li>
                 <li><Link to="/room-bookings">Room Bookings</Link></li>
             </ul>
-        </nav>
+        </div>
     );
 };
 
