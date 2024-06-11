@@ -10,10 +10,11 @@ body {
   width: 180px;
   background-color: #011627;
   position: absolute;
-  height: 95vh;
+  height: 100vh;
   padding: 0 30px;
   left: -100%;
-  transition: all 0.8s;
+  transition: all 0.8s ease;
+  z-index: 1000;
 }
 
 .navbar.active {
@@ -79,7 +80,7 @@ footer {
 
 @keyframes typewriter {
   from { width: 0; }
-  to { width: 28%; }
+  to { width: 26%; }
 }
 
 @keyframes cursor {
@@ -89,7 +90,6 @@ footer {
 
 .typewriter {
   float: inline-start;
-  padding-left: 100px;
   overflow: hidden; 
   border-right: .15em solid rgba(255, 255, 255, 0.75); 
   white-space: nowrap; 
@@ -104,4 +104,24 @@ header {
   background-color: #011627;
   height: 40px;
   padding: 30px;
+}
+
+.title {
+  height: 10px;
+}
+
+.content {
+  transition: margin-left 0.5s ease;
+}
+
+.content.shifted {
+  margin-left: 180px;
+  transition: all 1s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    left: -100%;
+  }
 }
