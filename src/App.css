@@ -44,6 +44,13 @@ ul li a:active {
   background: #172b4d;
 }
 
+.burger:hover {
+  background: #172b4d;
+  cursor: pointer;
+  border: 8px solid #172b4d;
+  border-radius: 6px;
+}
+
 header svg {
   font-size: 30px;
 }
@@ -80,7 +87,7 @@ footer {
 
 @keyframes typewriter {
   from { width: 0; }
-  to { width: 26%; }
+  to { width: 24%; }
 }
 
 @keyframes cursor {
@@ -97,7 +104,7 @@ footer {
   letter-spacing: .08em; 
   animation: 
       typewriter 4s steps(40, end) 1s 1 normal both, 
-      cursor 500ms steps(40, end) infinite normal; 
+      cursor 500ms steps(40, end) infinite normal;
 }
 
 header {
