@@ -19,7 +19,7 @@ const App = () => {
                     <h1 className="typewriter">UBC StudySpotter</h1>
                 </header>
                 <header className="App-header">
-                    <RxHamburgerMenu onClick={() => setDisplayNav(!displayNav)}/>
+                    <RxHamburgerMenu className='burger' onClick={() => setDisplayNav(!displayNav)}/>
                 </header>
                 <NavBar display={displayNav}/>
                 <div className={`content ${displayNav ? 'shifted' : ''}`}>
