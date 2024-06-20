@@ -1,16 +1,20 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaHome } from "react-icons/fa";
+import { BsInfoSquareFill } from "react-icons/bs";
+import { FaBookReader } from "react-icons/fa";
+import { IoPersonSharp } from "react-icons/io5";
 import '../App.css';
 
-const NavBar = () => {
+const NavBar = ({display}) => {
     return (
-        <nav>
+        <div className={display ? "navbar active" : "navbar"}>
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About/User Manual</Link></li>
-                <li><Link to="/room-bookings">Room Bookings</Link></li>
+                <li><Link to="/login"><IoPersonSharp /> Login</Link></li>
+                <li><Link to="/"><FaHome /> Home</Link></li>
+                <li><Link to="/about"><BsInfoSquareFill /> About</Link></li>
+                <li><Link to="/room-bookings"><FaBookReader /> Room Bookings</Link></li>
             </ul>
-        </nav>
+        </div>
     );
 };
 
