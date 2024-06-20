@@ -2,6 +2,8 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import pins from '../assets/pinData.json';
+import ChatBox from './Chatbox.jsx';
+
 
 
 const MapInterface = () => {
@@ -16,7 +18,9 @@ const MapInterface = () => {
                     <Marker key={pin.id} position={pin.position}>
                         <Popup>
                             <b>{pin.title}</b><br />{pin.description}
+                            <ChatBox />
                         </Popup>
+                        
                     </Marker>
                 ))}
             </MapContainer>
