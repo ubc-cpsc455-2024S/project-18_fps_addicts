@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {setAboutState} from "../redux/pages/service.js";
 
 const About = () => {
+
+    const dispatch = useDispatch();
+    const title = useSelector((state) => state.about.title);
+
+    useEffect(() => {
+        dispatch(setAboutState('About/User Manual'));
+    }, [dispatch]);
+
     return (
         <div>
-            <h1>About/User Manual</h1>
+            <h1>{title}</h1>
             {/* Add information about the app and how to use it */}
             <div className="about">
             <p >Welcome to StudySpotter! UBC's hottest study spot finder. StudySpotter is an app that facilitates

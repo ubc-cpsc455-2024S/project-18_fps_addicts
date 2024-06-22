@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import ExternalLink from '../components/ExternalLink';
 import './RoomBookings.css';
+import {setRoomBookingsState} from "../redux/pages/service.js";
+import {useDispatch, useSelector} from "react-redux";
 
 const RoomBookings = () => {
+  const dispatch = useDispatch();
+  const title = useSelector((state) => state.roomBookings.title);
+
+  useEffect(() => {
+    dispatch(setRoomBookingsState('Room Bookings'));
+  }, [dispatch]);
+
   const [date, setDate] = useState(''); // State for the date
   const [fromTime, setFromTime] = useState(''); // State for the start time
   const [toTime, setToTime] = useState(''); // State for the end time
@@ -26,7 +35,7 @@ const RoomBookings = () => {
 
   return (
     <div>
-      <h1>Room Bookings</h1>
+      <h1>{title}</h1>
       <div className="room-bookings-container">
       <form onSubmit={handleSubmit} className="booking-form">
         <label htmlFor="date">Date:</label>

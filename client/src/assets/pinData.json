@@ -230,16 +230,6 @@
     "link": "https://xwi7xwa.library.ubc.ca/"
   },
   {
-    "id": 27,
-    "position": [49.2620489,-123.2530989],
-    "title": "CENTRE FOR INTERACTIVE RESEARCH ON SUSTAINABILITY (CIRS)",
-    "description": "A 30 seat casual study spot on the first floor of CIRS, suitable for individual or group work.",
-    "power_port_availability": "Moderate",
-    "lighting": "Good",
-    "capacity": "30",
-    "link": "https://learningspaces.ubc.ca/classrooms/cirs-concourse"
-  },
-  {
     "id": 28,
     "position": [49.2626013965527, -123.2476255743556],
     "title": "CHEMICAL AND BIOLOGICAL ENGINEERING BUILDING (CHBE)",
@@ -248,6 +238,16 @@
     "lighting": "Moderate",
     "capacity": "64",
     "link": "https://learningspaces.ubc.ca/classrooms/chbe-atrium"
+  },
+  {
+    "id": 29,
+    "position": [49.2620489,-123.2530989],
+    "title": "CENTRE FOR INTERACTIVE RESEARCH ON SUSTAINABILITY (CIRS)",
+    "description": "A 30 seat casual study spot on the first floor of CIRS, suitable for individual or group work.",
+    "power_port_availability": "Moderate",
+    "lighting": "Good",
+    "capacity": "30",
+    "link": "https://learningspaces.ubc.ca/classrooms/cirs-concourse"
   },
   {
     "id": 30,
