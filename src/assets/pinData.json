@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "position": [49.262783, -123.245625],
+    "position": [49.26670298425106, -123.24999351668409],
     "title": "AMS NEST",
     "description": "A lot of study spots, but gets busy. Open late for night grinds.",
     "power_port_availability": "High",
@@ -221,7 +221,7 @@
   },
   {
     "id": 27,
-    "position": [49.26513126, -123.25625134],
+    "position": [49.265535231687835, -123.25666093595588],
     "title": "X̱wi7x̱wa Library",
     "description": "Very quiet, few seats and plugs, great for a silent alone study session.",
     "power_port_availability": "Low",
@@ -241,7 +241,7 @@
   },
   {
     "id": 28,
-    "position": [49.2624929,-123.2502166],
+    "position": [49.2626013965527, -123.2476255743556],
     "title": "CHEMICAL AND BIOLOGICAL ENGINEERING BUILDING (CHBE)",
     "description": "64 seat capacity within the atrium of CHBE.",
     "power_port_availability": "Moderate",
@@ -251,7 +251,7 @@
   },
   {
     "id": 30,
-    "position": [49.2631117,-123.2546256],
+    "position": [49.26322019514797, -123.25206676086249],
     "title": "EARTH SCIENCES BUILDING (ESB)",
     "description": "A vibrant 75 seat area along the corridors, offering a mix of lounge and table seating.",
     "power_port_availability": "Moderate",
@@ -281,7 +281,7 @@
   },
   {
     "id": 33,
-    "position": [49.2610145,-123.2494838],
+    "position": [49.26096669121422, -123.24787375901305],
     "title": "FOREST SCIENCES CENTRE (FSC) - MACMILLAN BLOEDEL ATRIUM",
     "description": "An open atrium surrounded by greenery, offering group tables and couches for study.",
     "power_port_availability": "Low",
@@ -301,7 +301,7 @@
   },
   {
     "id": 35,
-    "position": [49.26759,-123.2585],
+    "position": [49.26761428480149, -123.25594252533378],
     "title": "FREDERIC LASSERRE (LASR) - CUBE",
     "description": "The Cube provides comfortable seating for 20, nestled between theatres with adjustable lighting.",
     "power_port_availability": "Low",
@@ -311,23 +311,13 @@
   },
   {
     "id": 36,
-    "position": [49.2661526,-123.2541866],
+    "position": [49.266206690508085, -123.25177560319106],
     "title": "HEBB",
     "description": "Located outside the Hebb 100 lecture theatre, offering a variety of seating options.",
     "power_port_availability": "Low",
     "lighting": "Low",
     "capacity": "30",
     "link": "https://learningspaces.ubc.ca/classrooms/hebb-concourse"
-  },
-  {
-    "id": 37,
-    "position": [49.2664798,-123.2547637],
-    "title": "HENNINGS (HENN)",
-    "description": "62 informal learning seats ideal for quiet study, well-lit with task lighting and power plugs.",
-    "power_port_availability": "Moderate",
-    "lighting": "Moderate",
-    "capacity": "62",
-    "link": "https://learningspaces.ubc.ca/classrooms/henn-2nd-floor-hallways"
   },
   {
     "id": 38,
@@ -341,7 +331,7 @@
   },
   {
     "id": 39,
-    "position": [49.2651129,-123.2565071],
+    "position": [49.26473438969971, -123.25410255434937],
     "title": "HENRY ANGUS (ANGU) - BRUCE R. BIRMINGHAM UNDERGRADUATE CENTRE",
     "description": "An undergraduate study area next to the CPA Hall with movable furniture, ideal for group or individual study.",
     "power_port_availability": "Moderate",
