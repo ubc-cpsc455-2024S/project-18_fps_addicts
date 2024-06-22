@@ -21,8 +21,15 @@ const MapInterface = () => {
                 {pins.map(pin => (
                     <Marker key={pin.id} position={pin.position}>
                         <Popup>
-                            <b>{pin.title}</b><br />{pin.description}
-                            <ChatBox />
+                        <b>{pin.title}</b>
+                        <br />{pin.description}
+                        <br />
+                        <br /><strong>Outlet Availability:</strong> {pin.power_port_availability}
+                        <br /><strong>Lighting:</strong> {pin.lighting}
+                        <br /><strong>Capacity:</strong> {pin.capacity}
+                        <br /><strong>More info:</strong> <a href={pin.link} target="_blank" rel="noopener noreferrer">Click here</a>
+                        
+                        <ChatBox />
                         </Popup>
                         
                     </Marker>
