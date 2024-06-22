@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 const RoomBookings = () => {
   const dispatch = useDispatch();
-  const title = useSelector((state) => state.roomBookings.title);
+  const title = useSelector((state) => state.pages.title);
 
   useEffect(() => {
     dispatch(setRoomBookingsState('Room Bookings'));

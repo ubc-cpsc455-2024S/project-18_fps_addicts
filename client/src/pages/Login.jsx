@@ -11,7 +11,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const authStatus = useSelector((state) => state.auth.status);
   const authError = useSelector((state) => state.auth.error);
-  const title = useSelector((state) => state.login.title);
+  const title = useSelector((state) => state.pages.title);
 
   useEffect(() => {
      dispatch(setLoginState('Login'));

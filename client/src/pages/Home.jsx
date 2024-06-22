@@ -5,7 +5,7 @@ import {setHomeState} from "../redux/pages/service.js";
 
 const Home = () => {
     const dispatch = useDispatch();
-    const title = useSelector((state) => state.home.title);
+    const title = useSelector((state) => state.pages.title);
 
     useEffect(() => {
         dispatch(setHomeState('Map'));

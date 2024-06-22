@@ -1,13 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import authReducer from './users/authSlice';
-import { homeReducer, aboutReducer, loginReducer, roomBookingReducer } from "./pages/reducer";
+import { titleReducer } from "./pages/reducer";
 
 const rootReducer = combineReducers({
-    home: homeReducer,
-    about: aboutReducer,
-    login: loginReducer,
-    roomBookings: roomBookingReducer,
+    pages: titleReducer,
     auth: authReducer,
     //TODO: add other reducers
 });

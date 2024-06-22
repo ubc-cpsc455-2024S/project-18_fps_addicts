@@ -5,7 +5,7 @@ import {setAboutState} from "../redux/pages/service.js";
 const About = () => {
 
     const dispatch = useDispatch();
-    const title = useSelector((state) => state.about.title);
+    const title = useSelector((state) => state.pages.title);
 
     useEffect(() => {
         dispatch(setAboutState('About/User Manual'));
