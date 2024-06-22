@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser, signUpUser } from '../features/authSlice';
+import { loginUser, signUpUser } from '../redux/users/authSlice';
 import '../App.css';
 
 const Login = () => {

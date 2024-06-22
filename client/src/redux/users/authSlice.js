@@ -1,10 +1,9 @@
-// features/authSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const loginUser = createAsyncThunk(
   'auth/loginUser',
   async ({ email, password }) => {
-    // Replace with your actual login API call
+    // Replace with actual login API call
     const response = await fetch('/api/login', {
       method: 'POST',
       headers: {
@@ -23,7 +22,7 @@ export const loginUser = createAsyncThunk(
 export const signUpUser = createAsyncThunk(
   'auth/signUpUser',
   async ({ email, password }) => {
-    // Replace with your actual sign-up API call
+    // Replace with actual sign-up API call
     const response = await fetch('/api/signup', {
       method: 'POST',
       headers: {
