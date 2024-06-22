@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 {/*chat-generated */}
+{/*chatserver-generated*/}
 const ChatInput = ({ addMessage }) => {
     const [input, setInput] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (input.trim()) {
-            addMessage({ text: input, timestamp: new Date() });
+            addMessage({ text: input, timestamp: new Date().toISOString() });
             setInput('');
         }
     };
