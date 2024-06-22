@@ -6,16 +6,8 @@
     "description": "A lot of study spots, but gets busy. Open late for night grinds.",
     "power_port_availability": "High",
     "lighting": "Good",
-    "capacity": "High"
-  },
-  {
-    "id": 2,
-    "position": [49.26522068, -123.25053471],
-    "title": "UBC Bookstore",
-    "description": "Find your textbooks and more.",
-    "power_port_availability": "Low",
-    "lighting": "Moderate",
-    "capacity": "Moderate"
+    "capacity": "High",
+     "link": "http://ams.ubc.ca/nest"
   },
   {
     "id": 3,
@@ -24,7 +16,8 @@
     "description": "Quiet-ish with few spots on the first floor, limited plugs.",
     "power_port_availability": "Low",
     "lighting": "Good",
-    "capacity": "Low"
+    "capacity": "Low",
+     "link": "https://learningspaces.ubc.ca/classrooms/phrm-3rd-floor-study-lounge"
   },
   {
     "id": 4,
@@ -33,7 +26,8 @@
     "description": "Very quiet, plenty of seats with some plugs, good wifi.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
-    "capacity": "High"
+    "capacity": "High",
+     "link": "https://learningspaces.ubc.ca/classrooms/irc-concourse"
   },
   {
     "id": 5,
@@ -42,7 +36,8 @@
     "description": "Usually busy, few plugs, some food and drink options.",
     "power_port_availability": "Low",
     "lighting": "Moderate",
-    "capacity": "High"
+    "capacity": "High",
+     "link": "https://learningspaces.ubc.ca/buildings/ubc-life-building-life"
   },
   {
     "id": 6,
@@ -51,7 +46,8 @@
     "description": "Quiet basement spots, few people around.",
     "power_port_availability": "Low",
     "lighting": "Low",
-    "capacity": "Low"
+    "capacity": "Low",
+     "link": "https://learningspaces.ubc.ca/buildings/school-population-and-public-health-spph"
   },
   {
     "id": 7,
@@ -60,7 +56,8 @@
     "description": "Overcrowded, lots of outlets, the classic study spot.",
     "power_port_availability": "High",
     "lighting": "Good",
-    "capacity": "High"
+    "capacity": "High",
+     "link": "https://ikblc.ubc.ca/spaces/"
   },
   {
     "id": 8,
@@ -69,7 +66,8 @@
     "description": "Agora Cafe offers comfy seating and a nice vibe, few plugs.",
     "power_port_availability": "Low",
     "lighting": "Good",
-    "capacity": "Moderate"
+    "capacity": "Moderate",
+     "link": "https://learningspaces.ubc.ca/classrooms/mcml-agora-caf%C3%A9"
   },
   {
     "id": 9,
@@ -78,7 +76,8 @@
     "description": "Spacious, lots of study spots, many seats with plugs.",
     "power_port_availability": "High",
     "lighting": "Good",
-    "capacity": "High"
+    "capacity": "High",
+     "link": "https://learningspaces.ubc.ca/classrooms/lsc-east-atrium"
   },
   {
     "id": 10,
@@ -87,7 +86,8 @@
     "description": "Nice study spots in the hallway, washrooms far away.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
-    "capacity": "Moderate"
+    "capacity": "Moderate",
+     "link": "https://learningspaces.ubc.ca/classrooms/henn-2nd-floor-hallways"
   },
   {
     "id": 11,
@@ -96,16 +96,8 @@
     "description": "Plenty of well-lit study space and plugs, can get busy.",
     "power_port_availability": "High",
     "lighting": "Good",
-    "capacity": "High"
-  },
-  {
-    "id": 12,
-    "position": [49.26048796, -123.24882678],
-    "title": "Forestry",
-    "description": "One of the prettiest buildings on campus with hard-to-come-by seats, plugs at every table, nearby Tim's.",
-    "power_port_availability": "High",
-    "lighting": "Good",
-    "capacity": "Low"
+    "capacity": "High",
+     "link": "https://learningspaces.ubc.ca/classrooms/iccs-2nd-floor-atrium"
   },
   {
     "id": 13,
@@ -114,7 +106,8 @@
     "description": "Very quiet, natural light, kitchen, few study spots, weak wifi, located by Rose Garden.",
     "power_port_availability": "Low",
     "lighting": "Good",
-    "capacity": "Low"
+    "capacity": "Low",
+    "link": "https://learningspaces.ubc.ca/classrooms/ucen-study-lounge"
   },
   {
     "id": 14,
@@ -123,16 +116,8 @@
     "description": "Pretty quiet, not many people, lots of seats with plugs, hard to find places to sit and study.",
     "power_port_availability": "High",
     "lighting": "Moderate",
-    "capacity": "Moderate"
-  },
-  {
-    "id": 15,
-    "position": [49.26766553, -123.25582754],
-    "title": "LASR",
-    "description": "Comfy-ish seats, many charging plugs, no desks. Great for a quick study session.",
-    "power_port_availability": "High",
-    "lighting": "Moderate",
-    "capacity": "Low"
+    "capacity": "Moderate",
+    "link": "https://learningspaces.ubc.ca/classrooms/brck-centre-accessibility-hallway"
   },
   {
     "id": 16,
@@ -141,7 +126,8 @@
     "description": "Cozy, crowded after 2pm, kitchen area with microwave, lots of plugs by the wall seats.",
     "power_port_availability": "High",
     "lighting": "Good",
-    "capacity": "Moderate"
+    "capacity": "Moderate",
+    "link": "https://learningspaces.ubc.ca/classrooms/iona-study-lounge"
   },
   {
     "id": 17,
@@ -150,7 +136,8 @@
     "description": "Out of the way, plenty of seats, some with decent desks and plugs, decent wifi.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
-    "capacity": "Moderate"
+    "capacity": "Moderate",
+    "link": "https://learningspaces.ubc.ca/classrooms/alrd-1st-floor"
   },
   {
     "id": 18,
@@ -159,7 +146,8 @@
     "description": "Quiet, empty, comfy chairs, kitchen, lots of plugs and natural light.",
     "power_port_availability": "High",
     "lighting": "Good",
-    "capacity": "Moderate"
+    "capacity": "Moderate",
+    "link": "https://asian.library.ubc.ca/60thanniversarycelebration/building-and-spaces/"
   },
   {
     "id": 19,
@@ -168,16 +156,8 @@
     "description": "Extremely busy, hard to find spots, good amount of plugs and desk space.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
-    "capacity": "High"
-  },
-  {
-    "id": 20,
-    "position": [49.26979401, -123.25359215],
-    "title": "Law Library",
-    "description": "Very nice, quiet, desks with plugs and lamps, great lighting, comfy chairs.",
-    "power_port_availability": "High",
-    "lighting": "Good",
-    "capacity": "Moderate"
+    "capacity": "High",
+    "link": "https://learningspaces.ubc.ca/classrooms/buch-2nd-floor-lounge"
   },
   {
     "id": 21,
@@ -186,7 +166,8 @@
     "description": "Lots of study spots, desks with plugs and private covers, comfy seats, good lighting.",
     "power_port_availability": "High",
     "lighting": "Good",
-    "capacity": "High"
+    "capacity": "High",
+    "link": "https://vancouver.calendar.ubc.ca/ubc-library/libraries-and-collections/david-lam-library-and-canaccord-learning-commons"
   },
   {
     "id": 22,
@@ -195,7 +176,8 @@
     "description": "Very nice study spot, barely any people, chargers at both tables on the second floor.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
-    "capacity": "Low"
+    "capacity": "Low",
+    "link": "https://learningspaces.ubc.ca/classrooms/matx-2nd-floor-study-tables"
   },
   {
     "id": 23,
@@ -204,7 +186,8 @@
     "description": "Nice building, great natural lighting, barely any wall plugs.",
     "power_port_availability": "Low",
     "lighting": "Good",
-    "capacity": "Moderate"
+    "capacity": "Moderate",
+    "link": "https://learningspaces.ubc.ca/classrooms/swng-1st-floor-concourse"
   },
   {
     "id": 24,
@@ -213,7 +196,8 @@
     "description": "Very quiet, lots of seats, decent amount of plugs, great napping spots in the basement.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
-    "capacity": "High"
+    "capacity": "High",
+    "link": "https://koerner.library.ubc.ca/facilities-technology/study-support/"
   },
   {
     "id": 25,
@@ -222,7 +206,8 @@
     "description": "Hot and humid, no wall plugs, swimming pool smell, awkward for studying.",
     "power_port_availability": "None",
     "lighting": "Poor",
-    "capacity": "Low"
+    "capacity": "Low",
+    "link": "https://learningspaces.ubc.ca/classrooms/aqua-various-informal-learning-spaces"
   },
   {
     "id": 26,
@@ -231,7 +216,8 @@
     "description": "Lots of study spots, good wifi, plenty of lighting and wall plugs, comfy couches for napping.",
     "power_port_availability": "High",
     "lighting": "Good",
-    "capacity": "High"
+    "capacity": "High",
+    "link": "https://learningspaces.ubc.ca/classrooms/orch-3rd-floor-high-tech-study-nook"
   },
   {
     "id": 27,
@@ -240,7 +226,8 @@
     "description": "Very quiet, few seats and plugs, great for a silent alone study session.",
     "power_port_availability": "Low",
     "lighting": "Good",
-    "capacity": "Low"
+    "capacity": "Low",
+    "link": "https://xwi7xwa.library.ubc.ca/"
   },
   {
     "id": 27,
@@ -249,7 +236,8 @@
     "description": "A 30 seat casual study spot on the first floor of CIRS, suitable for individual or group work.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
-    "capacity": "30"
+    "capacity": "30",
+    "link": "https://learningspaces.ubc.ca/classrooms/cirs-concourse"
   },
   {
     "id": 28,
@@ -258,16 +246,18 @@
     "description": "64 seat capacity within the atrium of CHBE.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
-    "capacity": "64"
+    "capacity": "64",
+    "link": "https://learningspaces.ubc.ca/classrooms/chbe-atrium"
   },
   {
     "id": 30,
     "position": [49.2631117,-123.2546256],
-    "title": "EARTH SCIENCES BUILDING (ESB) - CONCOURSE",
+    "title": "EARTH SCIENCES BUILDING (ESB)",
     "description": "A vibrant 75 seat area along the corridors, offering a mix of lounge and table seating.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
-    "capacity": "75"
+    "capacity": "75",
+    "link": "https://learningspaces.ubc.ca/classrooms/esb-concourse"
   },
   {
     "id": 31,
@@ -276,7 +266,8 @@
     "description": "Features 2 floors of informal study space from group lounges to individual seating.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
-    "capacity": "50"
+    "capacity": "50",
+    "link": "https://ubcengineers.ca/study-rooms"
   },
   {
     "id": 32,
@@ -285,7 +276,8 @@
     "description": "Natural light fills these hallway spaces, offering a variety of individual study spots.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
-    "capacity": "20"
+    "capacity": "20",
+    "link": "https://learningspaces.ubc.ca/classrooms/fnh-hallway-informal-learning-space"
   },
   {
     "id": 33,
@@ -294,7 +286,8 @@
     "description": "An open atrium surrounded by greenery, offering group tables and couches for study.",
     "power_port_availability": "Low",
     "lighting": "Low",
-    "capacity": "60"
+    "capacity": "60",
+    "link": "https://learningspaces.ubc.ca/classrooms/fsc-macmillan-bloedel-atrium"
   },
   {
     "id": 34,
@@ -303,7 +296,8 @@
     "description": "Located near Starbucks, suitable for individual or group work with a capacity of 58.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
-    "capacity": "58"
+    "capacity": "58",
+    "link": "https://learningspaces.ubc.ca/classrooms/fsc-macmillan-bloedel-atrium"
   },
   {
     "id": 35,
@@ -312,16 +306,18 @@
     "description": "The Cube provides comfortable seating for 20, nestled between theatres with adjustable lighting.",
     "power_port_availability": "Loq",
     "lighting": "Good",
-    "capacity": "20"
+    "capacity": "20",
+    "link": "https://learningspaces.ubc.ca/classrooms/lasr-cube"
   },
   {
     "id": 36,
     "position": [49.2661526,-123.254192],
-    "title": "HEBB (HEBB) - CONCOURSE",
+    "title": "HEBB",
     "description": "Located outside the Hebb 100 lecture theatre, offering a variety of seating options.",
     "power_port_availability": "Low",
     "lighting": "Low",
-    "capacity": "30"
+    "capacity": "30",
+    "link": "https://learningspaces.ubc.ca/classrooms/hebb-concourse"
   },
   {
     "id": 37,
@@ -330,7 +326,18 @@
     "description": "62 informal learning seats ideal for quiet study, well-lit with task lighting and power plugs.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
-    "capacity": "62"
+    "capacity": "62",
+    "link": "https://learningspaces.ubc.ca/classrooms/henn-2nd-floor-hallways"
+  },
+  {
+    "id": 38,
+    "position": [49.2660556,-123.2539641], 
+    "title": "Abdul Ladha Science Student Centre (ALSC)",
+    "description": "This Science Student Centre is a vibrant spot for individual or group study. The building offers study lounges and bookable meeting rooms.",
+    "power_port_availability": "High",
+    "lighting": "High",
+    "capacity": "50",
+    "link": "https://sus.ubc.ca/alssc"
   },
   {
     "id": 39,
@@ -339,6 +346,7 @@
     "description": "An undergraduate study area next to the CPA Hall with movable furniture, ideal for group or individual study.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
-    "capacity": "50"
+    "capacity": "50",
+    "link": "https://learningspaces.ubc.ca/classrooms/angu-bruce-r-birmingham-undergraduate-centre"
   }
 ]
