@@ -271,7 +271,7 @@
   },
   {
     "id": 32,
-    "position": [49.2640273,-123.2524026],
+    "position": [49.263986,-123.2500379],
     "title": "FOOD, NUTRITION AND HEALTH (FNH)",
     "description": "Natural light fills these hallway spaces, offering a variety of individual study spots.",
     "power_port_availability": "Moderate",
@@ -281,7 +281,7 @@
   },
   {
     "id": 33,
-    "position": [49.2605059,-123.250201],
+    "position": [49.2610145,-123.2494838],
     "title": "FOREST SCIENCES CENTRE (FSC) - MACMILLAN BLOEDEL ATRIUM",
     "description": "An open atrium surrounded by greenery, offering group tables and couches for study.",
     "power_port_availability": "Low",
@@ -291,7 +291,7 @@
   },
   {
     "id": 34,
-    "position": [49.2623725,-123.2526984],
+    "position": [49.262369,-123.2501181],
     "title": "FRED KAISER (KAIS)",
     "description": "Located near Starbucks, suitable for individual or group work with a capacity of 58.",
     "power_port_availability": "Moderate",
@@ -311,7 +311,7 @@
   },
   {
     "id": 36,
-    "position": [49.2661526,-123.254192],
+    "position": [49.2661526,-123.2541866],
     "title": "HEBB",
     "description": "Located outside the Hebb 100 lecture theatre, offering a variety of seating options.",
     "power_port_availability": "Low",
@@ -321,8 +321,8 @@
   },
   {
     "id": 37,
-    "position": [49.2664798,-123.254769],
-    "title": "HENNINGS (HENN) - 2ND FLOOR HALLWAYS",
+    "position": [49.2664798,-123.2547637],
+    "title": "HENNINGS (HENN)",
     "description": "62 informal learning seats ideal for quiet study, well-lit with task lighting and power plugs.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
@@ -331,7 +331,7 @@
   },
   {
     "id": 38,
-    "position": [49.2660556,-123.2539641], 
+    "position": [49.2660556,-123.2539587], 
     "title": "Abdul Ladha Science Student Centre (ALSC)",
     "description": "This Science Student Centre is a vibrant spot for individual or group study. The building offers study lounges and bookable meeting rooms.",
     "power_port_availability": "High",
@@ -341,7 +341,7 @@
   },
   {
     "id": 39,
-    "position": [49.2651129,-123.2565125],
+    "position": [49.2651129,-123.2565071],
     "title": "HENRY ANGUS (ANGU) - BRUCE R. BIRMINGHAM UNDERGRADUATE CENTRE",
     "description": "An undergraduate study area next to the CPA Hall with movable furniture, ideal for group or individual study.",
     "power_port_availability": "Moderate",
