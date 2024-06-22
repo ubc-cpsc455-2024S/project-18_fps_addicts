@@ -5,6 +5,9 @@ const StudySpotPin = ({ spot }) => {
         <div>
             <h3>{spot.name}</h3>
             <p>{spot.description}</p>
+            <p>{spot.power_port_availability}</p>
+            <p>{spot.lighting}</p>
+            <p>{spot.capacity}</p>
             {/* Additional information and functionality can go here */}
         </div>
     );
