@@ -1,165 +1,344 @@
-
 [
-    {
-        "id": 1,
-        "position": [49.262783, -123.245625],
-        "title": "AMS NEST",
-        "description": "A lot of study spots, but gets busy. Open late for night grinds."
-    },
-    {
-        "id": 2,
-        "position": [49.26522068,-123.25053471],
-        "title": "UBC Bookstore",
-        "description": "Find your textbooks and more."
-    },
-    {
-        "id": 3,
-        "position": [49.26258208,-123.24280041],
-        "title": "Pharmaceutical Sciences Building",
-        "description": "Quiet-ish with few spots on the first floor, limited plugs."
-    },
-    {
-        "id": 4,
-        "position": [49.2644568,-123.24733433],
-        "title": "Woodward Library",
-        "description": "Very quiet, plenty of seats with some plugs, good wifi."
-    },
-    {
-        "id": 5,
-        "position": [49.26762464,-123.25016806],
-        "title": "Student Life Building",
-        "description": "Usually busy, few plugs, some food and drink options."
-    },
-    {
-        "id": 6,
-        "position": [49.26410664,-123.2486594],
-        "title": "School of Population and Public Health",
-        "description": "Quiet basement spots, few people around."
-    },
-    {
-        "id": 7,
-        "position": [49.26753206,-123.25268265,95],
-        "title": "Irving K. Barber Learning Centre",
-        "description": "Overcrowded, lots of outlets, the classic study spot."
-    },
-    {
-        "id": 8,
-        "position": [49.26106061,-123.2509973],
-        "title": "MacMillan Building",
-        "description": "Agora Cafe offers comfy seating and a nice vibe, few plugs."
-    },
-    {
-        "id": 9,
-        "position": [49.26235198,-123.24454949],
-        "title": "Life Sciences Institute",
-        "description": "Spacious, lots of study spots, many seats with plugs."
-    },
-    {
-        "id": 10,
-        "position": [49.2664554,-123.25220899],
-        "title": "Hennings Building",
-        "description": "Nice study spots in the hallway, washrooms far away."
-    },
-    {
-        "id": 11,
-        "position": [49.26126724,-123.24893132],
-        "title": "ICICS",
-        "description": "Plenty of well-lit study space and plugs, can get busy."
-    },
-    {
-        "id": 12,
-        "position": [49.26048796,-123.24882678],
-        "title": "Forestry",
-        "description": "One of the prettiest buildings on campus with hard-to-come-by seats, plugs at every table, nearby Tim's."
-    },
-    {
-        "id": 13,
-        "position": [49.2688898,-123.2571037],
-        "title": "Leon and Theo Koerner University Center",
-        "description": "Very quiet, natural light, kitchen, few study spots, weak wifi, located by Rose Garden."
-    },
-    {
-        "id": 14,
-        "position": [49.26843118,-123.2522771],
-        "title": "Brock Hall",
-        "description": "Pretty quiet, not many people, lots of seats with plugs, hard to find places to sit and study."
-    },
-    {
-        "id": 15,
-        "position": [49.26766553,-123.25582754],
-        "title": "LASR",
-        "description": "Comfy-ish seats, many charging plugs, no desks. Great for a quick study session."
-    },
-    {
-        "id": 16,
-        "position": [49.27104773,-123.25039253],
-        "title": "Iona",
-        "description": "Cozy, crowded after 2pm, kitchen area with microwave, lots of plugs by the wall seats."
-    },
-    {
-        "id": 17,
-        "position": [49.27011136,-123.25334953],
-        "title": "Allard Hall",
-        "description": "Out of the way, plenty of seats, some with decent desks and plugs, decent wifi."
-    },
-    {
-        "id": 18,
-        "position": [49.26683502,-123.25857607],
-        "title": "Asian Library",
-        "description": "Quiet, empty, comfy chairs, kitchen, lots of plugs and natural light."
-    },
-    {
-        "id": 19,
-        "position": [49.26916992,-123.25482156],
-        "title": "Buchanan",
-        "description": "Extremely busy, hard to find spots, good amount of plugs and desk space."
-    },
-    {
-        "id": 20,
-        "position": [49.26979401,-123.25359215],
-        "title": "Law Library",
-        "description": "Very nice, quiet, desks with plugs and lamps, great lighting, comfy chairs."
-    },
-    {
-        "id": 21,
-        "position": [49.26560282,-123.2545302],
-        "title": "David Lam Library",
-        "description": "Lots of study spots, desks with plugs and private covers, comfy seats, good lighting."
-    },
-    {
-        "id": 22,
-        "position": [49.26610007,-123.25484129],
-        "title": "Math Annex",
-        "description": "Very nice study spot, barely any people, chargers at both tables on the second floor."
-    },
-    {
-        "id": 23,
-        "position": [49.26283041,-123.25435899],
-        "title": "Swing Space",
-        "description": "Nice building, great natural lighting, barely any wall plugs."
-    },
-    {
-        "id": 24,
-        "position": [49.26664907,-123.25511567],
-        "title": "Koerner Library",
-        "description": "Very quiet, lots of seats, decent amount of plugs, great napping spots in the basement."
-    },
-    {
-        "id": 25,
-        "position": [49.26776431,-123.24876658],
-        "title": "Aquatic Centre",
-        "description": "Hot and humid, no wall plugs, swimming pool smell, awkward for studying."
-    },
-    {
-        "id": 26,
-        "position": [49.2600602,-123.2509365],
-        "title": "Orchard",
-        "description": "Lots of study spots, good wifi, plenty of lighting and wall plugs, comfy couches for napping."
-    },
-    {
-        "id": 27,
-        "position": [49.26513126,-123.25625134],
-        "title": "X̱wi7x̱wa Library",
-        "description": "Very quiet, few seats and plugs, great for a silent alone study session."
-    }
+  {
+    "id": 1,
+    "position": [49.262783, -123.245625],
+    "title": "AMS NEST",
+    "description": "A lot of study spots, but gets busy. Open late for night grinds.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "High"
+  },
+  {
+    "id": 2,
+    "position": [49.26522068, -123.25053471],
+    "title": "UBC Bookstore",
+    "description": "Find your textbooks and more.",
+    "power_port_availability": "Low",
+    "lighting": "Moderate",
+    "capacity": "Moderate"
+  },
+  {
+    "id": 3,
+    "position": [49.26258208, -123.24280041],
+    "title": "Pharmaceutical Sciences Building",
+    "description": "Quiet-ish with few spots on the first floor, limited plugs.",
+    "power_port_availability": "Low",
+    "lighting": "Good",
+    "capacity": "Low"
+  },
+  {
+    "id": 4,
+    "position": [49.2644568, -123.24733433],
+    "title": "Woodward Library",
+    "description": "Very quiet, plenty of seats with some plugs, good wifi.",
+    "power_port_availability": "Moderate",
+    "lighting": "Good",
+    "capacity": "High"
+  },
+  {
+    "id": 5,
+    "position": [49.26762464, -123.25016806],
+    "title": "Student Life Building",
+    "description": "Usually busy, few plugs, some food and drink options.",
+    "power_port_availability": "Low",
+    "lighting": "Moderate",
+    "capacity": "High"
+  },
+  {
+    "id": 6,
+    "position": [49.26410664, -123.2486594],
+    "title": "School of Population and Public Health",
+    "description": "Quiet basement spots, few people around.",
+    "power_port_availability": "Low",
+    "lighting": "Low",
+    "capacity": "Low"
+  },
+  {
+    "id": 7,
+    "position": [49.26753206, -123.25268265],
+    "title": "Irving K. Barber Learning Centre",
+    "description": "Overcrowded, lots of outlets, the classic study spot.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "High"
+  },
+  {
+    "id": 8,
+    "position": [49.26106061, -123.2509973],
+    "title": "MacMillan Building",
+    "description": "Agora Cafe offers comfy seating and a nice vibe, few plugs.",
+    "power_port_availability": "Low",
+    "lighting": "Good",
+    "capacity": "Moderate"
+  },
+  {
+    "id": 9,
+    "position": [49.26235198, -123.24454949],
+    "title": "Life Sciences Institute",
+    "description": "Spacious, lots of study spots, many seats with plugs.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "High"
+  },
+  {
+    "id": 10,
+    "position": [49.2664554, -123.25220899],
+    "title": "Hennings Building",
+    "description": "Nice study spots in the hallway, washrooms far away.",
+    "power_port_availability": "Moderate",
+    "lighting": "Moderate",
+    "capacity": "Moderate"
+  },
+  {
+    "id": 11,
+    "position": [49.26126724, -123.24893132],
+    "title": "ICICS",
+    "description": "Plenty of well-lit study space and plugs, can get busy.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "High"
+  },
+  {
+    "id": 12,
+    "position": [49.26048796, -123.24882678],
+    "title": "Forestry",
+    "description": "One of the prettiest buildings on campus with hard-to-come-by seats, plugs at every table, nearby Tim's.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "Low"
+  },
+  {
+    "id": 13,
+    "position": [49.2688898, -123.2571037],
+    "title": "Leon and Theo Koerner University Center",
+    "description": "Very quiet, natural light, kitchen, few study spots, weak wifi, located by Rose Garden.",
+    "power_port_availability": "Low",
+    "lighting": "Good",
+    "capacity": "Low"
+  },
+  {
+    "id": 14,
+    "position": [49.26843118, -123.2522771],
+    "title": "Brock Hall",
+    "description": "Pretty quiet, not many people, lots of seats with plugs, hard to find places to sit and study.",
+    "power_port_availability": "High",
+    "lighting": "Moderate",
+    "capacity": "Moderate"
+  },
+  {
+    "id": 15,
+    "position": [49.26766553, -123.25582754],
+    "title": "LASR",
+    "description": "Comfy-ish seats, many charging plugs, no desks. Great for a quick study session.",
+    "power_port_availability": "High",
+    "lighting": "Moderate",
+    "capacity": "Low"
+  },
+  {
+    "id": 16,
+    "position": [49.27104773, -123.25039253],
+    "title": "Iona",
+    "description": "Cozy, crowded after 2pm, kitchen area with microwave, lots of plugs by the wall seats.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "Moderate"
+  },
+  {
+    "id": 17,
+    "position": [49.27011136, -123.25334953],
+    "title": "Allard Hall",
+    "description": "Out of the way, plenty of seats, some with decent desks and plugs, decent wifi.",
+    "power_port_availability": "Moderate",
+    "lighting": "Good",
+    "capacity": "Moderate"
+  },
+  {
+    "id": 18,
+    "position": [49.26683502, -123.25857607],
+    "title": "Asian Library",
+    "description": "Quiet, empty, comfy chairs, kitchen, lots of plugs and natural light.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "Moderate"
+  },
+  {
+    "id": 19,
+    "position": [49.26916992, -123.25482156],
+    "title": "Buchanan",
+    "description": "Extremely busy, hard to find spots, good amount of plugs and desk space.",
+    "power_port_availability": "Moderate",
+    "lighting": "Moderate",
+    "capacity": "High"
+  },
+  {
+    "id": 20,
+    "position": [49.26979401, -123.25359215],
+    "title": "Law Library",
+    "description": "Very nice, quiet, desks with plugs and lamps, great lighting, comfy chairs.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "Moderate"
+  },
+  {
+    "id": 21,
+    "position": [49.26560282, -123.2545302],
+    "title": "David Lam Library",
+    "description": "Lots of study spots, desks with plugs and private covers, comfy seats, good lighting.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "High"
+  },
+  {
+    "id": 22,
+    "position": [49.26610007, -123.25484129],
+    "title": "Math Annex",
+    "description": "Very nice study spot, barely any people, chargers at both tables on the second floor.",
+    "power_port_availability": "Moderate",
+    "lighting": "Good",
+    "capacity": "Low"
+  },
+  {
+    "id": 23,
+    "position": [49.26283041, -123.25435899],
+    "title": "Swing Space",
+    "description": "Nice building, great natural lighting, barely any wall plugs.",
+    "power_port_availability": "Low",
+    "lighting": "Good",
+    "capacity": "Moderate"
+  },
+  {
+    "id": 24,
+    "position": [49.26664907, -123.25511567],
+    "title": "Koerner Library",
+    "description": "Very quiet, lots of seats, decent amount of plugs, great napping spots in the basement.",
+    "power_port_availability": "Moderate",
+    "lighting": "Good",
+    "capacity": "High"
+  },
+  {
+    "id": 25,
+    "position": [49.26776431, -123.24876658],
+    "title": "Aquatic Centre",
+    "description": "Hot and humid, no wall plugs, swimming pool smell, awkward for studying.",
+    "power_port_availability": "None",
+    "lighting": "Poor",
+    "capacity": "Low"
+  },
+  {
+    "id": 26,
+    "position": [49.2600602, -123.2509365],
+    "title": "Orchard",
+    "description": "Lots of study spots, good wifi, plenty of lighting and wall plugs, comfy couches for napping.",
+    "power_port_availability": "High",
+    "lighting": "Good",
+    "capacity": "High"
+  },
+  {
+    "id": 27,
+    "position": [49.26513126, -123.25625134],
+    "title": "X̱wi7x̱wa Library",
+    "description": "Very quiet, few seats and plugs, great for a silent alone study session.",
+    "power_port_availability": "Low",
+    "lighting": "Good",
+    "capacity": "Low"
+  },
+  {
+    "id": 27,
+    "position": [49.2620489,-123.2530989],
+    "title": "CENTRE FOR INTERACTIVE RESEARCH ON SUSTAINABILITY (CIRS)",
+    "description": "A 30 seat casual study spot on the first floor of CIRS, suitable for individual or group work.",
+    "power_port_availability": "Moderate",
+    "lighting": "Good",
+    "capacity": "30"
+  },
+  {
+    "id": 28,
+    "position": [49.2624929,-123.2502166],
+    "title": "CHEMICAL AND BIOLOGICAL ENGINEERING BUILDING (CHBE)",
+    "description": "64 seat capacity within the atrium of CHBE.",
+    "power_port_availability": "Moderate",
+    "lighting": "Moderate",
+    "capacity": "64"
+  },
+  {
+    "id": 30,
+    "position": [49.2631117,-123.2546256],
+    "title": "EARTH SCIENCES BUILDING (ESB) - CONCOURSE",
+    "description": "A vibrant 75 seat area along the corridors, offering a mix of lounge and table seating.",
+    "power_port_availability": "Moderate",
+    "lighting": "Good",
+    "capacity": "75"
+  },
+  {
+    "id": 31,
+    "position": [49.2621606,-123.2492561],
+    "title": "ENGINEERING STUDENT CENTRE (ESC)",
+    "description": "Features 2 floors of informal study space from group lounges to individual seating.",
+    "power_port_availability": "Moderate",
+    "lighting": "Good",
+    "capacity": "50"
+  },
+  {
+    "id": 32,
+    "position": [49.2640273,-123.2524026],
+    "title": "FOOD, NUTRITION AND HEALTH (FNH)",
+    "description": "Natural light fills these hallway spaces, offering a variety of individual study spots.",
+    "power_port_availability": "Moderate",
+    "lighting": "Moderate",
+    "capacity": "20"
+  },
+  {
+    "id": 33,
+    "position": [49.2605059,-123.250201],
+    "title": "FOREST SCIENCES CENTRE (FSC) - MACMILLAN BLOEDEL ATRIUM",
+    "description": "An open atrium surrounded by greenery, offering group tables and couches for study.",
+    "power_port_availability": "Low",
+    "lighting": "Low",
+    "capacity": "60"
+  },
+  {
+    "id": 34,
+    "position": [49.2623725,-123.2526984],
+    "title": "FRED KAISER (KAIS)",
+    "description": "Located near Starbucks, suitable for individual or group work with a capacity of 58.",
+    "power_port_availability": "Moderate",
+    "lighting": "Good",
+    "capacity": "58"
+  },
+  {
+    "id": 35,
+    "position": [49.26759,-123.2585],
+    "title": "FREDERIC LASSERRE (LASR) - CUBE",
+    "description": "The Cube provides comfortable seating for 20, nestled between theatres with adjustable lighting.",
+    "power_port_availability": "Loq",
+    "lighting": "Good",
+    "capacity": "20"
+  },
+  {
+    "id": 36,
+    "position": [49.2661526,-123.254192],
+    "title": "HEBB (HEBB) - CONCOURSE",
+    "description": "Located outside the Hebb 100 lecture theatre, offering a variety of seating options.",
+    "power_port_availability": "Low",
+    "lighting": "Low",
+    "capacity": "30"
+  },
+  {
+    "id": 37,
+    "position": [49.2664798,-123.254769],
+    "title": "HENNINGS (HENN) - 2ND FLOOR HALLWAYS",
+    "description": "62 informal learning seats ideal for quiet study, well-lit with task lighting and power plugs.",
+    "power_port_availability": "Moderate",
+    "lighting": "Moderate",
+    "capacity": "62"
+  },
+  {
+    "id": 39,
+    "position": [49.2651129,-123.2565125],
+    "title": "HENRY ANGUS (ANGU) - BRUCE R. BIRMINGHAM UNDERGRADUATE CENTRE",
+    "description": "An undergraduate study area next to the CPA Hall with movable furniture, ideal for group or individual study.",
+    "power_port_availability": "Moderate",
+    "lighting": "Moderate",
+    "capacity": "50"
+  }
 ]
