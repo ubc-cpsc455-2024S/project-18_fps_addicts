@@ -11,15 +11,24 @@ import { useState } from 'react';
 
 const App = () => {
     const [displayNav, setDisplayNav] = useState(false)
+    const [darkMode, setDarkMode] = useState(false);
+
+    const toggleDarkMode = () => {
+      setDarkMode(!darkMode);
+      document.body.classList.toggle('dark-mode', darkMode); 
+    };
 
     return (
         <div>
             <Router>
                 <header className='title'>
                     <h1 className="typewriter">UBC StudySpotter</h1>
+                    <button className="mode-toggle" onClick={toggleDarkMode}>
+                        {darkMode ? 'Light Mode' : 'Dark Mode'}
+                    </button>
                 </header>
                 <header className="App-header">
-                    <RxHamburgerMenu onClick={() => setDisplayNav(!displayNav)}/>
+                    <RxHamburgerMenu className='burger' onClick={() => setDisplayNav(!displayNav)}/>
                 </header>
                 <NavBar display={displayNav}/>
                 <div className={`content ${displayNav ? 'shifted' : ''}`}>
