@@ -217,12 +217,13 @@ header {
   justify-content: center;
   align-items: flex-start; 
   margin-top: 20px;
+
 }
 
 .map-container {
   flex: 1;
-  width: 70%; 
-  height: 700px;
+  width: 100%; 
+  height: 100vh;
   position: relative; 
   margin-right: 10px;
   margin-left: 400px;
@@ -245,9 +246,12 @@ header {
   margin-bottom: 20px; 
 }
 
-.details-content h2 {
+.details-content h3 {
   margin-bottom: 10px; 
   color: #333; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .details-content p {
@@ -313,7 +317,8 @@ body {
 }
 
 .login-input {
-  width: 100%;
+  text-align: left;
+  width: 80%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #333;
@@ -328,7 +333,7 @@ body {
 
 .login-button,
 .signup-button {
-  width: 100%;
+  width: 85%;
   padding: 10px;
   font-size: 16px;
   color: #ffffff;
