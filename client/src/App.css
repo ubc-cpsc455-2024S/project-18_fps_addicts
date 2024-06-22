@@ -1,9 +1,27 @@
+:root {
+  --background-light: #ffffff;
+  --text-light: #333333;
+  --background-dark: #222222;
+  --text-dark: #eeeeee;
+  --primary-color: #0d2b4c;
+}
+
+.mode-toggle {
+  float: right;
+}
+
 
 body {
+  background-color: var(--background-light);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #eaecef;
+  color: var(--text-light);
+}
+
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
 }
 
 .navbar {
@@ -85,7 +103,7 @@ header svg {
 .chat-box {
   position: bottom;
   bottom: 0;
-  width: 100%;
+  width: 300px;
   max-width: 500px;
   left: 0;
   right: 0;
@@ -105,6 +123,7 @@ header svg {
 
 .chat-message {
   margin-bottom: 5px;
+  color: #333;
 }
 
 .message-text {
@@ -146,7 +165,7 @@ footer {
 
 @keyframes typewriter {
   from { width: 0; }
-  to { width: 24%; }
+  to { width: 27%; }
 }
 
 @keyframes cursor {
@@ -191,4 +210,76 @@ header {
     left: -100%;
   }
 
+}
+
+.map-interface {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  margin-top: 20px;
+}
+
+.map-container {
+  flex: 1;
+  width: 70%; 
+  height: 700px;
+  position: relative; 
+  margin-right: 10px;
+  margin-left: 400px;
+}
+
+.details-panel {
+  width: 30%; 
+  margin-left: 10px; 
+}
+
+.details-panel-container {
+  width: 30%; 
+  margin: auto;
+  background-color: #f0f0f0; 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.details-content {
+  margin-bottom: 20px; 
+}
+
+.details-content h2 {
+  margin-bottom: 10px; 
+  color: #333; 
+}
+
+.details-content p {
+  line-height: 1.5; 
+}
+
+.details-content button {
+  padding: 8px 16px; 
+  background-color: #007bff; 
+  color: #fff;
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+
+.details-content button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .map-interface {
+      flex-direction: column;
+      align-items: center; 
+  }
+
+  .map-container,
+  .details-panel {
+      width: 100%;
+      margin: 0; 
+  }
+
+  .details-panel {
+      margin-top: 20px;
+  }
 }
