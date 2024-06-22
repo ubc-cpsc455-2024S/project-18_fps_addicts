@@ -1,6 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { loginUser, signUpUser } from '../redux/users/authSlice';
 import '../App.css';
-import {useDispatch, useSelector} from "react-redux";
 import {setLoginState} from "../redux/pages/service.js";
 
 const Login = () => {
@@ -9,9 +11,10 @@ const Login = () => {
   const dispatch = useDispatch();
   const authStatus = useSelector((state) => state.auth.status);
   const authError = useSelector((state) => state.auth.error);
+  const title = useSelector((state) => state.login.title);
 
   useEffect(() => {
-    dispatch(setLoginState('Login'));
+     dispatch(setLoginState('Login'));
   }, [dispatch]);
 
   const handleLogin = () => {
@@ -24,7 +27,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       <input
         type="email"
         value={email}

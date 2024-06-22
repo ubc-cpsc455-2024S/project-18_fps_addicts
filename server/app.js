@@ -19,6 +19,3 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;
-
-
-module.exports = app;
