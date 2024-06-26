@@ -22,6 +22,7 @@ const App = () => {
         <div>
             <Router>
                 <header className='title'>
+                
                     <h1 className="typewriter">UBC StudySpotter</h1>
                     <button className="mode-toggle" onClick={toggleDarkMode}>
                         {darkMode ? 'Light Mode' : 'Dark Mode'}
