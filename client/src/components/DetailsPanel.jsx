@@ -7,7 +7,7 @@ const DetailsPanel = ({ pin, onClose }) => {
             <div className="details-content">
                 <h2>{pin.title}</h2>
                 <p>{pin.details}</p>
-                <ChatBox />
+                <ChatBox pinId={pin.id} />
                 <br></br>
                 <br></br>
                 <button onClick={onClose}>Close</button>
