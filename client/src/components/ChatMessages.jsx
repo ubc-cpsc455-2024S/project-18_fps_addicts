@@ -1,14 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 {/*chat-generated */}
-const ChatMessages = ({ messages }) => {
+const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
+    const [editingMessageId, setEditingMessageId] = useState(null);
+    const [editText, setEditText] = useState('');
+
+    const handleEditClick = (message) => {
+        if (!message.editable) return;
+        setEditingMessageId(message.id);
+        setEditText(message.text);
+    };
+
+    const handleSaveClick = (message) => {
+        onEdit(message.id, editText);
+        setEditingMessageId(null);
+        setEditText('');
+    };
+
     return (
         <div className="chat-messages">
-            {messages.map((msg, index) => (
-                <div key={index} className="chat-message">
-                    <span className="message-text">{msg.text}</span>
-                    <span className="message-timestamp">{msg.timestamp.toLocaleTimeString()}</span>
-                </div>
-            ))}
+            {messages.map((msg, index) => {
+                const messageContent = editingMessageId === msg.id ? (
+                    <>
+                        <input
+                            type="text"
+                            value={editText}
+                            onChange={(e) => setEditText(e.target.value)}
+                        />
+                        <button onClick={() => handleSaveClick(msg)}>Save</button>
+                        <button onClick={() => setEditingMessageId(null)}>Cancel</button>
+                    </>
+                ) : (
+                    <>
+                        <span className="message-text">{msg.text}</span>
+                        <span className="message-timestamp">{new Date(msg.timestamp).toLocaleTimeString()}</span>
+                        {msg.editable && <button id = "userActionForChat" onClick={() => handleEditClick(msg)}>Edit</button>}
+                        {msg.editable && <button id = "userActionForChat" onClick={() => onDeleteMessage(msg.id)}>Delete</button>}
+                    </>
+                );
+
+                return (
+                    <div key={index} className="chat-message">
+                        {messageContent}
+                    </div>
+                );
+            })}
         </div>
     );
 };
