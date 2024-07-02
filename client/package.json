@@ -29,7 +29,6 @@
     "socket.io-client": "^4.7.5",
     "toolkit": "^1.5.4",
     "uuid": "^10.0.0"
-
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
