@@ -1,5 +1,6 @@
 // import React, { useState } from 'react';
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+// import { FaStar, FaRegStar } from 'react-icons/fa';
 // import 'leaflet/dist/leaflet.css';
 // import pins from '../assets/pinData.json';
 // import ChatBox from './Chatbox.jsx';
@@ -9,10 +10,13 @@
 // const MapInterface = () => {
 //     const [detailsVisible, setDetailsVisible] = useState(false);
 //     const [selectedPin, setSelectedPin] = useState(null);
+//     const [favorites, setFavorites] = useState([]);
+//     const [mapCenter] = useState([49.2606, -123.2460]); // Default center
+//     const [mapZoom] = useState(14); // Default zoom
 
 //     const handleMoreDetails = (pin) => {
-//         setDetailsVisible(true);
 //         setSelectedPin(pin);
+//         setDetailsVisible(true);
 //     };
 
 //     const handleCloseDetails = () => {
@@ -20,15 +24,26 @@
 //         setSelectedPin(null);
 //     };
 
+//     const toggleFavorite = (pinId) => {
+//         setFavorites(prevFavorites => {
+//             if (prevFavorites.includes(pinId)) {
+//                 return prevFavorites.filter(id => id !== pinId);
+//             } else {
+//                 return [...prevFavorites, pinId];
+//             }
+//         });
+//     };
+
 //     return (
 //         <div className="map-interface">
 //             <div className="map-container">
 //                 <MapContainer
-//                     center={[49.2606, -123.2460]}
-//                     zoom={14}
+//                     center={mapCenter}
+//                     zoom={mapZoom}
 //                     style={{ height: "700px", width: "100%" }}
 //                     fullscreenControl={true}
-//                     fullscreenControlOptions={{ position: 'topleft' }}>
+//                     fullscreenControlOptions={{ position: 'topleft' }}
+//                 >
 //                     <TileLayer
 //                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 //                         maxZoom={19}
@@ -36,11 +51,16 @@
 //                     {pins.map(pin => (
 //                         <Marker key={pin.id} position={pin.position}>
 //                             <Popup>
-//                                 <b>{pin.title}</b><br />{pin.description}
-//                                 <br></br>
-//                                 <br></br>
-//                                 <button onClick={handleMoreDetails}>More Details</button>
-//                                 {/* <ChatBox /> */}
+//                                 <div className="popup-content">
+//                                     <b>{pin.title}</b><br />{pin.description}
+//                                     <br></br>
+//                                     <br></br>
+//                                     <button onClick={() => handleMoreDetails(pin)}>More Details</button>
+//                                     {/* <ChatBox /> */}
+//                                     <div className="favorite" onClick={() => toggleFavorite(pin.id)}>
+//                                         {favorites.includes(pin.id) ? <FaStar /> : <FaRegStar />}
+//                                     </div>
+//                                 </div>
 //                             </Popup>
 //                         </Marker>
 //                     ))}
@@ -51,7 +71,7 @@
 //                     <div className="details-panel" onClick={(e) => e.stopPropagation()}>
 //                         <h2>{selectedPin.title}</h2>
 //                         <p>{selectedPin.description}</p>
-//                         <ChatBox /> 
+//                         <ChatBox />
 //                         <button onClick={handleCloseDetails}>Close</button>
 //                     </div>
 //                 </div>
@@ -77,6 +97,7 @@ const MapInterface = () => {
     const [favorites, setFavorites] = useState([]);
     const [mapCenter] = useState([49.2606, -123.2460]); // Default center
     const [mapZoom] = useState(14); // Default zoom
+    const [searchTerm, setSearchTerm] = useState('');
 
     const handleMoreDetails = (pin) => {
         setSelectedPin(pin);
@@ -98,9 +119,22 @@ const MapInterface = () => {
         });
     };
 
+    // Filter pins based on search term
+    const filteredPins = pins.filter(pin =>
+        pin.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
         <div className="map-interface">
             <div className="map-container">
+                 <div className="search-container">
+                    <input
+                        type="text"
+                        className="search-bar"
+                        placeholder="Search by Building Name"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}/>
+                </div>
                 <MapContainer
                     center={mapCenter}
                     zoom={mapZoom}
@@ -112,7 +146,7 @@ const MapInterface = () => {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         maxZoom={19}
                     />
-                    {pins.map(pin => (
+                    {filteredPins.map(pin => (
                         <Marker key={pin.id} position={pin.position}>
                             <Popup>
                                 <div className="popup-content">
@@ -145,4 +179,3 @@ const MapInterface = () => {
 };
 
 export default MapInterface;
-
