@@ -57,7 +57,7 @@ ul li a {
   border-radius: 6px;
 }
 
-ul li a:hover, 
+ul li a:hover,
 ul li a:active {
   background: #172b4d;
 }
@@ -83,13 +83,13 @@ header svg {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 200px;
   width: 50vw;
-  opacity: 0; 
-  animation: fadeIn 2s forwards; 
+  opacity: 0;
+  animation: fadeIn 2s forwards;
 }
 
 @keyframes fadeIn {
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -164,25 +164,35 @@ footer {
 }
 
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 27%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 27%;
+  }
 }
 
 @keyframes cursor {
-  from { border-right-color: rgba(255, 255, 255, 0.75); }
-  to { border-right-color: transparent; }
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
 }
 
 .typewriter {
   float: inline-start;
-  overflow: hidden; 
-  border-right: .15em solid rgba(255, 255, 255, 0.75); 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .08em; 
-  animation: 
-      typewriter 4s steps(40, end) 1s 1 normal both, 
-      cursor 500ms steps(40, end) infinite normal;
+  overflow: hidden;
+  border-right: .15em solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .08em;
+  animation:
+    typewriter 4s steps(40, end) 1s 1 normal both,
+    cursor 500ms steps(40, end) infinite normal;
 }
 
 header {
@@ -215,52 +225,61 @@ header {
 .map-interface {
   display: flex;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
   margin-top: 20px;
 }
 
 .map-container {
   flex: 1;
-  width: 70%; 
+  width: 70%;
   height: 700px;
-  position: relative; 
+  position: relative;
   margin-right: 10px;
   margin-left: 400px;
 }
 
 .details-panel {
-  width: 30%; 
-  margin-left: 10px; 
+  width: 30%;
+  margin-left: 10px;
 }
 
 .details-panel-container {
-  width: 30%; 
+  width: 30%;
   margin: auto;
-  background-color: #f0f0f0; 
-  border-radius: 8px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .details-content {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .details-content h2 {
-  margin-bottom: 10px; 
-  color: #333; 
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .details-content p {
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 .details-content button {
-  padding: 8px 16px; 
-  background-color: #007bff; 
+  padding: 8px 16px;
+  background-color: #007bff;
   color: #fff;
-  border: none; 
-  border-radius: 4px; 
-  cursor: pointer; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#userActionForChat {
+  padding: 4px 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .details-content button:hover {
@@ -269,18 +288,18 @@ header {
 
 @media (max-width: 768px) {
   .map-interface {
-      flex-direction: column;
-      align-items: center; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .map-container,
   .details-panel {
-      width: 100%;
-      margin: 0; 
+    width: 100%;
+    margin: 0;
   }
 
   .details-panel {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 }
 
