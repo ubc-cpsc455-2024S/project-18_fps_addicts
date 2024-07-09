@@ -10,7 +10,7 @@ const DetailsPanel = ({ pin, onClose }) => {
                 <ChatBox pinId={pin.id} />
                 <br></br>
                 <br></br>
-                <button onClick={onClose}>Close</button>
+                {/* <button onClick={onClose}>Close</button> */}
           
             </div>
         </div>
