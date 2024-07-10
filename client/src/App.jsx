@@ -20,7 +20,7 @@ const App = () => {
         document.body.classList.toggle('dark-mode', darkMode);
     };
 
-
+    // "port generated" - see chatserver.js
     useEffect(() => {
         const initialSocket = io('http://localhost:4000'); // Initial connection to get server IP
         initialSocket.on('serverIp', (ip) => {
@@ -33,6 +33,7 @@ const App = () => {
         };
     }, []);
 
+    // "port generated"
     useEffect(() => {
         if (serverIp) {
             const socket = io(`http://${serverIp}:4000`);
