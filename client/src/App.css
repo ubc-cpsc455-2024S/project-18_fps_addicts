@@ -6,10 +6,12 @@
 
 :root {
   --background-light: #ffffff;
-  --text-light: #333333;
+  --text-light: #000000;
   --background-dark: #222222;
-  --text-dark: #eeeeee;
+  --text-dark: #eaecef;
   --primary-color: #0d2b4c;
+  --header-background-light: #40B4E5;
+  --header-background-dark: #002145;
 }
 
 .mode-toggle {
@@ -24,11 +26,39 @@ body {
   padding: 0;
   color: var(--text-light);
   flex: 1;
+  transition: all 0.3s ease;
 }
 
 body.dark-mode {
   background-color: var(--background-dark);
   color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.dark-mode header {
+  background-color: var(--header-background-dark);
+}
+
+.dark-mode .navbar {
+  background-color: var(--header-background-dark);
+}
+
+.dark-mode .search-bar {
+  border-color: white;
+}
+
+.dark-mode ul li a {
+  color: var(--text-dark);
+}
+
+header {
+  background-color: var(--header-background-light);
+  height: 20px;
+  padding: 20px;
+}
+
+header svg {
+  font-size: 30px;
 }
 
 .search-container {
@@ -41,9 +71,9 @@ body.dark-mode {
 .search-bar {
   width: 80%; 
   padding: 10px; 
-  font-size: 16px; 
-  border: 2px solid white;
-  background: white; 
+  font-size: 16px;
+  border: 2px solid black;
+  background: white;
   border-radius: 4px; 
   color: black;
   /* margin-bottom: 20px */
@@ -51,12 +81,12 @@ body.dark-mode {
 
 .navbar {
   width: 180px;
-  background-color: #011627;
+  background-color: var(--header-background-light);
   position: absolute;
-  height: 85vh;
+  height: max-content;
   padding: 0 20px;
   left: -100%;
-  transition: all 0.8s ease;
+  transition: all 0.3s ease;
   z-index: 1000;
 }
 
@@ -74,7 +104,7 @@ ul li {
 }
 
 ul li a {
-  color: #eaecef;
+  color: var(--text-light);
   text-decoration: none;
   font-size: 16px;
   display: block;
@@ -90,12 +120,8 @@ ul li a:active {
 .burger:hover {
   background: #172b4d;
   cursor: pointer;
-  border: 8px solid #172b4d;
+  border: 2px solid #172b4d;
   border-radius: 6px;
-}
-
-header svg {
-  font-size: 30px;
 }
 
 
@@ -219,24 +245,18 @@ footer {
     cursor 500ms steps(40, end) infinite normal;
 }
 
-header {
-  background-color: #011627;
-  height: 20px;
-  padding: 20px;
-}
-
 .title {
   height: 10px;
 }
 
-.content {
-  transition: margin-left 0.5s ease;
-}
+/*.content {*/
+/*  transition: margin-left 0.5s ease;*/
+/*}*/
 
-.content.shifted {
-  margin-left: 180px;
-  transition: all 1s ease;
-}
+/*.content.shifted {*/
+/*  margin-left: 180px;*/
+/*  transition: all 1s ease;*/
+/*}*/
 
 @media (max-width: 768px) {
   .navbar {
@@ -291,14 +311,6 @@ header {
   color: gold;
   font-size: 20px;
   float: right;
-}
-
-body {
-  background-color: #121212;
-  color: #ffffff;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 .login-container {
