@@ -7,31 +7,65 @@ import RoomBookings from './pages/RoomBookings';
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import io from 'socket.io-client';
 
 const App = () => {
     const [displayNav, setDisplayNav] = useState(false)
     const [darkMode, setDarkMode] = useState(false);
+    const [serverIp, setServerIp] = useState('');
 
     const toggleDarkMode = () => {
-      setDarkMode(!darkMode);
-      document.body.classList.toggle('dark-mode', darkMode); 
+        setDarkMode(!darkMode);
+        document.body.classList.toggle('dark-mode', darkMode);
     };
+
+    // "port generated" - see chatserver.js
+    useEffect(() => {
+        const initialSocket = io('http://localhost:4000'); // Initial connection to get server IP
+        initialSocket.on('serverIp', (ip) => {
+            setServerIp(ip); // Update state with server IP
+            initialSocket.disconnect(); // Disconnect initial socket
+        });
+
+        return () => {
+            initialSocket.disconnect();
+        };
+    }, []);
+
+    // "port generated"
+    useEffect(() => {
+        if (serverIp) {
+            const socket = io(`http://${serverIp}:4000`);
+            socket.on('connect', () => {
+                console.log('Connected to server');
+            });
+
+            socket.on('disconnect', () => {
+                console.log('Disconnected from server');
+            });
+
+            return () => {
+                socket.disconnect();
+            };
+        }
+    }, [serverIp]);
+
 
     return (
         <div>
             <Router>
                 <header className='title'>
-                
+
                     <h1 className="typewriter">UBC StudySpotter</h1>
                     <button className="mode-toggle" onClick={toggleDarkMode}>
                         {darkMode ? 'Light Mode' : 'Dark Mode'}
                     </button>
                 </header>
                 <header className="App-header">
-                    <RxHamburgerMenu className='burger' onClick={() => setDisplayNav(!displayNav)}/>
+                    <RxHamburgerMenu className='burger' onClick={() => setDisplayNav(!displayNav)} />
                 </header>
-                <NavBar display={displayNav}/>
+                <NavBar display={displayNav} />
                 <div className={`content ${displayNav ? 'shifted' : ''}`}>
                     <Routes>
                         <Route path="/" element={<Home />} />
