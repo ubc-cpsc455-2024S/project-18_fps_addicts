@@ -68,13 +68,14 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store user info in session
         req.session.user = user;
-
-        // Redirect to your React app
         res.redirect('http://localhost:5173/login');
     } catch (error) {
         console.error('Error getting tokens:', error);
-        res.status(500).json({ error: 'Failed to get tokens' });
+        // res.status(500).json({ error: 'Failed to get tokens' });
+        res.redirect('http://localhost:5173/login');
     }
+
+
 });
 
 router.get('/auth/logout', (req, res, next) => {
