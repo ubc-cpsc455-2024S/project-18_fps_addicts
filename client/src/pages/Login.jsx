@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser, signUpUser } from '../redux/users/authSlice';
+// import { loginUser, signUpUser } from '../redux/users/authSlice';
 import '../App.css';
+import GoogleAuth from "../components/GoogleAuth.jsx";
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
-  const authStatus = useSelector((state) => state.auth.status);
+  const authStatus = useSelector((state) => state.auth.isAuthenticated);
   const authError = useSelector((state) => state.auth.error);
+  const user = useSelector((state) => state.auth.user);
 
   const handleLogin = () => {
-    dispatch(loginUser({ email, password }));
+    // dispatch(loginUser({ email, password }));
   };
 
   const handleSignUp = () => {
-    dispatch(signUpUser({ email, password }));
+    // dispatch(signUpUser({ email, password }));
   };
 
   return (
@@ -43,6 +45,7 @@ const Login = () => {
       </button>
       {authStatus === 'loading' && <p>Loading...</p>}
       {authStatus === 'failed' && <p>Error: {authError}</p>}
+        <GoogleAuth />
     </div>
   );
 };

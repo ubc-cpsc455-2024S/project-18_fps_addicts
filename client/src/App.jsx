@@ -11,19 +11,30 @@ import { useState, useEffect } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import io from 'socket.io-client';
 import './App.css';
+import {jwtDecode} from "jwt-decode";
 
 const App = () => {
     const [displayNav, setDisplayNav] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
     const [serverIp, setServerIp] = useState('');
+    const [darkMode, setDarkMode] = useState(() => {
+        const savedDarkMode = localStorage.getItem('darkMode');
+        return savedDarkMode === 'true' || (savedDarkMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    });
 
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
+        setDarkMode(prevMode => !prevMode);
     };
 
     useEffect(() => {
+        const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+        setDarkMode(savedDarkMode);
+    }, []);
+
+    useEffect(() => {
         document.body.classList.toggle('dark-mode', darkMode);
+        localStorage.setItem('darkMode', darkMode);
     }, [darkMode]);
+
 
     // "port generated" - see chatserver.js
     useEffect(() => {
@@ -56,6 +67,26 @@ const App = () => {
         }
     }, [serverIp]);
 
+    const handleCallbackResponse = (response) => {
+        console.log("Encoded JWT token: " + response.credential);
+        const userObject = jwtDecode(response.credential);
+        console.log(userObject);
+    };
+
+    // useEffect(() => {
+    //     /* global google */
+    //     google.accounts.id.initialize({
+    //         client_id: "761190464142-13nrmtjol14dcbpuj8smo3f4cqubhkvt.apps.googleusercontent.com",
+    //         callback: handleCallbackResponse
+    //     });
+    //
+    //     google.accounts.id.renderButton(
+    //         document.getElementById("signInDiv"),
+    //         { theme: "outline", size: "large" }
+    //     );
+    // }, []);
+
+
 
     return (
         <div>
@@ -81,6 +112,7 @@ const App = () => {
                     <Footer />
                 </div>
             </Router>
+            {/*<div id="signInDiv"></div>*/}
         </div>
     );
 };
