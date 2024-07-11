@@ -87,6 +87,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import 'leaflet/dist/leaflet.css';
 import pins from '../assets/pinData.json';
+import DetailsPanel from './DetailsPanel.jsx';
 import ChatBox from './Chatbox.jsx';
 import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.css';
 import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.js';
@@ -169,7 +170,11 @@ const MapInterface = () => {
                     <div className="details-panel" onClick={(e) => e.stopPropagation()}>
                         <h2>{selectedPin.title}</h2>
                         <p>{selectedPin.description}</p>
-                        <ChatBox />
+
+                            <div className="details-panel-container">
+                            <DetailsPanel pin={selectedPin} onClose={handleCloseDetails} />
+                            </div>
+                            {/* <ChatBox /> */}
                         <button onClick={handleCloseDetails}>Close</button>
                     </div>
                 </div>
