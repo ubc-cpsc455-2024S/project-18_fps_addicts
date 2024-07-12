@@ -55,10 +55,10 @@ router.get('/auth/google/callback', async (req, res) => {
         const { data } = await oauth2.userinfo.get();
 
         // Find or create user in the database
-        let user = await User.findOne({ googleId: data.id });
+        let user = await User.findById( data.id );
         if (!user) {
             user = new User({
-                googleId: data.id,
+                _id: data.id,
                 email: data.email,
                 name: data.name,
                 picture: data.picture
@@ -68,11 +68,10 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store user info in session
         req.session.user = user;
-        res.redirect('http://localhost:5173/login');
+        res.redirect('http://localhost:5173/profile');
     } catch (error) {
         console.error('Error getting tokens:', error);
-        // res.status(500).json({ error: 'Failed to get tokens' });
-        res.redirect('http://localhost:5173/login');
+        res.redirect('http://localhost:5173/profile');
     }
 
 

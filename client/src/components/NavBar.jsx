@@ -9,7 +9,7 @@ const NavBar = ({display}) => {
     return (
         <div className={display ? "navbar active" : "navbar"}>
             <ul>
-                <li><Link to="/login"><IoPersonSharp /> Login</Link></li>
+                <li><Link to="/profile"><IoPersonSharp /> Profile</Link></li>
                 <li><Link to="/"><FaHome /> Home</Link></li>
                 <li><Link to="/about"><BsInfoSquareFill /> About</Link></li>
                 <li><Link to="/room-bookings"><FaBookReader /> Room Bookings</Link></li>
