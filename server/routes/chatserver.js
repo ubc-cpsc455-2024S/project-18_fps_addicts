@@ -6,7 +6,7 @@ const { Server } = require('socket.io');
 const os = require('os');
 const cors = require('cors');
 const router = express();
-
+ // "start": "node ./bin/www" - old package start
 
 router.use(cors());
 
@@ -46,6 +46,8 @@ io.on('connection', (socket) => {
 
     // "port generated"
     socket.emit('serverIp', localIpAddress);
+
+    
 
     socket.on('join', (pinId) => {
         socket.join(pinId);
