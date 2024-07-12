@@ -5,13 +5,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import RoomBookings from './pages/RoomBookings';
 import Footer from './components/Footer';
-import Login from './pages/Login';
+import Profile from './pages/Profile.jsx';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState, useEffect } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import io from 'socket.io-client';
 import './App.css';
-import {jwtDecode} from "jwt-decode";
 
 const App = () => {
     const [displayNav, setDisplayNav] = useState(false);
@@ -67,26 +66,6 @@ const App = () => {
         }
     }, [serverIp]);
 
-    const handleCallbackResponse = (response) => {
-        console.log("Encoded JWT token: " + response.credential);
-        const userObject = jwtDecode(response.credential);
-        console.log(userObject);
-    };
-
-    // useEffect(() => {
-    //     /* global google */
-    //     google.accounts.id.initialize({
-    //         client_id: "761190464142-13nrmtjol14dcbpuj8smo3f4cqubhkvt.apps.googleusercontent.com",
-    //         callback: handleCallbackResponse
-    //     });
-    //
-    //     google.accounts.id.renderButton(
-    //         document.getElementById("signInDiv"),
-    //         { theme: "outline", size: "large" }
-    //     );
-    // }, []);
-
-
 
     return (
         <div>
@@ -107,7 +86,7 @@ const App = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/room-bookings" element={<RoomBookings />} />
-                        <Route path="/login" element={<Login />} />
+                        <Route path="/profile" element={<Profile />} />
                     </Routes>
                     <Footer />
                 </div>

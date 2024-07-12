@@ -26,13 +26,11 @@ body {
   padding: 0;
   color: var(--text-light);
   flex: 1;
-  transition: all 0.3s ease;
 }
 
 body.dark-mode {
   background-color: var(--background-dark);
   color: var(--text-dark);
-  transition: all 0.3s ease;
 }
 
 .dark-mode header {
@@ -347,7 +345,7 @@ footer {
   }
 }
 
-.login-container {
+.profile-container {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
@@ -357,7 +355,7 @@ footer {
   text-align: center;
 }
 
-.login-title {
+.profile-title {
   font-size: 24px;
   margin-bottom: 20px;
   color: #ffffff;
@@ -367,7 +365,7 @@ footer {
   margin-bottom: 15px;
 }
 
-.login-input {
+.profile-input {
   text-align: left;
   width: 80%;
   padding: 10px;
@@ -378,11 +376,11 @@ footer {
   color: #ffffff;
 }
 
-.login-input::placeholder {
+.profile-input::placeholder {
   color: #888;
 }
 
-.login-button,
+.profile-button,
 .signup-button {
   width: 85%;
   padding: 10px;
@@ -396,7 +394,7 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-.login-button:hover,
+.profile-button:hover,
 .signup-button:hover {
   background-color: #0056b3;
 }
