@@ -5,20 +5,35 @@ import Home from './pages/Home';
 import About from './pages/About';
 import RoomBookings from './pages/RoomBookings';
 import Footer from './components/Footer';
-import Login from './pages/Login';
+import Profile from './pages/Profile.jsx';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState, useEffect } from 'react';
+import { FiSun, FiMoon } from 'react-icons/fi';
 import io from 'socket.io-client';
+import './App.css';
 
 const App = () => {
-    const [displayNav, setDisplayNav] = useState(false)
-    const [darkMode, setDarkMode] = useState(false);
+    const [displayNav, setDisplayNav] = useState(false);
     const [serverIp, setServerIp] = useState('');
+    const [darkMode, setDarkMode] = useState(() => {
+        const savedDarkMode = localStorage.getItem('darkMode');
+        return savedDarkMode === 'true' || (savedDarkMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    });
 
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-        document.body.classList.toggle('dark-mode', darkMode);
+        setDarkMode(prevMode => !prevMode);
     };
+
+    useEffect(() => {
+        const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+        setDarkMode(savedDarkMode);
+    }, []);
+
+    useEffect(() => {
+        document.body.classList.toggle('dark-mode', darkMode);
+        localStorage.setItem('darkMode', darkMode);
+    }, [darkMode]);
+
 
     // "port generated" - see chatserver.js
     useEffect(() => {
@@ -59,7 +74,7 @@ const App = () => {
 
                     <h1 className="typewriter">UBC StudySpotter</h1>
                     <button className="mode-toggle" onClick={toggleDarkMode}>
-                        {darkMode ? 'Light Mode' : 'Dark Mode'}
+                        {darkMode ? <FiSun /> : <FiMoon />}
                     </button>
                 </header>
                 <header className="App-header">
@@ -71,11 +86,12 @@ const App = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/room-bookings" element={<RoomBookings />} />
-                        <Route path="/login" element={<Login />} />
+                        <Route path="/profile" element={<Profile />} />
                     </Routes>
                     <Footer />
                 </div>
             </Router>
+            {/*<div id="signInDiv"></div>*/}
         </div>
     );
 };

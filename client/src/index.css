@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /*color-scheme: light dark;*/
+  /*color: rgba(255, 255, 255, 0.87);*/
+  /*background-color: #242424;*/
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,38 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ------------------- Nav Bar ------------------- */
-
-nav {
-  width: 100%;
-  background-color: #fff; /* Light background color for the nav bar */
-  border-bottom: 1px solid #ddd; /* Subtle border to separate the nav bar */
-  position: fixed; /* Fix the nav bar at the top */
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 50px; /* Set a fixed height for the nav bar */
-}
-
-nav li {
-  margin: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  padding: 10px 15px;
-  display: block;
-}
 
 h1, h2 {
   margin-top: 70px; /* Add top margin to avoid content being hidden under the fixed nav bar */
