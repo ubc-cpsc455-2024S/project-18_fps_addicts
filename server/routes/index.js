@@ -108,7 +108,8 @@ router.get('/api/user', async (req, res) => {
 
     try {
         const { data } = await oauth2.userinfo.get();
-        res.json(data);
+        let user = await User.findById( data.id );
+        res.json(user);
     } catch (error) {
         console.error('Error fetching user info:', error);
         res.status(500).json({ error: 'Failed to fetch user info' });
