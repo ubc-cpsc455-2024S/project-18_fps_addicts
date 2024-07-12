@@ -5,7 +5,7 @@ import profileReducer from './users/profileSlice';
 export const store = configureStore({
     reducer: {
         auth: authReducer,
-        profile: profileReducer
+        profile: profileReducer,
     }
 });
 
