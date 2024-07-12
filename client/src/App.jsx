@@ -22,7 +22,7 @@ const App = () => {
 
     // "port generated" - see chatserver.js
     useEffect(() => {
-        const initialSocket = io('http://localhost:4000'); // Initial connection to get server IP
+        const initialSocket = io('http://192.168.1.89:4000'); // Initial connection to get server IP
         initialSocket.on('serverIp', (ip) => {
             setServerIp(ip); // Update state with server IP
             initialSocket.disconnect(); // Disconnect initial socket
