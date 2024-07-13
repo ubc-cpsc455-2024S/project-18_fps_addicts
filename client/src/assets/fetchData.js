@@ -55,7 +55,7 @@ const fetchRoomData = async (transformed) => {
       const document = dom.window.document;
 
       const tableRows = document.querySelectorAll('tr');
-      let room = '', address = '', capacity = '', moreInfo = '', link = '';
+      let room = '', address = '', capacity = '', moreInfo = '', link = '', imageUrl = '';
 
       tableRows.forEach(row => {
         const cells = row.querySelectorAll('td');
@@ -83,13 +83,19 @@ const fetchRoomData = async (transformed) => {
         }
       });
 
+      const imgTag = document.querySelector('img');
+      if (imgTag) {
+        imageUrl = imgTag.src;
+      }
+
       const waypoint = {
         id: room.replace(/\s+/g, '-').toLowerCase(),
         title: room,
         address: address,
         description: moreInfo,
         capacity: capacity,
-        link: link.startsWith('http') ? link : `https://learningspaces.ubc.ca${link}`
+        link: link.startsWith('http') ? link : `https://learningspaces.ubc.ca${link}`,
+        imageUrl: imageUrl.startsWith('http') ? imageUrl : `https://learningspaces.ubc.ca${imageUrl}`
       };
 
       waypointData.push(waypoint);

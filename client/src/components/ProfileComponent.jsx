@@ -51,7 +51,7 @@ const ProfileComponent = () => {
                     onChange={e => setEmail(e.target.value)}
                     placeholder="Email"
                 />
-                <button onClick={handleUpdate}>Update Profile</button>
+                <button className="update-button" onClick={handleUpdate}>Update Profile</button>
             </div>
         </div>
     );

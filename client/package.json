@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
     "axios": "^1.7.2",
+    "cors": "^2.8.5",
     "css-select": "^5.1.0",
     "dom-serializer": "^2.0.0",
     "fs": "^0.0.1-security",

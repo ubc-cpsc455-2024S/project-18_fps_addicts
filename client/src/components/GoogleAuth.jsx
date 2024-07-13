@@ -47,14 +47,14 @@ const GoogleAuth = () => {
             {isAuthenticated ? (
                 <button
                     onClick={handleLogout}
-                    className="flex items-center space-x-2 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+                    className="logout-button"
                 >
                     <span>Logout</span>
                 </button>
             ) : (
                 <button
                     onClick={handleLogin}
-                    className="flex items-center space-x-2 bg-white hover:bg-gray-100 text-gray-800 font-bold py-2 px-4 border border-gray-400 rounded shadow transition duration-300 ease-in-out"
+                    className="google-button"
                 >
                     <span>Login with Google</span>
                 </button>
