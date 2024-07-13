@@ -5,8 +5,12 @@ const DetailsPanel = ({ pin, onClose }) => {
     return (
         <div className="details-panel">
             <div className="details-content">
-                <h3>{pin.title}</h3>
+                {/* <h3>{pin.title}</h3> */}
                 <p>{pin.details}</p>
+                <p><b>Outlet availability:</b> {pin.power_port_availability}</p>
+                <p><b>Lighting:</b> {pin.lighting}</p>
+                <p><b>Capacity:</b> {pin.capacity}</p>
+                <p><b>More info:</b> <a href={pin.link} target="_blank" rel="noopener noreferrer">Visit Link</a></p>
                 <ChatBox pinId={pin.id} />
                 <br></br>
                 <br></br>
