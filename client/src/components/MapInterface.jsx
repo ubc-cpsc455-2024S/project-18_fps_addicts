@@ -100,7 +100,7 @@ const MapInterface = () => {
     const [mapZoom] = useState(14); // Default zoom
     const [searchTerm, setSearchTerm] = useState('');
 
-    const handleMoreDetails = (pin) => {
+    const handleMoreDetails = (pin, point) => {
         setSelectedPin(pin);
         setDetailsVisible(true);
     };
@@ -169,10 +169,21 @@ const MapInterface = () => {
                 <div className="overlay" onClick={handleCloseDetails}>
                     <div className="details-panel" onClick={(e) => e.stopPropagation()}>
                         <h2>{selectedPin.title}</h2>
-                        <p>{selectedPin.description}</p>
+
+                        <p>{selectedPin.description}</p> 
+                        <label><strong>Power Port Availability:</strong> {selectedPin.power_port_availability}</label> 
+                        <br></br>
+                        <label><strong>Capacity:</strong> {selectedPin.capacity}</label> 
+                        <br></br>
+                        <br></br>
+                        <a href={selectedPin.link}>Click for more info!</a>
+
+
                             <div className="details-panel-container">
                             <DetailsPanel pin={selectedPin} onClose={handleCloseDetails} />
                             </div>
+                            {/* <ChatBox /> */}
+
                         <button onClick={handleCloseDetails}>Close</button>
                     </div>
                 </div>

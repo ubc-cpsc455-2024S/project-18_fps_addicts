@@ -84,7 +84,7 @@ header svg {
   height: max-content;
   padding: 0 20px;
   left: -100%;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
   z-index: 1000;
 }
 
@@ -315,7 +315,7 @@ footer {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  background: #1e1e1e;
+  background: #515151;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -379,4 +379,15 @@ footer {
 
 p {
   margin-top: 20px;
+}
+
+.logout-button,
+.google-button {
+  margin-bottom: 20px;
+
+}
+
+.update-button {
+  margin-bottom: 20px;
+  margin-top: 20px;;
 }
