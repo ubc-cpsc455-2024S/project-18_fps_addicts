@@ -5,6 +5,7 @@ const DetailsPanel = ({ pin }) => {
     return (
         <div className="details-panel">
             <div className="details-content">
+
                 {/* <h3>{pin.title}</h3>
                 <p>{pin.details}</p> */}
                 <ChatBox pinId={pin.id} />

@@ -47,7 +47,9 @@ const GoogleAuth = () => {
             {isAuthenticated ? (
                 <button
                     onClick={handleLogout}
+
                     className="logout-button"
+
                 >
                     <span>Logout</span>
                 </button>
@@ -55,6 +57,7 @@ const GoogleAuth = () => {
                 <button
                     onClick={handleLogin}
                     className="google-button"
+
                 >
                     <span>Login with Google</span>
                 </button>

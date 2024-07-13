@@ -22,7 +22,9 @@ const ChatBox = ({ pinId }) => {
     const [socket, setSocket] = useState(null);
 
     useEffect(() => {
-        const initialSocket = io('http://75.156.8.45:4000', {
+
+        const initialSocket = io('http://192.168.1.89:4000', {
+          
             transports: ['websocket', 'polling', 'flashsocket']
         });
 
