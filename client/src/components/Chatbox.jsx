@@ -23,13 +23,13 @@ const ChatBox = ({ pinId }) => {
 
     useEffect(() => {
 
-        const initialSocket = io('http://192.168.1.89:4000', {
+        const initialSocket = io('https://ubcstudyspotterserver.onrender.com', {
           
             transports: ['websocket', 'polling', 'flashsocket']
         });
 
         initialSocket.on('serverIp', (ip) => {
-            const newSocket = io(`http://${ip}:4000`, {
+            const newSocket = io('https://ubcstudyspotterserver.onrender.com', {
                 transports: ['websocket', 'polling', 'flashsocket']
             });
             setSocket(newSocket);

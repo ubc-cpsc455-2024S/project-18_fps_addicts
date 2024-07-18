@@ -37,7 +37,7 @@ const App = () => {
 
     // "port generated" - see chatserver.js
     useEffect(() => {
-        const initialSocket = io('http://192.168.1.89:4000'); // Initial connection to get server IP
+        const initialSocket = io('https://ubcstudyspotterserver.onrender.com'); // Initial connection to get server IP
 
         initialSocket.on('serverIp', (ip) => {
             setServerIp(ip); // Update state with server IP
@@ -52,7 +52,7 @@ const App = () => {
     // "port generated"
     useEffect(() => {
         if (serverIp) {
-            const socket = io(`http://${serverIp}:4000`);
+            const socket = io('https://ubcstudyspotterserver.onrender.com');
             socket.on('connect', () => {
                 console.log('Connected to server');
             });

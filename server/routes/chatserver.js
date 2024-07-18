@@ -6,9 +6,14 @@ const { Server } = require('socket.io');
 const os = require('os');
 const cors = require('cors');
 const router = express();
+require("dotenv").config();
  // "start": "node ./bin/www" - old package start
 
-router.use(cors());
+const corsOptions = {
+    origin: "http://localhost:3000" // frontend URI (ReactJS)
+}
+
+router.use(cors(corsOptions));
 
 const server = http.createServer(router);
 

@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(r =>
 const oauth2Client = new google.auth.OAuth2(
     process.env.GOOGLE_CLIENT_ID,
     process.env.GOOGLE_CLIENT_SECRET,
-    'http://localhost:3000/auth/google/callback'
+    'https://ubcstudyspotterserver.onrender.com/auth/google/callback'
 );
 
 // Define routes
