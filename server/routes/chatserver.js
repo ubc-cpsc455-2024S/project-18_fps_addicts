@@ -10,7 +10,7 @@ require("dotenv").config();
  // "start": "node ./bin/www" - old package start
 
 const corsOptions = {
-    origin: "http://localhost:3000" // frontend URI (ReactJS)
+    origin: "https://ubcstudyspotterclient.onrender.com" // frontend URI (ReactJS)
 }
 
 router.use(cors(corsOptions));

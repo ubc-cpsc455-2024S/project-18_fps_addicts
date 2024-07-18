@@ -16,7 +16,7 @@ router.use(session({
 }));
 
 router.use(cors({
-    origin: 'http://localhost:5173', // Specify the frontend origin
+    origin: 'https://ubcstudyspotterclient.onrender.com', // Specify the frontend origin
     credentials: true // Allow credentials (cookies) to be sent
 }));
 
@@ -68,10 +68,10 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store user info in session
         req.session.user = user;
-        res.redirect('http://localhost:5173/profile');
+        res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
     } catch (error) {
         console.error('Error getting tokens:', error);
-        res.redirect('http://localhost:5173/profile');
+        res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
     }
 
 
