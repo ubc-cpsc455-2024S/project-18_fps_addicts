@@ -6,18 +6,15 @@
 (function (root, factory) {
 	if (typeof define === 'function' && define.amd) {
 		// define an AMD module that requires 'leaflet'
-		// and resolve to an object containing leaflet
-		define('leafletFullScreen', ['leaflet'], factory);
+		define(['leaflet'], factory);
 	} else if (typeof module === 'object' && module.exports) {
 		// define a CommonJS module that requires 'leaflet'
 		module.exports = factory(require('leaflet'));
 	} else {
-		// Assume 'leaflet' are loaded into global variable already
+		// Assume 'leaflet' is loaded into global variable already
 		factory(root.L);
 	}
-}(typeof self !== 'undefined'
-	? self
-	: this, (leaflet) => {
+}(typeof self !== 'undefined' ? self : this, function (L) {
 	'use strict';
 
 	if (typeof document === 'undefined') {
@@ -132,7 +129,7 @@
 		}
 	});
 
-	leaflet.Control.FullScreen = leaflet.Control.extend({
+	L.Control.FullScreen = L.Control.extend({
 		options: {
 			position: 'topleft',
 			title: 'Full Screen',
@@ -152,7 +149,7 @@
 			if (map.zoomControl && !this.options.forceSeparateButton) {
 				container = map.zoomControl._container;
 			} else {
-				container = leaflet.DomUtil.create('div', 'leaflet-bar');
+				container = L.DomUtil.create('div', 'leaflet-bar');
 			}
 
 			if (this.options.content) {
@@ -170,23 +167,23 @@
 		},
 
 		onRemove() {
-			leaflet.DomEvent
-				.off(this.link, 'click', leaflet.DomEvent.stop)
+			L.DomEvent
+				.off(this.link, 'click', L.DomEvent.stop)
 				.off(this.link, 'click', this.toggleFullScreen, this);
 
 			if (this._screenfull.isEnabled) {
-				leaflet.DomEvent
-					.off(this._container, this._screenfull.nativeAPI.fullscreenchange, leaflet.DomEvent.stop)
+				L.DomEvent
+					.off(this._container, this._screenfull.nativeAPI.fullscreenchange, L.DomEvent.stop)
 					.off(this._container, this._screenfull.nativeAPI.fullscreenchange, this._handleFullscreenChange, this);
 
-				leaflet.DomEvent
-					.off(document, this._screenfull.nativeAPI.fullscreenchange, leaflet.DomEvent.stop)
+				L.DomEvent
+					.off(document, this._screenfull.nativeAPI.fullscreenchange, L.DomEvent.stop)
 					.off(document, this._screenfull.nativeAPI.fullscreenchange, this._handleFullscreenChange, this);
 			}
 		},
 
 		_createButton(title, className, content, container, fn, context) {
-			this.link = leaflet.DomUtil.create('a', className, container);
+			this.link = L.DomUtil.create('a', className, container);
 			this.link.href = '#';
 			this.link.title = title;
 			this.link.innerHTML = content;
@@ -196,17 +193,17 @@
 
 			L.DomEvent.disableClickPropagation(container);
 
-			leaflet.DomEvent
-				.on(this.link, 'click', leaflet.DomEvent.stop)
+			L.DomEvent
+				.on(this.link, 'click', L.DomEvent.stop)
 				.on(this.link, 'click', fn, context);
 
 			if (this._screenfull.isEnabled) {
-				leaflet.DomEvent
-					.on(container, this._screenfull.nativeAPI.fullscreenchange, leaflet.DomEvent.stop)
+				L.DomEvent
+					.on(container, this._screenfull.nativeAPI.fullscreenchange, L.DomEvent.stop)
 					.on(container, this._screenfull.nativeAPI.fullscreenchange, this._handleFullscreenChange, context);
 
-				leaflet.DomEvent
-					.on(document, this._screenfull.nativeAPI.fullscreenchange, leaflet.DomEvent.stop)
+				L.DomEvent
+					.on(document, this._screenfull.nativeAPI.fullscreenchange, L.DomEvent.stop)
 					.on(document, this._screenfull.nativeAPI.fullscreenchange, this._handleFullscreenChange, context);
 			}
 
@@ -220,7 +217,7 @@
 				if (this._screenfull.isEnabled && !this.options.forcePseudoFullscreen) {
 					this._screenfull.exit().then(() => map.invalidateSize());
 				} else {
-					leaflet.DomUtil.removeClass(this.options.fullscreenElement
+					L.DomUtil.removeClass(this.options.fullscreenElement
 						? this.options.fullscreenElement
 						: map._container, 'leaflet-pseudo-fullscreen');
 					map.invalidateSize();
@@ -234,7 +231,7 @@
 						? this.options.fullscreenElement
 						: map._container).then(() => map.invalidateSize());
 				} else {
-					leaflet.DomUtil.addClass(this.options.fullscreenElement
+					L.DomUtil.addClass(this.options.fullscreenElement
 						? this.options.fullscreenElement
 						: map._container, 'leaflet-pseudo-fullscreen');
 					map.invalidateSize();
@@ -264,21 +261,21 @@
 		}
 	});
 
-	leaflet.Map.include({
+	L.Map.include({
 		toggleFullscreen() {
 			this.fullscreenControl.toggleFullScreen();
 		}
 	});
 
-	leaflet.Map.addInitHook(function () {
+	L.Map.addInitHook(function () {
 		if (this.options.fullscreenControl) {
-			this.addControl(leaflet.control.fullscreen(this.options.fullscreenControlOptions));
+			this.addControl(L.control.fullscreen(this.options.fullscreenControlOptions));
 		}
 	});
 
-	leaflet.control.fullscreen = function (options) {
-		return new leaflet.Control.FullScreen(options);
+	L.control.fullscreen = function (options) {
+		return new L.Control.FullScreen(options);
 	};
 
-	return { leaflet };
+	return { L };
 }));
