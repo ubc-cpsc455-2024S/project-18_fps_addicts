@@ -65,7 +65,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('message', (message) => {
-        const { pinId } = message;
+        const { pinId, userId } = message;
 
         if (!messages[pinId]) {
             messages[pinId] = [];
@@ -79,20 +79,24 @@ io.on('connection', (socket) => {
     // The prompt used was: how to make a edit a message in a chatbox.
     // modifcations were made to intergrate it to the porject. One such major modification made was to make it so each pin is treated differently
     socket.on('edit-message', (editedMessage) => {
-        const { pinId, id } = editedMessage;
+        const { pinId, id, userId } = editedMessage;
 
         if (messages[pinId]) {
-            messages[pinId] = messages[pinId].map((msg) =>
-                msg.id === id ? editedMessage : msg
-            );
-            io.to(pinId).emit('edit-message', editedMessage);
+            const message = messages[pinId].find((msg) => msg.id === id);
+            if (message && message.userId === userId) {
+                Object.assign(message, editedMessage);
+                io.to(pinId).emit('edit-message', editedMessage);
+            }
         }
     });
 
-    socket.on('delete-message', ({ pinId, messageId }) => {
+    socket.on('delete-message', ({ pinId, messageId, userId }) => {
         if (messages[pinId]) {
-            messages[pinId] = messages[pinId].filter((msg) => msg.id !== messageId);
-            io.to(pinId).emit('delete-message', { pinId, messageId });
+            const messageIndex = messages[pinId].findIndex((msg) => msg.id === messageId);
+            if (messageIndex !== -1 && messages[pinId][messageIndex].userId === userId) {
+                messages[pinId].splice(messageIndex, 1);
+                io.to(pinId).emit('delete-message', { pinId, messageId });
+            }
         }
     });
 
