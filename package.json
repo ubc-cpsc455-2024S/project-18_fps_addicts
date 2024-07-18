@@ -4,7 +4,7 @@
   "description": "",
   
   "scripts": {
-    "install-server": "cd server && npm install && npm install express && npm install dotenv && npm install uuid && npm install axios && npm install socket.io-client",
+    "install-server": "cd server && npm install && npm install express && npm i leaflet && npm install dotenv && npm install uuid && npm install axios && npm install socket.io-client",
     "start-server": "cd server && node app.js",
     "install-client": "cd client && npm install",
     "build-client": "cd client && npm run build",
