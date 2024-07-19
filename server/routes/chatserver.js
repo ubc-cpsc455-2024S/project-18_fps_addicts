@@ -6,7 +6,7 @@ const { Server } = require('socket.io');
 const os = require('os');
 const cors = require('cors');
 const router = express();
-
+const Filter = require('bad-words');
  // "start": "node ./bin/www" - old package start
 
 const corsOptions = {
@@ -48,6 +48,7 @@ function getLocalIpAddress() {
 let messages = {};
 const welcomeMessage = { text: 'Welcome to the chat!', timestamp: new Date().toISOString(), editable: false };
 const localIpAddress = getLocalIpAddress();
+const filter = new Filter();
 
 io.on('connection', (socket) => {
     console.log('New client connected');
@@ -73,6 +74,8 @@ io.on('connection', (socket) => {
     socket.on('message', (message) => {
         const { pinId } = message;
 
+        message.text = filter.clean(message.text);
+
         if (!messages[pinId]) {
             messages[pinId] = [];
         }
@@ -87,9 +90,12 @@ io.on('connection', (socket) => {
     socket.on('edit-message', (editedMessage) => {
         const { pinId, id, userId } = editedMessage;
 
+       
+
         if (messages[pinId]) {
             const message = messages[pinId].find((msg) => msg.id === id);
             if (message && message.userId === userId) {
+                editedMessage.text = filter.clean(editedMessage.text);
                 Object.assign(message, editedMessage);
                 io.to(pinId).emit('edit-message', editedMessage);
             }
