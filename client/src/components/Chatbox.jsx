@@ -22,7 +22,7 @@ const socket = io('https://ubcstudyspotterserver.onrender.com', {
     transports: ['websocket', 'polling', 'flashsocket']
 });
 
-const userId = uuidv4();
+const userId = localStorage.getItem('userId') || uuidv4();
 localStorage.setItem('userId', userId);
 
 const ChatBox = ({ pinId }) => {

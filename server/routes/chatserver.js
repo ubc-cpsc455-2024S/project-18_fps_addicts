@@ -10,7 +10,11 @@ const router = express();
  // "start": "node ./bin/www" - old package start
 
 const corsOptions = {
-    origin: "https://ubcstudyspotterclient.onrender.com" // frontend URI (ReactJS)
+    origin: "https://ubcstudyspotterclient.onrender.com", // frontend URI (ReactJS)
+  
+    methods: ['GET', 'POST'],
+    credentials: true,
+    optionsSuccessStatus: 200
 }
 
 router.use(cors(corsOptions));
@@ -23,7 +27,7 @@ const server = http.createServer(router);
 //everything tagged with "port generated" was in part created thanks to this prompt
 const io = new Server(server, {
     cors: {
-        origin: '*', // Allow all origins (You can specify the origin you want to allow)
+        origin: 'https://ubcstudyspotterclient.onrender.com', // Allow all origins (You can specify the origin you want to allow)
         methods: ['GET', 'POST'],
     },
 });
@@ -54,8 +58,9 @@ io.on('connection', (socket) => {
 
     
 
-    socket.on('join', (pinId) => {
+    socket.on('join', ({ pinId, userId }) => {
         socket.join(pinId);
+        socket.userId = userId;
 
         if (!messages[pinId]) {
             messages[pinId] = [welcomeMessage];
@@ -64,8 +69,9 @@ io.on('connection', (socket) => {
         socket.emit('init', messages[pinId]);
     });
 
+
     socket.on('message', (message) => {
-        const { pinId, userId } = message;
+        const { pinId } = message;
 
         if (!messages[pinId]) {
             messages[pinId] = [];
