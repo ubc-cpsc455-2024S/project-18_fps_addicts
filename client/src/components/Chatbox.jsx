@@ -83,7 +83,8 @@ const ChatBox = ({ pinId }) => {
             text: newText,
             timestamp: new Date().toISOString(),
             pinId,
-            userId
+            userId, 
+            editable: true
         };
         socket.emit('edit-message', editedMessage);
     };
