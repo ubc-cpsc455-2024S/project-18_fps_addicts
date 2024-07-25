@@ -5,7 +5,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 const os = require('os');
 const cors = require('cors');
-const router = express.Router();
+const router = express();
 const Filter = require('bad-words');
  // "start": "node ./bin/www" - old package start
 

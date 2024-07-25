@@ -15,12 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", (req, res) => {
-    res.status(201).json({message: "Connected to Backend!"});
-});
-
 app.use('/', indexRouter);
-app.use('/chat', chatRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;
