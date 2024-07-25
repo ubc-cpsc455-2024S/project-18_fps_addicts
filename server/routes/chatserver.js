@@ -10,8 +10,8 @@ const Filter = require('bad-words');
  // "start": "node ./bin/www" - old package start
 
 const corsOptions = {
-    origin: "https://ubcstudyspotterclient.onrender.com", // frontend URI (ReactJS)
-  
+    origin: "https://study-spotter-front-google.onrender.com", // frontend URI (ReactJS)
+
     methods: ['GET', 'POST'],
     credentials: true,
     optionsSuccessStatus: 200
@@ -27,7 +27,7 @@ const server = http.createServer(router);
 //everything tagged with "port generated" was in part created thanks to this prompt
 const io = new Server(server, {
     cors: {
-        origin: 'https://ubcstudyspotterclient.onrender.com', // Allow all origins (You can specify the origin you want to allow)
+        origin: 'https://study-spotter-front-google.onrender.com', // Allow all origins (You can specify the origin you want to allow)
         methods: ['GET', 'POST'],
     },
 });
