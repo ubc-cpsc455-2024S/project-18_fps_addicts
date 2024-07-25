@@ -16,7 +16,7 @@ router.use(session({
 }));
 
 router.use(cors({
-    origin: 'http://localhost:5173', // Specify the frontend origin
+    origin: 'https://ubcstudyspotterclient.onrender.com', // Specify the frontend origin
     credentials: true // Allow credentials (cookies) to be sent
 }));
 
@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(r =>
 const oauth2Client = new google.auth.OAuth2(
     process.env.GOOGLE_CLIENT_ID,
     process.env.GOOGLE_CLIENT_SECRET,
-    'http://localhost:3000/auth/google/callback'
+    'https://ubcstudyspotterserver.onrender.com/auth/google/callback'
 );
 
 // Define routes
@@ -68,10 +68,10 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store user info in session
         req.session.user = user;
-        res.redirect('http://localhost:5173/profile');
+        res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
     } catch (error) {
         console.error('Error getting tokens:', error);
-        res.redirect('http://localhost:5173/profile');
+        res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
     }
 
 

@@ -6,9 +6,18 @@ const { Server } = require('socket.io');
 const os = require('os');
 const cors = require('cors');
 const router = express();
+const Filter = require('bad-words');
  // "start": "node ./bin/www" - old package start
 
-router.use(cors());
+const corsOptions = {
+    origin: "https://ubcstudyspotterclient.onrender.com", // frontend URI (ReactJS)
+  
+    methods: ['GET', 'POST'],
+    credentials: true,
+    optionsSuccessStatus: 200
+}
+
+router.use(cors(corsOptions));
 
 const server = http.createServer(router);
 
@@ -18,7 +27,7 @@ const server = http.createServer(router);
 //everything tagged with "port generated" was in part created thanks to this prompt
 const io = new Server(server, {
     cors: {
-        origin: '*', // Allow all origins (You can specify the origin you want to allow)
+        origin: 'https://ubcstudyspotterclient.onrender.com', // Allow all origins (You can specify the origin you want to allow)
         methods: ['GET', 'POST'],
     },
 });
@@ -39,6 +48,7 @@ function getLocalIpAddress() {
 let messages = {};
 const welcomeMessage = { text: 'Welcome to the chat!', timestamp: new Date().toISOString(), editable: false };
 const localIpAddress = getLocalIpAddress();
+const filter = new Filter();
 
 io.on('connection', (socket) => {
     console.log('New client connected');
@@ -49,8 +59,9 @@ io.on('connection', (socket) => {
 
     
 
-    socket.on('join', (pinId) => {
+    socket.on('join', ({ pinId, userId }) => {
         socket.join(pinId);
+        socket.userId = userId;
 
         if (!messages[pinId]) {
             messages[pinId] = [welcomeMessage];
@@ -59,8 +70,11 @@ io.on('connection', (socket) => {
         socket.emit('init', messages[pinId]);
     });
 
+
     socket.on('message', (message) => {
         const { pinId } = message;
+
+        message.text = filter.clean(message.text);
 
         if (!messages[pinId]) {
             messages[pinId] = [];
@@ -74,20 +88,27 @@ io.on('connection', (socket) => {
     // The prompt used was: how to make a edit a message in a chatbox.
     // modifcations were made to intergrate it to the porject. One such major modification made was to make it so each pin is treated differently
     socket.on('edit-message', (editedMessage) => {
-        const { pinId, id } = editedMessage;
+        const { pinId, id, userId } = editedMessage;
+
+       
 
         if (messages[pinId]) {
-            messages[pinId] = messages[pinId].map((msg) =>
-                msg.id === id ? editedMessage : msg
-            );
-            io.to(pinId).emit('edit-message', editedMessage);
+            const message = messages[pinId].find((msg) => msg.id === id);
+            if (message && message.userId === userId) {
+                editedMessage.text = filter.clean(editedMessage.text);
+                Object.assign(message, editedMessage);
+                io.to(pinId).emit('edit-message', editedMessage);
+            }
         }
     });
 
-    socket.on('delete-message', ({ pinId, messageId }) => {
+    socket.on('delete-message', ({ pinId, messageId, userId }) => {
         if (messages[pinId]) {
-            messages[pinId] = messages[pinId].filter((msg) => msg.id !== messageId);
-            io.to(pinId).emit('delete-message', { pinId, messageId });
+            const messageIndex = messages[pinId].findIndex((msg) => msg.id === messageId);
+            if (messageIndex !== -1 && messages[pinId][messageIndex].userId === userId) {
+                messages[pinId].splice(messageIndex, 1);
+                io.to(pinId).emit('delete-message', { pinId, messageId });
+            }
         }
     });
 

@@ -4,8 +4,10 @@ const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
     const [editingMessageId, setEditingMessageId] = useState(null);
     const [editText, setEditText] = useState('');
 
+    const userId = localStorage.getItem('userId'); // Retrieve the current user's ID
+
     const handleEditClick = (message) => {
-        if (!message.editable) return;
+        if (!message.editable || message.userId !== userId) return;
         setEditingMessageId(message.id);
         setEditText(message.text);
     };
@@ -33,8 +35,12 @@ const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
                     <>
                         <span className="message-text">{msg.text}</span>
                         <span className="message-timestamp">{new Date(msg.timestamp).toLocaleTimeString()}</span>
-                        {msg.editable && <button id = "userActionForChat" onClick={() => handleEditClick(msg)}>Edit</button>}
-                        {msg.editable && <button id = "userActionForChat" onClick={() => onDeleteMessage(msg.id)}>Delete</button>}
+                        {msg.userId === userId && msg.editable && (
+                            <>
+                                <button id="userActionForChat" onClick={() => handleEditClick(msg)}>Edit</button>
+                                <button id="userActionForChat" onClick={() => onDeleteMessage(msg.id)}>Delete</button>
+                            </>
+                        )}
                     </>
                 );
 

@@ -1,10 +1,40 @@
 {
+  "name": "mern-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "install-server": "cd server && npm install && npm install bad-words && npm install express && npm i leaflet && npm install dotenv && npm install uuid && npm install axios && npm install socket.io-client",
+    "start-server": "cd server && node app.js",
+    "install-client": "cd client && npm install",
+    "build-client": "cd client && npm run build",
+    "start-client": "cd client && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
     "axios": "^1.7.2",
+    "bad-words": "^3.0.4",
     "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "css-select": "^5.1.0",
+    "dom-serializer": "^2.0.0",
+    "fs": "^0.0.1-security",
+    "htmlparser2": "^9.1.0",
+    "jsdom": "^24.1.0",
+    "leaflet": "^1.9.4",
+    "node-fetch": "^3.3.2",
+    "node-html-parser": "^6.1.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-leaflet": "^4.2.1",
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.23.1",
+    "redux": "^5.0.1",
     "socket.io-client": "^4.7.5",
+    "toolkit": "^1.5.4",
     "uuid": "^10.0.0"
-    "jwt-decode": "^4.0.0",
-
   }
 }

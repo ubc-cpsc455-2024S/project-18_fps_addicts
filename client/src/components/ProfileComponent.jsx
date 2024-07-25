@@ -19,7 +19,7 @@ const ProfileComponent = () => {
 
     const handleUpdate = async () => {
         try {
-            const response = await axios.put(`http://localhost:3000/users/${user._id}`, { name, email });
+            const response = await axios.put(`https://ubcstudyspotterserver.onrender.com/users/${user._id}`, { name, email });
             dispatch(setUser(response.data));
             alert('Profile updated successfully');
         } catch (error) {
