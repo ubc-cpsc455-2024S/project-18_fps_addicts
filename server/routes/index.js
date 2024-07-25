@@ -40,6 +40,7 @@ router.get("/", (req, res) => {
 router.get('/auth/google', (req, res) => {
     const url = oauth2Client.generateAuthUrl({
         access_type: 'offline',
+        scope: ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'], 
         prompt: 'select_account'
     });
     res.redirect(url);
