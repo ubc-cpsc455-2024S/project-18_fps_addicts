@@ -14,7 +14,7 @@ const GoogleAuth = () => {
 
     const checkAuthStatus = async () => {
         try {
-            const response = await fetch('https://ubcstudyspotterserver.onrender.com/api/user', {
+            const response = await fetch('https://https://study-spotter-google-auth.onrender.com/api/user', {
                 credentials: 'include' // Important for including cookies
             });
             if (response.ok) {
@@ -30,12 +30,12 @@ const GoogleAuth = () => {
     };
 
     const handleLogin = () => {
-        window.location.href = 'https://ubcstudyspotterserver.onrender.com/auth/google';
+        window.location.href = 'https://study-spotter-google-auth.onrender.com/auth/google';
     };
 
     const handleLogout = async () => {
         try {
-            await fetch('https://ubcstudyspotterserver.onrender.com/auth/logout', { credentials: 'include' });
+            await fetch('https://study-spotter-google-auth.onrender.com/auth/logout', { credentials: 'include' });
             dispatch(logout());
         } catch (error) {
             console.error('Error logging out:', error);
