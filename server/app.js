@@ -16,7 +16,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/chat', chatRouter);
 app.use('/users', usersRouter);
+
+// Set the port number
+var port = process.env.PORT || 3000;
+
+// Start the server
+app.listen(port, function() {
+    console.log(`Server is running on port ${port}`);
+});
 
 module.exports = app;
 
