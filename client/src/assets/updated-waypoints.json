@@ -1,0 +1,821 @@
+[
+  {
+    "id": "abdul-ladha-science-student-centre-(alsc)---various-informal-learning-spaces",
+    "title": "Abdul Ladha Science Student Centre (ALSC) - Various Informal Learning Spaces",
+    "address": "2055 East Mall, Vancouver, BC V6T 1Z4",
+    "description": "This Science Student Centre is a vibrant spot for individual or group study. The building offers study lounges and bookable meeting rooms. For more information, or to book spaces in Abdul Ladha, visit sus.ubc.ca/alssc",
+    "capacity": "50",
+    "link": "http://sus.ubc.ca/alssc/",
+    "coordinates": [
+      49.26607735,
+      -123.25137314363899
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ALSSC.JPG?itok=MTP2AwuH&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "allard-hall-(alrd)---1st-floor",
+    "title": "Allard Hall  (ALRD) - 1st Floor",
+    "address": "1822 East Mall, Vancouver, BC V6T 1Z1",
+    "description": "A collection of open study areas on the first level floor of Allard Hall. Featuring casual tables and lounge seating, and just a few steps from the Law Café.",
+    "capacity": "100",
+    "link": "https://learningspaces.ubc.ca/classrooms/alrd-1st-floor",
+    "coordinates": [
+      49.26999585,
+      -123.25328031852874
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ALRD%201st%20Floor%20Lounge-2.JPG?itok=5_zO_uOg&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "allard-hall-(alrd)---2nd-floor-lounge",
+    "title": "Allard Hall  (ALRD) - 2nd Floor Lounge",
+    "address": "1822 East Mall, Vancouver, BC V6T 1Z1",
+    "description": "A number of informal lounge seating options next to the Allard Law Library, perfect for individual or small group work.",
+    "capacity": "38",
+    "link": "https://learningspaces.ubc.ca/classrooms/alrd-2nd-floor-lounge",
+    "coordinates": [
+      49.26999585,
+      -123.25328031852874
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ALRD%202nd%20Floor%20%282%29-2.JPG?itok=4W3_m1Bf&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "allard-hall-(alrd)---3rd-floor-lounge",
+    "title": "Allard Hall  (ALRD) - 3rd Floor Lounge",
+    "address": "1822 East Mall, Vancouver, BC V6T 1Z1",
+    "description": "Informal learning spaces perfect for individual or small group work. Study in the various lounge set ups or table seating offered on the 3rd floor of this Law building.",
+    "capacity": "60",
+    "link": "https://learningspaces.ubc.ca/classrooms/alrd-3rd-floor-lounge",
+    "coordinates": [
+      49.26999585,
+      -123.25328031852874
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ALRD%203rd%20Floor%20Lounge%20%283%29-2.JPG?itok=3c68F7I5&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "allard-hall-(alrd)---franklin-lew-forum-(room-101)",
+    "title": "Allard Hall  (ALRD) - Franklin Lew Forum (Room 101)",
+    "address": "1822 East Mall, Vancouver, BC V6T 1Z1",
+    "description": "A multipurpose room that when not used for formal events is transformed to an open space with movable tables and chairs. A flexible space for individual or group work sessions.",
+    "capacity": "32",
+    "link": "https://learningspaces.ubc.ca/classrooms/alrd-franklin-lew-forum-room-101",
+    "coordinates": [
+      49.26999585,
+      -123.25328031852874
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ALRD%20Forum.JPG?itok=r8HpXaYs&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "ams-student-nest-(nest)---various-informal-learning-spaces",
+    "title": "AMS Student Nest (NEST) - Various Informal Learning Spaces",
+    "address": "6133 University Blvd, Vancouver, BC V6T 1Z1",
+    "description": "The AMS Student Nest is a campus hub for students to eat, shop, socialize and study. Find informal study spaces on all 4 floors of the Nest, from casual tables on the ground floor, study aisles overlooking the campus to quiet lounge spaces. Visit ams.ubc.ca/nest for more information.",
+    "capacity": "300",
+    "link": "http://ams.ubc.ca/nest",
+    "coordinates": [
+      49.26655335,
+      -123.24983897521201
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Nest%20-%20UBC%20CM.jpg?itok=X_kVU8pX&c=eb2f8cf42d63b614118e48d71c61bc96"
+  },
+  {
+    "id": "brock-hall-(brck)---concourse",
+    "title": "Brock Hall (BRCK) - Concourse",
+    "address": "1874 East Mall, Vancouver, BC V6T 1Z1",
+    "description": "Brock Hall’s student centre offers 30 seat ranging from group tables to individual seating. Use this space for collaborative or individual study.",
+    "capacity": "30",
+    "link": "https://learningspaces.ubc.ca/classrooms/brck-concourse",
+    "coordinates": [
+      49.26858615,
+      -123.25205712924605
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/BRCK%20Con-3.JPG?itok=REhMt4rH&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "brock-hall-(brck)---study-carrels",
+    "title": "Brock Hall (BRCK) - Study Carrels",
+    "address": "1874 East Mall, Vancouver, BC V6T 1Z1",
+    "description": "Find this study area with 12 study carrels on the second floor of Brock Hall. This spot is ideal for people looking for a silent study session.",
+    "capacity": "12",
+    "link": "https://learningspaces.ubc.ca/classrooms/brck-study-carrels",
+    "coordinates": [
+      49.26858615,
+      -123.25205712924605
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_9786.JPG?itok=e4NGBXrU&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "buchanan-(buch)---2nd-floor-lounge",
+    "title": "Buchanan (BUCH) - 2nd Floor Lounge",
+    "address": "1866 Main Mall, Vancouver BC V6T 1Z1",
+    "description": "In the midst of Buchanan B block’s classrooms is this 55 seat open study space. It features a mix of tall group tables, bench seating and lounge space.\n360° VIEW",
+    "capacity": "55",
+    "link": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/rooms/BUCH-2ND-FLOOR-LOUNGE/index.html",
+    "coordinates": [
+      49.2688179,
+      -123.25439783964498
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/BUCH%20B%202nd%20floor%20lounge-2.JPG?itok=h-W_3pnB&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "buchanan-(buch)---3rd-floor-lounge",
+    "title": "Buchanan (BUCH) - 3rd Floor Lounge",
+    "address": "1866 Main Mall, Vancouver BC V6T 1Z1",
+    "description": "A 43 seat study space with small group tables and bench seating in B Block. Frosted glass panels split the lounge into 3 sections.\n360° VIEW",
+    "capacity": "43",
+    "link": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/rooms/BUCH-3RD-FLOOR-LOUNGE/index.html",
+    "coordinates": [
+      49.2688179,
+      -123.25439783964498
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/BUCH%20B%203rd%20Floor%20Lounge%20%282%29-2.JPG?itok=3dDDovcH&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "buchanan-(buch)---alcove-lounge",
+    "title": "Buchanan (BUCH) - Alcove Lounge",
+    "address": "1866 Main Mall, Vancouver BC V6T 1Z1",
+    "description": "This small informal lounge is located on the second floor of Buchanan A. With 8 seats in the lounge, it’s perfectly suited for individual and small group study.",
+    "capacity": "8",
+    "link": "https://learningspaces.ubc.ca/classrooms/buch-alcove-lounge",
+    "coordinates": [
+      49.2688179,
+      -123.25439783964498
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/BUCH%20A-B%20Lounge-2.JPG?itok=FBdzEEvZ&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "buchanan-(buch)---corridor",
+    "title": "Buchanan (BUCH) - Corridor",
+    "address": "1866 Main Mall, Vancouver BC V6T 1Z1",
+    "description": "Located on the second floor of Buchanan A, this space offers bench styled seating for 22 people.",
+    "capacity": "22",
+    "link": "https://learningspaces.ubc.ca/classrooms/buch-corridor",
+    "coordinates": [
+      49.2688179,
+      -123.25439783964498
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/BUCH%20A%20Corridor-2.JPG?itok=PAPnYmcJ&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "centre-for-interactive-research-on-sustainability-(cirs)---concourse",
+    "title": "Centre for Interactive Research on Sustainability (CIRS) - Concourse",
+    "address": "2260 West Mall, Vancouver, BC V6T 1Z4",
+    "description": "A 30 seat casual study spot on the first floor of CIRS. The concourse can be used for individual or group work.",
+    "capacity": "30",
+    "link": "https://learningspaces.ubc.ca/classrooms/cirs-concourse",
+    "coordinates": [
+      49.2618829,
+      -123.2530369
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/CIRS%20Loop-3.JPG?itok=_rjhx31h&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "centre-for-interactive-research-on-sustainability-(cirs)---loop-café",
+    "title": "Centre for Interactive Research on Sustainability (CIRS) - Loop Café",
+    "address": "2260 West Mall, Vancouver, BC V6T 1Z4",
+    "description": "Next to CIRS’s Loop Café are 40 seats, perfect for individual study or group work.",
+    "capacity": "40",
+    "link": "https://learningspaces.ubc.ca/classrooms/cirs-loop-café",
+    "coordinates": [
+      49.2618829,
+      -123.2530369
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/CIRS%20Loop-4.JPG?itok=1Js_bOaP&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "chemical-and-biological-engineering-building-(chbe)---atrium",
+    "title": "Chemical and Biological Engineering Building (CHBE) - Atrium",
+    "address": "2360 East Mall, Vancouver, BC V6T 1Z3",
+    "description": "",
+    "capacity": "64",
+    "link": "https://learningspaces.ubc.ca",
+    "coordinates": [
+      49.26235,
+      -123.24684326251716
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_20170921_154817.jpg?itok=dYTBHRm3&c=f3cc7d895b65174df15f2cb0d6f03838"
+  },
+  {
+    "id": "civil-and-mechanical-engineering-(ceme)---various-informal-learning-spaces",
+    "title": "Civil and Mechanical Engineering (CEME) - Various Informal Learning Spaces",
+    "address": "6250 Applied Science Lane, Vancouver, BC V6T 1Z4",
+    "description": "Informal learning spaces perfect for individual or group work. Study in the various lounge set ups or table seating offered on the main floor of this building.",
+    "capacity": "19",
+    "link": "https://learningspaces.ubc.ca/classrooms/ceme-various-informal-learning-spaces",
+    "coordinates": [
+      49.2628533,
+      -123.2484594
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_1061_0.JPG?itok=HP_6_WYT&c=6fe533d6582a022b00ca9a9c2f83f766"
+  },
+  {
+    "id": "earth-sciences-building-(esb)---concourse",
+    "title": "Earth Sciences Building (ESB) - Concourse",
+    "address": "2207 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "An open and vibrant 75 seat area along the corridors of the Earth Science Building. Find a variety of lounge and table seating.",
+    "capacity": "75",
+    "link": "https://learningspaces.ubc.ca/classrooms/esb-concourse",
+    "coordinates": [
+      49.262882950000005,
+      -123.25192198442289
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ESB%20Lounge-2.JPG?itok=MLJYf0CS&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "earth-sciences-building-(esb)---magma-café",
+    "title": "Earth Sciences Building (ESB) - Magma Café",
+    "address": "2207 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "Featuring table seating in the café and outdoors, this space is designed for casual study needs. Seating accommodates around 55 people.",
+    "capacity": "55",
+    "link": "https://learningspaces.ubc.ca/classrooms/esb-magma-café",
+    "coordinates": [
+      49.262882950000005,
+      -123.25192198442289
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ESB%20Magma-2.JPG?itok=2BHt7xok&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "engineering-student-centre-(esc)---various-informal-learning-spaces",
+    "title": "Engineering Student Centre (ESC) - Various Informal Learning Spaces",
+    "address": "2335 Engineering Road, Vancouver, BC V6T 1Z4",
+    "description": "Engineering's Student Centre features 2 floors of informal study space from group lounges to individual seating. Information on study rooms in the ESC can be found at https://ubcengineers.ca/study-rooms, and information regarding booking the entire ESC as a venue can be found at https://ubcengineers.ca/bookings",
+    "capacity": "50",
+    "link": "https://ubcengineers.ca/study-rooms",
+    "coordinates": [
+      49.2618098,
+      -123.2487218
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/23175999564_ff18116d82_o.jpg?itok=neNp2CGm&c=bedcc8efd220007771e31c03db0b35cc"
+  },
+  {
+    "id": "food,-nutrition-and-health-(fnh)---3rd-floor",
+    "title": "Food, Nutrition and Health (FNH) - 3rd Floor",
+    "address": "2205 East Mall, Vancouver, BC V6T 1Z4",
+    "description": "",
+    "capacity": "13",
+    "link": "https://learningspaces.ubc.ca",
+    "coordinates": [
+      49.2639864,
+      -123.25005544000078
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/FNH%20ILS%203FLR.JPG?itok=Y7JX5BSw&c=feafd7f5ab7d60c363652d23929d0aee"
+  },
+  {
+    "id": "food,-nutrition-and-health-(fnh)---concourse",
+    "title": "Food, Nutrition and Health (FNH) - Concourse",
+    "address": "2205 East Mall, Vancouver, BC V6T 1Z4",
+    "description": "An open concourse furnished with group study tables suitable for group or individual work.",
+    "capacity": "16",
+    "link": "https://learningspaces.ubc.ca/classrooms/fnh-concourse",
+    "coordinates": [
+      49.2639864,
+      -123.25005544000078
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/FNH%20Concourse-2.JPG?itok=PmMTEllx&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "food,-nutrition-and-health-(fnh)---hallway-informal-learning-space",
+    "title": "Food, Nutrition and Health (FNH) - Hallway Informal Learning Space",
+    "address": "2205 East Mall, Vancouver, BC V6T 1Z4",
+    "description": "Filled with natural light, the hallways of FNH offer a variety of individual study spaces.",
+    "capacity": "20",
+    "link": "https://learningspaces.ubc.ca/classrooms/fnh-hallway-informal-learning-space",
+    "coordinates": [
+      49.2639864,
+      -123.25005544000078
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/FNH%20Hallway-2.JPG?itok=pYbgig65&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "forest-sciences-centre-(fsc)---macmillan-bloedel-atrium",
+    "title": "Forest Sciences Centre (FSC) - MacMillan Bloedel Atrium",
+    "address": "2424 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "An open atrium of group tables and couches surrounded by greenery in the heart of the Forestry building. This spot is a vibrant place for individual or group study.\n360° VIEW",
+    "capacity": "60",
+    "link": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/rooms/FSC-MACMILLAN-BLOEDEL-ATRIUM/index.html",
+    "coordinates": [
+      49.2601863,
+      -123.248397
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/FSC%20Atrium-2.JPG?itok=Mq7h7qv5&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "fred-kaiser-(kais)---concourse",
+    "title": "Fred Kaiser (KAIS) - Concourse",
+    "address": "2332 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "Located near Starbucks, this space features furnishings suitable for individual or group work.\n360° VIEW",
+    "capacity": "58",
+    "link": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/rooms/KAIS-CONCOURSE/index.html",
+    "coordinates": [
+      49.2621866,
+      -123.250135
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/KAIS.JPG?itok=xwTskNhs&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "frederic-lasserre-(lasr)---cube",
+    "title": "Frederic Lasserre (LASR) - Cube",
+    "address": "6333 Memorial Road, Vancouver, BC V6T 1Z2",
+    "description": "The Cube is located in the Lasserre ground level nested between theatres 102 and 104. When not being booked for events, the Cube provides comfortable seating for 20. Switches are located under the seating bench if additional lighting is desired.",
+    "capacity": "20",
+    "link": "https://learningspaces.ubc.ca/classrooms/lasr-cube",
+    "coordinates": [
+      49.26758505,
+      -123.25597858679274
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_1597.jpg?itok=Lxd9NT3Y&c=feafd7f5ab7d60c363652d23929d0aee"
+  },
+  {
+    "id": "hebb-(hebb)---concourse",
+    "title": "Hebb (HEBB) - Concourse",
+    "address": "2045 East Mall, Vancouver, BC V6T 1Z1",
+    "description": "Located outside of the Hebb 100 lecture theatre, this space offers a variety of seating including bench seating, small bistro tables and lounge furniture.",
+    "capacity": "30",
+    "link": "https://learningspaces.ubc.ca/classrooms/hebb-concourse",
+    "coordinates": [
+      49.26603205,
+      -123.25175758330798
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/HEBB3.JPG?itok=8ZdDNsqW&c=b17655246ef6838cae622f11de1f0d4e"
+  },
+  {
+    "id": "hennings-(henn)---2nd-floor-hallways",
+    "title": "Hennings (HENN) - 2nd Floor Hallways",
+    "address": "6224 Agricultural Road, Vancouver, BC V6T 1Z1",
+    "description": "This area provides 62 informal learning seats. Seating in front of the lecture theatres is ideal for waiting for your next class while the seats on the side hallways are designed for longer term quiet study. The area is well lit and task lighting and power plugs have been installed.",
+    "capacity": "62",
+    "link": "https://learningspaces.ubc.ca/classrooms/henn-2nd-floor-hallways",
+    "coordinates": [
+      49.26643415,
+      -123.25221415008912
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_1583.jpg?itok=5LNpyYZy&c=feafd7f5ab7d60c363652d23929d0aee"
+  },
+  {
+    "id": "hennings-(henn)---foyer",
+    "title": "Hennings (HENN) - Foyer",
+    "address": "6224 Agricultural Road, Vancouver, BC V6T 1Z1",
+    "description": "This area provides 34 informal learning seats. Seating in front of the lecture theatres is ideal for waiting for your next class while the seats on the side hallways are designed for longer term quiet study. The area is well lit and task lighting and power plugs have been installed.",
+    "capacity": "42",
+    "link": "https://learningspaces.ubc.ca/classrooms/henn-foyer",
+    "coordinates": [
+      49.26643415,
+      -123.25221415008912
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_0984.JPG?itok=2ea4ZiKy&c=7be2f6cdbb90aff70a0b287448f71256"
+  },
+  {
+    "id": "henry-angus-(angu)---concourse",
+    "title": "Henry Angus (ANGU) - Concourse",
+    "address": "2053 Main Mall, Vancouver, BC V6T 1Z2",
+    "description": "A lively study spot on the first floor of Henry Angus, connected to the Bruce R. Birmingham Undergraduate Centre and Sauder Exchange Café Lounge.\n360° VIEW",
+    "capacity": "24",
+    "link": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/rooms/ANGUS-CONCOURSE/index.html",
+    "coordinates": [
+      49.2655042,
+      -123.2538704
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ANGU%20CPA-2.JPG?itok=JNcwExrJ&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "henry-angus-(angu)---sauder-exchange-café",
+    "title": "Henry Angus (ANGU) - Sauder Exchange Café",
+    "address": "2053 Main Mall, Vancouver, BC V6T 1Z2",
+    "description": "A café on the first floor of Henry Angus. With group tables and lounge styled seating, this is a great spot for individual study or group work.",
+    "capacity": "25",
+    "link": "https://learningspaces.ubc.ca/classrooms/angu-sauder-exchange-café",
+    "coordinates": [
+      49.2655042,
+      -123.2538704
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca"
+  },
+  {
+    "id": "institute-for-computing-(icics/cs)-(iccs)---2nd-floor-atrium",
+    "title": "Institute for Computing (ICICS/CS) (ICCS) - 2nd Floor Atrium",
+    "address": "2366 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "Overlooking the first floor of ICICS, this study area is suited for individual or group study. The atrium features large group tables and individual seats in the hallway next to the building’s X Wing.",
+    "capacity": "20",
+    "link": "https://learningspaces.ubc.ca/classrooms/iccs-2nd-floor-atrium",
+    "coordinates": [
+      49.2612513,
+      -123.2491887
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%202nd%20Floor.JPG?itok=v78VGxAB&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "institute-for-computing-(icics/cs)-(iccs)---3rd-floor-study-lounge",
+    "title": "Institute for Computing (ICICS/CS) (ICCS) - 3rd Floor Study Lounge",
+    "address": "2366 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "Furnished with group tables and lounge seats, this space is suited for individual or group study. A number of flat panel displays are also offered within the space.",
+    "capacity": "44",
+    "link": "https://learningspaces.ubc.ca/classrooms/iccs-3rd-floor-study-lounge",
+    "coordinates": [
+      49.2612513,
+      -123.2491887
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20X351.JPG?itok=SF_99L_7&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "institute-for-computing-(icics/cs)-(iccs)---alcove-booths",
+    "title": "Institute for Computing (ICICS/CS) (ICCS) - Alcove Booths",
+    "address": "2366 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "Located next to the main concourse of ICICS, this space features a variety of group tables.",
+    "capacity": "36",
+    "link": "https://learningspaces.ubc.ca/classrooms/iccs-alcove-booths",
+    "coordinates": [
+      49.2612513,
+      -123.2491887
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/icics%20Booth%20%282%29-2.JPG?itok=UdBT6f5x&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "institute-for-computing-(icics/cs)-(iccs)---atrium",
+    "title": "Institute for Computing (ICICS/CS) (ICCS) - Atrium",
+    "address": "2366 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "Recently upgraded with new furniture this informal learning space offers group study tables and soft seating with ample power for long term studying or group work.",
+    "capacity": "40",
+    "link": "https://learningspaces.ubc.ca/classrooms/iccs-atrium",
+    "coordinates": [
+      49.2612513,
+      -123.2491887
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20Concourse-2.JPG?itok=dmK0Jh7f&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "institute-for-computing-(icics/cs)-(iccs)---demco-learning-centre",
+    "title": "Institute for Computing (ICICS/CS) (ICCS) - Demco Learning Centre",
+    "address": "2366 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "The Demco Learning Centre (DLC) provides drop-in help for students having difficulty with any of the concepts presented in class and for advice on assignments and projects in many Computer Science courses. Teaching Assistants book a table in DLC to hold office hours.  To find out your TA’s upcoming office hours in the DLC follow the link and login with your CWL https://my.cs.ubc.ca/students/ta-hours\nFurnished with round tables and whiteboards, the DLC also provides drop-in space for students to study alone or in small groups.",
+    "capacity": "40",
+    "link": "https://my.cs.ubc.ca/students/ta-hours",
+    "coordinates": [
+      49.2612513,
+      -123.2491887
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Demco-2.JPG?itok=BsFNz_Yg&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "institute-for-computing-(icics/cs)-(iccs)---lounge",
+    "title": "Institute for Computing (ICICS/CS) (ICCS) - Lounge",
+    "address": "2366 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "ICICS's first floor X Wing lounge area is suited for studying or socializing. The space seats 50 with couches and small group tables.",
+    "capacity": "50",
+    "link": "https://learningspaces.ubc.ca/classrooms/iccs-lounge",
+    "coordinates": [
+      49.2612513,
+      -123.2491887
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/icics-1.JPG?itok=88N5JYWT&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "institute-for-computing-(icics/cs)-(iccs)---study-stairs",
+    "title": "Institute for Computing (ICICS/CS) (ICCS) - Study Stairs",
+    "address": "2366 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "A collection of seats along the side of the X Wing building. Facing large windows, this space is a bright spot for individual or group study.",
+    "capacity": "20",
+    "link": "https://learningspaces.ubc.ca/classrooms/iccs-study-stairs",
+    "coordinates": [
+      49.2612513,
+      -123.2491887
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20Study%20Stairs.JPG?itok=JACCfXqk&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "institute-for-computing-(icics/cs)-(iccs)---undergraduate-lab",
+    "title": "Institute for Computing (ICICS/CS) (ICCS) - Undergraduate Lab",
+    "address": "2366 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "Located on the third floor of the X Wing, this undergraduate computer science space is a computer lab with a seat capacity of 44 students.",
+    "capacity": "44",
+    "link": "https://learningspaces.ubc.ca/classrooms/iccs-undergraduate-lab",
+    "coordinates": [
+      49.2612513,
+      -123.2491887
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20X350%20Undergrad%20Lab_.JPG?itok=sj7qVOLj&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "iona-building-(iona)---study-lounge",
+    "title": "Iona Building (IONA) - Study Lounge",
+    "address": "6000 Iona Drive, Vancouver BC, V6T 1L4",
+    "description": "Find this vibrant lounge room on the 3rd floor of the Iona Building. Featuring large tables, couches and a small kitchen area, the space accommodates individual and group study.",
+    "capacity": "56",
+    "link": "https://learningspaces.ubc.ca/classrooms/iona-study-lounge",
+    "coordinates": [
+      49.27097095,
+      -123.25025202650126
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IONA%203RD%20FLOOR%20B-2.JPG?itok=0LAYOQnt&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "life-sciences-centre-(lsc)---east-atrium",
+    "title": "Life Sciences Centre (LSC) - East Atrium",
+    "address": "2350 Health Sciences Mall, Vancouver, BC V6T 1Z3",
+    "description": "Enter the Life Science Building’s expansive 170 seat study space with rows of long tables. High ceilings and large windows makes this space bright and easy for individual or group study.",
+    "capacity": "170",
+    "link": "https://learningspaces.ubc.ca/classrooms/lsc-east-atrium",
+    "coordinates": [
+      49.2624808,
+      -123.2449147
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/LSC%201.jpg?itok=ka2_Ee6h&c=e5953b2f3f6b982e3eab4b23b13ef573"
+  },
+  {
+    "id": "life-sciences-centre-(lsc)---perugia-café",
+    "title": "Life Sciences Centre (LSC) - Perugia Café",
+    "address": "2350 Health Sciences Mall, Vancouver, BC V6T 1Z3",
+    "description": "A coffee and food spot on campus, located next to the LSC atrium. Small tables and bench seating support individual and group work.",
+    "capacity": "36",
+    "link": "https://learningspaces.ubc.ca/classrooms/lsc-perugia-café",
+    "coordinates": [
+      49.2624808,
+      -123.2449147
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Perugia-2.JPG?itok=3nSpDper&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "life-sciences-centre-(lsc)---west-atrium",
+    "title": "Life Sciences Centre (LSC) - West Atrium",
+    "address": "2350 Health Sciences Mall, Vancouver, BC V6T 1Z3",
+    "description": "A 110 capacity space furnished with small group tables and bench seating. This spot is also right next to Perugia Café.",
+    "capacity": "110",
+    "link": "https://learningspaces.ubc.ca/classrooms/lsc-west-atrium",
+    "coordinates": [
+      49.2624808,
+      -123.2449147
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/LSC%20INFORMAL-5.jpg?itok=nwS1LipT&c=e5953b2f3f6b982e3eab4b23b13ef573"
+  },
+  {
+    "id": "macmillan-(mcml)---agora-café",
+    "title": "MacMillan (MCML) - Agora Café",
+    "address": "2357 Main Mall, Vancouver BC, V6T 1Z4",
+    "description": "Agora Cafe was re-furnished in 2017 to provide a more comfortable and cozy environment for socializing and studying. Furniture can be re-arranged to form groups of various sizes. An area towards the back provides soft seating for lounging or longer term studying.",
+    "capacity": "109",
+    "link": "https://learningspaces.ubc.ca/classrooms/mcml-agora-café",
+    "coordinates": [
+      49.260953,
+      -123.2510588
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_1523.jpg?itok=gYi-sakr&c=feafd7f5ab7d60c363652d23929d0aee"
+  },
+  {
+    "id": "mathematics-annex-(matx)---2nd-floor-study-tables",
+    "title": "Mathematics Annex (MATX) - 2nd Floor Study Tables",
+    "address": "1986 Mathematics Road, Vancouver, BC V6T 1Z2",
+    "description": "This quiet ILS location offers two study tables for group or individual work. Located on the 2nd level of the Math Annex building near faculty offices.",
+    "capacity": "8",
+    "link": "https://learningspaces.ubc.ca/classrooms/matx-2nd-floor-study-tables",
+    "coordinates": [
+      49.26610465,
+      -123.25478600654719
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/MATX%20ILS%202FLR-1.JPG?itok=f3xxF5J7&c=feafd7f5ab7d60c363652d23929d0aee"
+  },
+  {
+    "id": "neville-scarfe-(scrf)---hallway-informal-learning-space",
+    "title": "Neville Scarfe (SCRF) - Hallway Informal Learning Space",
+    "address": "2125 Main Mall, Vancouver, BC V6T 1Z4",
+    "description": "Situated next to the Education Library and across from the Neville’s Café, this is an easy space for studying individually or in a group. Table and bench seating is offered along the main hallway.",
+    "capacity": "55",
+    "link": "https://learningspaces.ubc.ca/classrooms/scrf-hallway-informal-learning-space",
+    "coordinates": [
+      49.263981,
+      -123.25295092659103
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_9721.JPG?itok=RgSGLbiA&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "orchard-commons-(orch)---3rd-floor-high-tech-study-nook",
+    "title": "Orchard Commons (ORCH) - 3rd Floor High Tech Study Nook",
+    "address": "6363 Agronomy Rd, Vancouver, BC V6T 1Z4",
+    "description": "Find a number of high tech group stations are located along the third floor. Each station is equipped with flat panel displays and power outlets.",
+    "capacity": "16",
+    "link": "https://learningspaces.ubc.ca/classrooms/orch-3rd-floor-high-tech-study-nook",
+    "coordinates": [
+      49.2605697,
+      -123.2491685
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ORCH%203rd%20High%20Tech%20%283%29-3.JPG?itok=CL0i5AGT&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "orchard-commons-(orch)---4th-floor-high-tech-study-nook",
+    "title": "Orchard Commons (ORCH) - 4th Floor High Tech Study Nook",
+    "address": "6363 Agronomy Rd, Vancouver, BC V6T 1Z4",
+    "description": "A number of high tech group stations are located along the fourth floor. Each station is equipped with flat panel displays and power outlets.",
+    "capacity": "14",
+    "link": "https://learningspaces.ubc.ca/classrooms/orch-4th-floor-high-tech-study-nook",
+    "coordinates": [
+      49.2605697,
+      -123.2491685
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ORCH%204th-1-2.JPG?itok=roOfTtnQ&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "orchard-commons-(orch)---alcove-study-nook",
+    "title": "Orchard Commons (ORCH) - Alcove Study Nook",
+    "address": "6363 Agronomy Rd, Vancouver, BC V6T 1Z4",
+    "description": "A small alcove lounge located next to Room 1001. This area is perfect for individual or group study.",
+    "capacity": "12",
+    "link": "https://learningspaces.ubc.ca/classrooms/orch-alcove-study-nook",
+    "coordinates": [
+      49.2605697,
+      -123.2491685
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Orch%20Alcove-2.JPG?itok=SCB6yxvf&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "orchard-commons-(orch)---dining-hall",
+    "title": "Orchard Commons (ORCH) - Dining Hall",
+    "address": "6363 Agronomy Rd, Vancouver, BC V6T 1Z4",
+    "description": "Study at Orchard’s Dining Hall area located on the ground floor of the building. The space is open to all students and faculty members, with plenty of group tables and lounge seat.",
+    "capacity": "100",
+    "link": "https://learningspaces.ubc.ca/classrooms/orch-dining-hall",
+    "coordinates": [
+      49.2605697,
+      -123.2491685
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ORCH%20Dining%20Hall-2.JPG?itok=6tOfyyC5&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "orchard-commons-(orch)---study-lounge",
+    "title": "Orchard Commons (ORCH) - Study Lounge",
+    "address": "6363 Agronomy Rd, Vancouver, BC V6T 1Z4",
+    "description": "This 40 seat lounge is furnished with soft seats, large tables and power outlets. Vantage College’s study lounge is open to all students. Quiet study rooms are also accessible through this lounge.",
+    "capacity": "40",
+    "link": "https://learningspaces.ubc.ca/classrooms/orch-study-lounge",
+    "coordinates": [
+      49.2605697,
+      -123.2491685
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/orch%20inf-3_0.JPG?itok=phWrOC1H&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "p.a.-woodward-instructional-resources-centre-(irc)---concourse",
+    "title": "P.A. Woodward Instructional Resources Centre (IRC) - Concourse",
+    "address": "2194 Health Sciences Mall, Vancouver BC, V6T 1Z3",
+    "description": "A two-level concourse with group tables and booth seating. Located across from Woodward Library and close to the IRC Snackbar.\n360° VIEW",
+    "capacity": "75",
+    "link": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/rooms/WOOD-CONCOURSE/index.html",
+    "coordinates": [
+      49.26480085,
+      -123.2468390367338
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/WOOD%20Concourse%20%282%29-2.jpg?itok=poMmrCLn&c=feafd7f5ab7d60c363652d23929d0aee"
+  },
+  {
+    "id": "pharmaceutical-sciences-building-(phrm)---3rd-floor-study-lounge",
+    "title": "Pharmaceutical Sciences Building (PHRM) - 3rd Floor Study Lounge",
+    "address": "2405 Wesbrook Mall, Vancouver, BC V6T 1Z3",
+    "description": "A small study lounge located on the third floor of the building. Furnished with couches and tables, the spot is perfect for individual or group study.",
+    "capacity": "49",
+    "link": "https://learningspaces.ubc.ca/classrooms/phrm-3rd-floor-study-lounge",
+    "coordinates": [
+      49.2622565,
+      -123.24329295568945
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Phrm%203rd%20Floor-2.JPG?itok=YeC68QP9&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "pharmaceutical-sciences-building-(phrm)---concourse",
+    "title": "Pharmaceutical Sciences Building (PHRM) - Concourse",
+    "address": "2405 Wesbrook Mall, Vancouver, BC V6T 1Z3",
+    "description": "On the main floor of the Pharmaceutical building is this open concourse, seating 110 people. This space is designed with large tables, perfect for individual or group study.",
+    "capacity": "110",
+    "link": "https://learningspaces.ubc.ca/classrooms/phrm-concourse",
+    "coordinates": [
+      49.2622565,
+      -123.24329295568945
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/PHRM%20Concourse-2.JPG?itok=0p7iOygW&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "pharmaceutical-sciences-building-(phrm)---mezzanine",
+    "title": "Pharmaceutical Sciences Building (PHRM) - Mezzanine",
+    "address": "2405 Wesbrook Mall, Vancouver, BC V6T 1Z3",
+    "description": "A second floor 45 seat lounge space. With a collection of couches and tables, this is the ideal spot for individual or group study.",
+    "capacity": "45",
+    "link": "https://learningspaces.ubc.ca/classrooms/phrm-mezzanine",
+    "coordinates": [
+      49.2622565,
+      -123.24329295568945
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Phrm%202nd%20Floor-2_0.JPG?itok=-hp2Ojmq&c=d2065bc566c2f98ce11dcf9826ce5272"
+  },
+  {
+    "id": "pharmaceutical-sciences-building-(phrm)---study-nook",
+    "title": "Pharmaceutical Sciences Building (PHRM) - Study Nook",
+    "address": "2405 Wesbrook Mall, Vancouver, BC V6T 1Z3",
+    "description": "With 25 study seats along a large window wall, this space on the ground floor is filled with natural light and offers long tables and soft furnishings.",
+    "capacity": "25",
+    "link": "https://learningspaces.ubc.ca/classrooms/phrm-study-nook",
+    "coordinates": [
+      49.2622565,
+      -123.24329295568945
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Phrm%20ILS%20%283%29-2.JPG?itok=54g0ib40&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "ponderosa-commons-north:-oak/cedar-house-(pcn)---alcove-lounge",
+    "title": "Ponderosa Commons North: Oak/Cedar House (PCN) - Alcove Lounge",
+    "address": "6445 University Boulevard, Vancouver, BC V6T 1Z2",
+    "description": "Find this 40 seat study lounge inside the Ponderosa multipurpose hub. Featuring group tables and lounge areas, the space works for individual or group study. The lounge is also right below the Harvest grocery market.",
+    "capacity": "40",
+    "link": "https://learningspaces.ubc.ca/classrooms/pcn-alcove-lounge",
+    "coordinates": [
+      49.2638885,
+      -123.2558898
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/PCOH%20Lounge-3.jpg?itok=mLa2O5tL&c=feafd7f5ab7d60c363652d23929d0aee"
+  },
+  {
+    "id": "ponderosa-commons-west:-arbutus/maple-house-(pcw)---mercante-café",
+    "title": "Ponderosa Commons West: Arbutus/Maple House (PCW) - Mercante Café",
+    "address": "2075 Lower Mall, Vancouver BC, V6T 1Z4",
+    "description": "A campus favourite pizza place, and cozy spot to study. Featuring long tables, couches and individual seating facing University Boulevard.",
+    "capacity": "36",
+    "link": "https://learningspaces.ubc.ca/classrooms/pcw-mercante-café",
+    "coordinates": [
+      49.2595529,
+      -123.2532179
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Mercante-1.JPG?itok=GxgYQlOR&c=46fa2529ee97ff9f82a833771ba8b390"
+  },
+  {
+    "id": "the-leon-and-thea-koerner-university-centre-(ucen)---study-lounge",
+    "title": "The Leon and Thea Koerner University Centre (UCEN) - Study Lounge",
+    "address": "6331 Crescent Road, Vancouver, BC V6T 1Z2",
+    "description": "Find this bright 45 seat study lounge on the bottom level of UCEN. Seating faces UCEN’s garden space, and the lounge area offers a group of couches, tables and open access to a small kitchen.",
+    "capacity": "45",
+    "link": "https://learningspaces.ubc.ca/classrooms/ucen-study-lounge",
+    "coordinates": [
+      49.268880499999995,
+      -123.25723856957501
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/UCLL-6948.jpg?itok=VfHtDeSL&c=feafd7f5ab7d60c363652d23929d0aee"
+  },
+  {
+    "id": "ubc-aquatic-centre-(aqua)---various-informal-learning-spaces",
+    "title": "UBC Aquatic Centre (AQUA) - Various Informal Learning Spaces",
+    "address": "6080 Student Union Blvd, Vancouver, BC V6T 1Z1",
+    "description": "UBC's Aquatic Centre features a number of tables and seats in the various viewing areas located in the the building. For more information, visit recreation.ubc.ca/aquatics.",
+    "capacity": "30",
+    "link": "http://recreation.ubc.ca/aquatics",
+    "coordinates": [
+      49.267804850000005,
+      -123.2486042714177
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/AQUA_0.jpg?itok=ZU_BeplE&c=ad8acc54309ee0d315b081faaab3ecb2"
+  },
+  {
+    "id": "war-memorial-gymnasium-(mgym)---atrium",
+    "title": "War Memorial Gymnasium (MGYM) - Atrium",
+    "address": "6081 University Blvd, Vancouver, BC V6T 1Z1",
+    "description": "Two large group work tables and 10 chairs were recently added to provide students with options for individual or group work. This informal learning space is located near Kinesiology classrooms and convenient for students using the gym.",
+    "capacity": "10",
+    "link": "https://learningspaces.ubc.ca/classrooms/mgym-atrium",
+    "coordinates": [
+      49.266796,
+      -123.24763482487361
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/MGYM%20ATRIUM%201.JPG?itok=KwLMDMCj&c=10124f3a537dcff10f6d6374bc421fbb"
+  },
+  {
+    "id": "wayne-and-william-white-engineering-design-centre-(edc)---various-informal-learning-spaces",
+    "title": "Wayne and William White Engineering Design Centre (EDC) - Various Informal Learning Spaces",
+    "address": "2345 East Mall, Vancouver, BC V6T 1Z4",
+    "description": "This 3 story Engineering Student Centre offers over 140 seats for a studying or socializing. For more information, visit design.engineering.ubc.ca/student-resources/studying-space-in-edc.",
+    "capacity": "140",
+    "link": "http://design.engineering.ubc.ca/student-resources/studying-space-in-edc/",
+    "coordinates": [
+      49.26235125,
+      -123.24816956348315
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_1559.jpg?itok=g1dcVMbU&c=feafd7f5ab7d60c363652d23929d0aee"
+  },
+  {
+    "id": "west-mall-swing-space-(swng)---1st-floor-concourse",
+    "title": "West Mall Swing Space (SWNG) - 1st Floor Concourse",
+    "address": "2175 West Mall, Vancouver, BC V6T 1Z4",
+    "description": "Group tables are featured outside of Swing Space’s first floor theatre spaces. The spot accommodates individual and group study.",
+    "capacity": "10",
+    "link": "https://learningspaces.ubc.ca/classrooms/swng-1st-floor-concourse",
+    "coordinates": [
+      49.2629965,
+      -123.254339
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/SWNG%201st%20Floor.JPG?itok=MaZ-oLeo&c=e1e918d3bf2c672213a4538db83301c0"
+  },
+  {
+    "id": "west-mall-swing-space-(swng)---2nd-floor-concourse",
+    "title": "West Mall Swing Space (SWNG) - 2nd Floor Concourse",
+    "address": "2175 West Mall, Vancouver, BC V6T 1Z4",
+    "description": "A study concourse beside the 2nd floor classrooms of the Swing Space building. This space is best suited for individual or group work.",
+    "capacity": "20",
+    "link": "https://learningspaces.ubc.ca/classrooms/swng-2nd-floor-concourse",
+    "coordinates": [
+      49.2629965,
+      -123.254339
+    ],
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/SWNG%202nd%20ILS-2.JPG?itok=Sa8Zx57K&c=46fa2529ee97ff9f82a833771ba8b390"
+  }
+]

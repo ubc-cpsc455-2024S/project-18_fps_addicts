@@ -2,7 +2,7 @@
   {
     "id": 1,
     "position": [49.26670298425106, -123.24999351668409],
-    "title": "AMS NEST",
+    "title": "AMS Nest",
     "description": "A lot of study spots, but gets busy. Open late for night grinds.",
     "power_port_availability": "High",
     "lighting": "Good",
@@ -232,7 +232,7 @@
   {
     "id": 40,
     "position": [49.2620489,-123.2530989],
-    "title": "CENTRE FOR INTERACTIVE RESEARCH ON SUSTAINABILITY (CIRS)",
+    "title": "Centre for Interactive Research on Sustainability (CIRS)",
     "description": "A 30 seat casual study spot on the first floor of CIRS, suitable for individual or group work.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
@@ -242,7 +242,7 @@
   {
     "id": 28,
     "position": [49.2626013965527, -123.2476255743556],
-    "title": "CHEMICAL AND BIOLOGICAL ENGINEERING BUILDING (CHBE)",
+    "title": "Chemical and Biological Engineering Building (CHBE)",
     "description": "64 seat capacity within the atrium of CHBE.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
@@ -252,7 +252,7 @@
   {
     "id": 30,
     "position": [49.26322019514797, -123.25206676086249],
-    "title": "EARTH SCIENCES BUILDING (ESB)",
+    "title": "Earth Sciences Building (ESB)",
     "description": "A vibrant 75 seat area along the corridors, offering a mix of lounge and table seating.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
@@ -262,7 +262,7 @@
   {
     "id": 31,
     "position": [49.2621606,-123.2492561],
-    "title": "ENGINEERING STUDENT CENTRE (ESC)",
+    "title": "Engineering Student Centre (ESC)",
     "description": "Features 2 floors of informal study space from group lounges to individual seating.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
@@ -272,7 +272,7 @@
   {
     "id": 32,
     "position": [49.263986,-123.2500379],
-    "title": "FOOD, NUTRITION AND HEALTH (FNH)",
+    "title": "Food, Nutrition, and Health (FNH)",
     "description": "Natural light fills these hallway spaces, offering a variety of individual study spots.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
@@ -282,7 +282,7 @@
   {
     "id": 33,
     "position": [49.26096669121422, -123.24787375901305],
-    "title": "FOREST SCIENCES CENTRE (FSC) - MACMILLAN BLOEDEL ATRIUM",
+    "title": "Forest Sciences Centre (FSC) - MACMILLAN BLOEDEL ATRIUM",
     "description": "An open atrium surrounded by greenery, offering group tables and couches for study.",
     "power_port_availability": "Low",
     "lighting": "Low",
@@ -292,7 +292,7 @@
   {
     "id": 34,
     "position": [49.262369,-123.2501181],
-    "title": "FRED KAISER (KAIS)",
+    "title": "Fred Kaiser (KAIS)",
     "description": "Located near Starbucks, suitable for individual or group work with a capacity of 58.",
     "power_port_availability": "Moderate",
     "lighting": "Good",
@@ -302,7 +302,7 @@
   {
     "id": 35,
     "position": [49.26761428480149, -123.25594252533378],
-    "title": "FREDERIC LASSERRE (LASR) - CUBE",
+    "title": "Frederic Lasserre (LASR) - CUBE",
     "description": "The Cube provides comfortable seating for 20, nestled between theatres with adjustable lighting.",
     "power_port_availability": "Low",
     "lighting": "Good",
@@ -332,7 +332,7 @@
   {
     "id": 39,
     "position": [49.26473438969971, -123.25410255434937],
-    "title": "HENRY ANGUS (ANGU) - BRUCE R. BIRMINGHAM UNDERGRADUATE CENTRE",
+    "title": "Henry Angus (ANGU) - Bruce R. Birmingham Undergraduate Centre",
     "description": "An undergraduate study area next to the CPA Hall with movable furniture, ideal for group or individual study.",
     "power_port_availability": "Moderate",
     "lighting": "Moderate",
