@@ -82,12 +82,13 @@
 
 // export default MapInterface;
 
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import 'leaflet/dist/leaflet.css';
-import pins from '../assets/pinData.json';
-import ChatBox from './Chatbox.jsx';
+// import pins from '../assets/pinData.json';
+import pins from '../assets/updated-waypoints.json'
+// import ChatBox from './Chatbox.jsx';
 import DetailsPanel from './DetailsPanel.jsx';
 //import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.css';
 //import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.js';
@@ -148,7 +149,7 @@ const MapInterface = () => {
                         maxZoom={19}
                     />
                     {filteredPins.map(pin => (
-                        <Marker key={pin.id} position={pin.position}>
+                        <Marker key={pin.id} position={pin.coordinates}>
                             <Popup>
                                 <div className="popup-content">
                                     <b>{pin.title}</b><br />{pin.description}
@@ -162,21 +163,19 @@ const MapInterface = () => {
                                 </div>
                             </Popup>
                         </Marker>
-                    ))}
+                    ))};
                 </MapContainer>
             </div>
             {detailsVisible && selectedPin && (
                 <div className="overlay" onClick={handleCloseDetails}>
                     <div className="details-panel" onClick={(e) => e.stopPropagation()}>
                         <h2>{selectedPin.title}</h2>
-
                         <p>{selectedPin.description}</p> 
-                        <label><strong>Power Port Availability:</strong> {selectedPin.power_port_availability}</label> 
-                        <br></br>
+                        {selectedPin.imageUrl && <img src={selectedPin.imageUrl} alt={selectedPin.title} style={{ width: '100%', height: 'auto' }} />}
                         <label><strong>Capacity:</strong> {selectedPin.capacity}</label> 
                         <br></br>
                         <br></br>
-                        <a href={selectedPin.link}>Click for more info!</a>
+                        <a className='details-link' href={selectedPin.link}>Click for more info!</a>
 
 
                             <div className="details-panel-container">

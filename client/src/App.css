@@ -84,7 +84,7 @@ header svg {
   height: max-content;
   padding: 0 20px;
   left: -100%;
-  transition: all 1s ease;
+  transition: all 0.8s ease;
   z-index: 1000;
 }
 
@@ -217,7 +217,7 @@ footer {
   }
 
   to {
-    width: 27%;
+    width: 28%;
   }
 }
 
@@ -247,14 +247,14 @@ footer {
   height: 10px;
 }
 
-/*.content {*/
-/*  transition: margin-left 0.5s ease;*/
-/*}*/
+.content {
+  transition: margin-left 0.5s ease;
+}
 
-/*.content.shifted {*/
-/*  margin-left: 180px;*/
-/*  transition: all 1s ease;*/
-/*}*/
+.content.shifted {
+  margin-left: 180px;
+  transition: all 1s ease;
+}
 
 @media (max-width: 768px) {
   .navbar {
@@ -390,4 +390,12 @@ p {
 .update-button {
   margin-bottom: 20px;
   margin-top: 20px;;
+}
+
+h3 {
+  text-align: center;
+}
+
+.details-link:hover {
+  color: #333;
 }
