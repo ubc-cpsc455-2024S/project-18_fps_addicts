@@ -29,14 +29,13 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(r =>
 const oauth2Client = new google.auth.OAuth2(
     process.env.GOOGLE_CLIENT_ID,
     process.env.GOOGLE_CLIENT_SECRET,
-    'https://ubcstudyspotterserver.onrender.com/auth/google/callback'
+    'https://study-spotter-google-auth.onrender.com/auth/google/callback'
 );
 
 // Define routes
 router.get('/auth/google', (req, res) => {
     const url = oauth2Client.generateAuthUrl({
         access_type: 'offline',
-        scope: ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'],
         prompt: 'select_account'
     });
     res.redirect(url);
