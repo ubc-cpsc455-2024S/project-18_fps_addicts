@@ -402,11 +402,47 @@ h3 {
 }
 
 .close-button {
-  position: fixed; /* Fixes the button in the viewport */
-  top: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  z-index: 1000; /* Ensures the button is above other content */
-  background-color: #ff4444; /* Optional: styling for better visibility */
+  position: fixed; 
+  top: 20px;
+  right: 20px; 
+  z-index: 1000;
+  background-color: #ff4444; 
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editButton {
+  top: 20px;
+  right: 20px; 
+  z-index: 1000;
+  background-color: #44a2ff; 
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editButton {
+  top: 20px;
+  right: 20px; 
+  z-index: 1000;
+  background-color: #44a2ff; 
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  top: 20px;
+  right: 20px; 
+  z-index: 1000;
+  background-color: #ff7044; 
   color: white;
   border: none;
   padding: 10px;

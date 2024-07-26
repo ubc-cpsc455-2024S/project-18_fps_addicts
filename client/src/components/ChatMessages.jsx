@@ -40,8 +40,8 @@ const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
                         <span className="message-timestamp">{new Date(msg.timestamp).toLocaleTimeString()}</span>
                         {isCurrentUser && msg.editable && (
                             <>
-                                <button id="userActionForChat" onClick={() => handleEditClick(msg)}>Edit</button>
-                                <button id="userActionForChat" onClick={() => onDeleteMessage(msg.id)}>Delete</button>
+                                <button className="editButton" id="userActionForChat" onClick={() => handleEditClick(msg)}>Edit</button>
+                                <button className="deleteButton" onClick={() => onDeleteMessage(msg.id)}>Delete</button>
                             </>
                         )}
                     </>
