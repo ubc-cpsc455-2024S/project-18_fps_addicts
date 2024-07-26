@@ -89,8 +89,8 @@ import { FaStar, FaRegStar } from 'react-icons/fa';
 import pins from '../assets/pinData.json';
 import ChatBox from './Chatbox.jsx';
 import DetailsPanel from './DetailsPanel.jsx';
-import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.css';
-import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.js';
+// import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.css';
+// import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.js';
 
 const MapInterface = () => {
     const [detailsVisible, setDetailsVisible] = useState(false);
@@ -140,8 +140,8 @@ const MapInterface = () => {
                     center={mapCenter}
                     zoom={mapZoom}
                     style={{ height: "700px", width: "100%" }}
-                    fullscreenControl={true}
-                    fullscreenControlOptions={{ position: 'topleft' }}
+                    // fullscreenControl={true}
+                    // fullscreenControlOptions={{ position: 'topleft' }}
                 >
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
