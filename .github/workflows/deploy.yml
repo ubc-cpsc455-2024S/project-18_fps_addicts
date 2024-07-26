@@ -1,4 +1,4 @@
-name: Deploy Render
+name: Deploy to Render
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Deploy Render
+    - name: Deploy to Render
       env:
         RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
         SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
