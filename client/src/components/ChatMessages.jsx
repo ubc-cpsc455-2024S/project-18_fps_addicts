@@ -21,6 +21,9 @@ const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
     return (
         <div className="chat-messages">
             {messages.map((msg, index) => {
+                const isCurrentUser = msg.userId === userId;
+                const messageStyle = isCurrentUser ? { backgroundColor: '#f5f5dc' } : { backgroundColor: '#ffffff' };
+
                 const messageContent = editingMessageId === msg.id ? (
                     <>
                         <input
@@ -35,7 +38,7 @@ const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
                     <>
                         <span className="message-text">{msg.text}</span>
                         <span className="message-timestamp">{new Date(msg.timestamp).toLocaleTimeString()}</span>
-                        {msg.userId === userId && msg.editable && (
+                        {isCurrentUser && msg.editable && (
                             <>
                                 <button id="userActionForChat" onClick={() => handleEditClick(msg)}>Edit</button>
                                 <button id="userActionForChat" onClick={() => onDeleteMessage(msg.id)}>Delete</button>
@@ -45,7 +48,7 @@ const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
                 );
 
                 return (
-                    <div key={index} className="chat-message">
+                    <div key={index} className="chat-message" style={messageStyle}>
                         {messageContent}
                     </div>
                 );
