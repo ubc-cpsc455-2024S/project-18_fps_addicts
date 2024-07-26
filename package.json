@@ -7,7 +7,8 @@
     "start-server": "cd server && node app.js",
     "install-client": "cd client && npm install",
     "build-client": "cd client && npm run build",
-    "start-client": "cd client && npm run start"
+    "start-client": "cd client && npm run start",
+    "build": "npm run build-client"
   },
   "keywords": [],
   "author": "",
