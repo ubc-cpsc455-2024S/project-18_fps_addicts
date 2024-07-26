@@ -19,11 +19,14 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Install dependencies
-      run: npm install
+    - name: Install server dependencies
+      run: npm run install-server
+
+    - name: Install client dependencies
+      run: npm run install-client
 
     - name: Build project
-      run: npm run build-client
+      run: npm run build
 
     - name: Deploy to Render
       env:
