@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var chatRouter = require('./routes/chatserver');
+// var chatRouter = require('./routes/chatserver');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'client/dist')));
 
 
 app.use('/', indexRouter);
-app.use('/chat', chatRouter);
+// app.use('/chat', chatRouter);
 app.use('/users', usersRouter);
 
 app.get('*', (req, res) => {

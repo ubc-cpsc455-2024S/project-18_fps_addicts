@@ -16,7 +16,7 @@ router.use(session({
 }));
 
 router.use(cors({
-    origin: 'https://study-spotter-front-google.onrender.com/', // Specify the frontend origin
+    origin: 'https://ubcstudyspotterclient.onrender.com', // Specify the frontend origin
     credentials: true // Allow credentials (cookies) to be sent
 }));
 
