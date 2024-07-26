@@ -415,37 +415,25 @@ h3 {
 }
 
 .editButton {
-  top: 20px;
-  right: 20px; 
+  top: 10px;
+  right: 10px; 
   z-index: 1000;
   background-color: #44a2ff; 
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.editButton {
-  top: 20px;
-  right: 20px; 
-  z-index: 1000;
-  background-color: #44a2ff; 
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: 2px;
   cursor: pointer;
 }
 
 .deleteButton {
-  top: 20px;
-  right: 20px; 
+  top: 10px;
+  right: 10px; 
   z-index: 1000;
   background-color: #ff7044; 
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: 2px;
   cursor: pointer;
 }
