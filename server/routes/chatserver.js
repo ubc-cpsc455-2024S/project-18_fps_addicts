@@ -11,7 +11,7 @@ const Filter = require('bad-words');
 
 const corsOptions = {
     origin: "https://ubcstudyspotterclient.onrender.com", // frontend URI (ReactJS)
-  
+
     methods: ['GET', 'POST'],
     credentials: true,
     optionsSuccessStatus: 200

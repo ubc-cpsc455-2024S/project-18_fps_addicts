@@ -32,10 +32,15 @@ const oauth2Client = new google.auth.OAuth2(
     'https://study-spotter-google-auth.onrender.com/auth/google/callback'
 );
 
+router.get("/", (req, res) => {
+    res.status(201).json({message: "Connected to Backend!"});
+});
+
 // Define routes
 router.get('/auth/google', (req, res) => {
     const url = oauth2Client.generateAuthUrl({
         access_type: 'offline',
+        scope: ['profile', 'email'],
         prompt: 'select_account'
     });
     res.redirect(url);
