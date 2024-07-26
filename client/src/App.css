@@ -297,6 +297,7 @@ footer {
   max-width: 500px;
   width: 80%;
   color: #1e1e1e;
+  position: relative;
 }
 
 .details-panel h2 {
@@ -398,4 +399,17 @@ h3 {
 
 .details-link:hover {
   color: #333;
+}
+
+.close-button {
+  position: fixed; /* Fixes the button in the viewport */
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensures the button is above other content */
+  background-color: #ff4444; /* Optional: styling for better visibility */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }

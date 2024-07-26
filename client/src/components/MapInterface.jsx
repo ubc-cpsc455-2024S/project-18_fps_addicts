@@ -183,7 +183,7 @@ const MapInterface = () => {
                             </div>
                             {/* <ChatBox /> */}
 
-                        <button onClick={handleCloseDetails}>Close</button>
+                        <button className="close-button" onClick={handleCloseDetails}>Close</button>
                     </div>
                 </div>
             )}
