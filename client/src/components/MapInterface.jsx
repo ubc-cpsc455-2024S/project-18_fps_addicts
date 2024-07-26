@@ -171,9 +171,10 @@ const MapInterface = () => {
                     <div className="details-panel" onClick={(e) => e.stopPropagation()}>
                         <h2>{selectedPin.title}</h2>
                         <p>{selectedPin.description}</p> 
-                        {selectedPin.imageUrl && <img src={selectedPin.imageUrl} alt={selectedPin.title} style={{ width: '100%', height: 'auto' }} />}
-                        <label><strong>Capacity:</strong> {selectedPin.capacity}</label> 
+                        {selectedPin.imageUrl && <img src={selectedPin.imageUrl} alt={selectedPin.title} onerror="this.onerror=null; this.src='../assets/ubc_logo.jpg';" style={{ width: '100%', height: 'auto' }} />}
                         <br></br>
+                        <label><strong>Capacity:</strong> {selectedPin.capacity}</label> 
+
                         <br></br>
                         <a className='details-link' href={selectedPin.link}>Click for more info!</a>
 

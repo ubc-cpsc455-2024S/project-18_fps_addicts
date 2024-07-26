@@ -218,7 +218,7 @@ footer {
   text-align: center;
 }
 
-@keyframes typewriter {
+/* @keyframes typewriter {
   from {
     width: 0;
   }
@@ -236,12 +236,12 @@ footer {
   to {
     border-right-color: transparent;
   }
-}
+} */
 
 .typewriter {
   float: inline-start;
   overflow: hidden;
-  border-right: .15em solid rgba(255, 255, 255, 0.75);
+  /* border-right: .15em solid rgba(255, 255, 255, 0.75); */
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .08em;
@@ -420,10 +420,22 @@ h3 {
 
 .panel {
   opacity: 0;
-  transform: translate3d(0, 100%, 0);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 20px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.panel.visible {
-  animation: fadeInUp 0.5s forwards;
+.panel.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-page-text {
+  float:inline-start;
+  margin-left: 50px;
+  color: #FF4500;
 }
