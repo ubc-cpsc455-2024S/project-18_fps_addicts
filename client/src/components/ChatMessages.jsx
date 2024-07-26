@@ -31,8 +31,8 @@ const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
                             value={editText}
                             onChange={(e) => setEditText(e.target.value)}
                         />
-                        <button onClick={() => handleSaveClick(msg)}>Save</button>
-                        <button onClick={() => setEditingMessageId(null)}>Cancel</button>
+                        <button className="saveButton"  onClick={() => handleSaveClick(msg)}>Save</button>
+                        <button className="cancelButton"  onClick={() => setEditingMessageId(null)}>Cancel</button>
                     </>
                 ) : (
                     <>
