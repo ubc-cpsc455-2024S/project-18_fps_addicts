@@ -22,7 +22,7 @@ const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
         <div className="chat-messages">
             {messages.map((msg, index) => {
                 const isCurrentUser = msg.userId === userId;
-                const messageStyle = isCurrentUser ? { backgroundColor: '#f5f5dc' } : { backgroundColor: '#ffffff' };
+                const messageStyle = isCurrentUser ? { backgroundColor: '#87CEEB' } : { backgroundColor: '#ffffff' };
 
                 const messageContent = editingMessageId === msg.id ? (
                     <>
