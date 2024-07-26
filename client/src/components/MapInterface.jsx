@@ -85,7 +85,7 @@
 import React, { useLayoutEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { FaStar, FaRegStar } from 'react-icons/fa';
-import 'leaflet/dist/leaflet.css';
+//import 'leaflet/dist/leaflet.css';
 // import pins from '../assets/pinData.json';
 import pins from '../assets/updated-waypoints.json'
 // import ChatBox from './Chatbox.jsx';

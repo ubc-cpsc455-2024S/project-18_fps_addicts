@@ -13,11 +13,25 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client/dist')));
+
 
 app.use('/', indexRouter);
 app.use('/chat', chatRouter);
 app.use('/users', usersRouter);
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
+});
+
+// Set the port number
+var port = process.env.PORT || 3000;
+
+// Start the server
+app.listen(port, function() {
+    console.log(`Server is running on port ${port}`);
+});
 
 module.exports = app;
 
