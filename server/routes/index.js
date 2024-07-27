@@ -59,7 +59,7 @@ router.get('/auth/google', (req, res) => {
         scope: ['profile', 'email'],
         prompt: 'select_account'
     });
-    res.redirect({ url });
+    res.redirect( url );
 });
 
 router.get('/auth/google/callback', async (req, res) => {
