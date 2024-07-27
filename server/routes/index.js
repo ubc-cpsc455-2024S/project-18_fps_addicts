@@ -14,22 +14,28 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(() =>
     console.log("mongoDB connection successful");
 });
 
-// Set up session middleware
-router.use(session({
-    secret: 'session_secret',
+const sessionConfig = {
+    secret: process.env.SESSION_SECRET || 'session_secret',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     store: MongoStore.create({
         mongoUrl: process.env.MONGODB_CONNECTION_STRING,
         collectionName: 'sessions'
     }),
     cookie: {
         maxAge: 24 * 60 * 60 * 1000, // 1 day
-        httpOnly: false,
-        secure: process.env.NODE_ENV === 'production', // Ensures cookies are sent over HTTPS
-        sameSite: 'lax' // Adjust based on your needs
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'lax'
     }
-}));
+};
+
+router.use(session(sessionConfig));
+
+router.use((req, res, next) => {
+    console.log('Session cookie:', JSON.stringify(req.session.cookie));
+    next();
+});
 
 router.use(cors({
     origin: 'https://ubcstudyspotterclient.onrender.com', // Specify the frontend origin
