@@ -111,15 +111,15 @@ const MapInterface = () => {
         setSelectedPin(null);
     };
 
-    const toggleFavorite = (pinId) => {
-        setFavorites(prevFavorites => {
-            if (prevFavorites.includes(pinId)) {
-                return prevFavorites.filter(id => id !== pinId);
-            } else {
-                return [...prevFavorites, pinId];
-            }
-        });
-    };
+    // const toggleFavorite = (pinId) => {
+    //     setFavorites(prevFavorites => {
+    //         if (prevFavorites.includes(pinId)) {
+    //             return prevFavorites.filter(id => id !== pinId);
+    //         } else {
+    //             return [...prevFavorites, pinId];
+    //         }
+    //     });
+    // };
 
     // Filter pins based on search term
     const filteredPins = pins.filter(pin =>
@@ -158,7 +158,7 @@ const MapInterface = () => {
                                     <button onClick={() => handleMoreDetails(pin)}>More Details</button>
                                     {/* <ChatBox /> */}
                                     <div className="favorite" onClick={() => toggleFavorite(pin.id)}>
-                                        {favorites.includes(pin.id) ? <FaStar /> : <FaRegStar />}
+                                        {/* {favorites.includes(pin.id) ? <FaStar /> : <FaRegStar />} */}
                                     </div>
                                 </div>
                             </Popup>
@@ -180,6 +180,7 @@ const MapInterface = () => {
 
 
                             <div className="details-panel-container">
+                            <h3>Join the chat and make new friends!</h3>
                             <DetailsPanel pin={selectedPin} onClose={handleCloseDetails} />
                             </div>
                             {/* <ChatBox /> */}

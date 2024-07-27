@@ -206,12 +206,18 @@ ul li a:active {
 
 
 footer {
+  --text-light: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+.dark-mode footer {
   color: #fff;
   padding: 20px;
   text-align: center;
 }
 
-@keyframes typewriter {
+/* @keyframes typewriter {
   from {
     width: 0;
   }
@@ -229,18 +235,18 @@ footer {
   to {
     border-right-color: transparent;
   }
-}
+} */
 
 .typewriter {
   float: inline-start;
   overflow: hidden;
-  border-right: .15em solid rgba(255, 255, 255, 0.75);
+  /* border-right: .15em solid rgba(255, 255, 255, 0.75); */
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .08em;
-  animation:
+  /* animation:
     typewriter 4s steps(40, end) 1s 1 normal both,
-    cursor 500ms steps(40, end) infinite normal;
+    cursor 500ms steps(40, end) infinite normal; */
 }
 
 .title {
@@ -316,7 +322,7 @@ footer {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  background: #515151;
+  background: #787d95;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -401,6 +407,7 @@ h3 {
   color: #333;
 }
 
+
 .close-button {
   position: fixed; 
   top: 20px;
@@ -460,4 +467,25 @@ h3 {
   padding: 5px;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.about-page-text {
+  float: inline-start;
+  color: #FF4500;
+}
+
+.panel {
+  opacity: 0;
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 1s ease-out;
+}
+
+.panel.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
