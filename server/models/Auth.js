@@ -1,15 +1,16 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const authSchema = new mongoose.Schema({
     expires: {
         type: Date
     },
     session: String,
 }, {
     _id: false, // Disable automatic _id generation
-    strict: false // Allow fields that are not specified in the schema
+    strict: false, // Allow fields that are not specified in the schema
+    collection: 'sessions'
 });
 
-const User = mongoose.model('User', userSchema);
+const Auth = mongoose.model('Auth', authSchema);
 
-module.exports = User;
+module.exports = Auth;
