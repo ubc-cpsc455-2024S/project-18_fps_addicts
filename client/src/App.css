@@ -319,15 +319,13 @@ footer {
 } */
 
 .profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f9f9f9;
+  max-width: 400px;
+  margin: 50px auto;
   padding: 20px;
-  border-radius: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 600px;
+  text-align: center;
 }
 
 .profile-header {
@@ -353,7 +351,7 @@ footer {
 }
 
 .profile-input::placeholder {
-  color: #cdcaca;
+  color: #888;
 }
 
 .profile-button,
