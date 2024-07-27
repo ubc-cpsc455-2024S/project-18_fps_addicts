@@ -130,16 +130,14 @@ router.get('/auth/logout/:id', async (req, res, next) => {
 
 router.get('/api/user/:id', async (req, res) => {
     let auth = await Auth.findById( req.params.id );
-    console.log(req.params.id);
-    console.log(await Auth.find({}));
-    console.log(auth);
-
 
 
     if (!auth || !auth.session || !auth.session.tokens) {
+        console.log(":)");
         return res.status(401).json({ error: 'Not authenticated' });
     }
-
+    console.log(":(");
+    console.log(auth.session.tokens);
     oauth2Client.setCredentials(auth.session.tokens);
     const oauth2 = google.oauth2({ version: 'v2', auth: oauth2Client });
 
