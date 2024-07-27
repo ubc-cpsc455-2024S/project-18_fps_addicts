@@ -36,6 +36,12 @@ h2 {
   font-size: 1.2em;
 }
 
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: black;
+}
+
 .booking-card-image {
   width: 100%;
   height: auto;

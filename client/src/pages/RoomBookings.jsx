@@ -26,8 +26,9 @@ const bookingLinks = [
 
 const BookingLinks = () => {
     return (
+        <>
+        <h1>Book a Study Room</h1>
         <div className="booking-links-container">
-            <h1>Book a Study Room</h1>
             <div className="booking-cards">
                 {bookingLinks.map((link, index) => (
                     <div key={index} className="booking-card">
@@ -40,6 +41,7 @@ const BookingLinks = () => {
                 ))}
             </div>
         </div>
+        </>
     );
 };
 

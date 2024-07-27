@@ -1,7 +1,7 @@
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Minimum viewport height */
+  min-height: 100vh; 
 }
 
 :root {
