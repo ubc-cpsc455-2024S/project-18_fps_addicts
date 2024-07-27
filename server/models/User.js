@@ -6,7 +6,8 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     name: String,
-    picture: String
+    picture: String,
+    session: String
 }, {
     _id: false, // Disable automatic _id generation
     strict: false // Allow fields that are not specified in the schema

@@ -32,11 +32,11 @@ const sessionConfig = {
 
 router.use(session(sessionConfig));
 
-router.use((req, res, next) => {
-    console.log('Session:', req.session);
-    console.log('Session ID:', req.sessionID);
-    next();
-});
+// router.use((req, res, next) => {
+//     console.log('Session:', req.session);
+//     console.log('Session ID:', req.sessionID);
+//     next();
+// });
 
 router.use(cors({
     origin: 'https://ubcstudyspotterclient.onrender.com', // Specify the frontend origin
@@ -72,6 +72,7 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store tokens in session
         req.session.tokens = tokens;
+        console.log(req.sessionID);
 
         const oauth2 = google.oauth2({ version: 'v2', auth: oauth2Client });
         const { data } = await oauth2.userinfo.get();
@@ -83,7 +84,8 @@ router.get('/auth/google/callback', async (req, res) => {
                 _id: data.id,
                 email: data.email,
                 name: data.name,
-                picture: data.picture
+                picture: data.picture,
+                session: req.sessionID
             });
             await user.save();
         }
@@ -100,15 +102,15 @@ router.get('/auth/google/callback', async (req, res) => {
 
 });
 
-router.get('/auth/logout', async (req, res, next) => {
+router.get('/auth/logout/:id', async (req, res, next) => {
     if (req.session) {
         // Destroy the session
-        // Auth.findByIdAndDelete(_id: req.sessionID).then(r=>{
-        //     //connect-mongo session successfully deleted
-        // }).catch(e=>{
-        //     console.error('Error destroying session:', err);
-        //     return res.status(500).json({message: 'Error logging out'});
-        // });
+        Auth.findByIdAndDelete( req.params.id ).then(r=>{
+            //connect-mongo session successfully deleted
+        }).catch(e=>{
+            console.error('Error destroying session:', err);
+            return res.status(500).json({message: 'Error logging out'});
+        });
 
         req.session.destroy((err) => {
             if (err) {
@@ -128,10 +130,8 @@ router.get('/auth/logout', async (req, res, next) => {
     }
 });
 
-router.get('/api/user', async (req, res) => {
-    let auth = await Auth.findById( req.sessionID );
-    console.log(Auth.collection.collectionName);
-    console.log(req.sessionID);
+router.get('/api/user/:id', async (req, res) => {
+    let auth = await Auth.findById( req.params.id );
     console.log(await Auth.find({}));
 
     if (!auth || !auth.session || !auth.session.tokens) {

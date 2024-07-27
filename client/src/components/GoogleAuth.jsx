@@ -14,7 +14,7 @@ const GoogleAuth = () => {
 
     const checkAuthStatus = async () => {
         try {
-            const response = await fetch('https://study-spotter-google-auth.onrender.com/api/user', {
+            const response = await fetch(`https://study-spotter-google-auth.onrender.com/api/user/${user.session}`, {
                 credentials: 'include' // Important for including cookies
             });
             if (response.ok) {
@@ -35,7 +35,7 @@ const GoogleAuth = () => {
 
     const handleLogout = async () => {
         try {
-            await fetch('https://study-spotter-google-auth.onrender.com/auth/logout', { credentials: 'include' });
+            await fetch(`https://study-spotter-google-auth.onrender.com/auth/logout/${user.session}`, { credentials: 'include' });
             dispatch(logout());
         } catch (error) {
             console.error('Error logging out:', error);
