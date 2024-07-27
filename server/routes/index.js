@@ -32,11 +32,11 @@ const sessionConfig = {
 
 router.use(session(sessionConfig));
 
-router.use((req, res, next) => {
-    console.log('Session:', req.session);
-    console.log('Session ID:', req.sessionID);
-    next();
-});
+// router.use((req, res, next) => {
+//     console.log('Session:', req.session);
+//     console.log('Session ID:', req.sessionID);
+//     next();
+// });
 
 router.use(cors({
     origin: 'https://ubcstudyspotterclient.onrender.com', // Specify the frontend origin
@@ -72,7 +72,6 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store tokens in session
         req.session.tokens = tokens;
-        console.log('Tokens saved to session:', req.session);
 
         const oauth2 = google.oauth2({ version: 'v2', auth: oauth2Client });
         const { data } = await oauth2.userinfo.get();
@@ -91,7 +90,6 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store user info in session
         req.session.user = user;
-        console.log('User saved to session:', req.session.user);
 
         res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
     } catch (error) {
@@ -131,13 +129,13 @@ router.get('/auth/logout', async (req, res, next) => {
 });
 
 router.get('/api/user', async (req, res) => {
-    let session = await Auth.findOne( req.sessionID );
+    let auth = await Auth.findOne( req.sessionID );
 
-    if (!session || !session.tokens) {
+    if (!auth || !auth.session || !auth.session.tokens) {
         return res.status(401).json({ error: 'Not authenticated' });
     }
 
-    oauth2Client.setCredentials(session.tokens);
+    oauth2Client.setCredentials(auth.session.tokens);
     const oauth2 = google.oauth2({ version: 'v2', auth: oauth2Client });
 
     try {
