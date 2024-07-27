@@ -77,8 +77,6 @@ router.get('/auth/google/callback', async (req, res) => {
         console.error('Error getting tokens:', error);
         res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
     }
-
-
 });
 
 router.get('/auth/logout', (req, res, next) => {
