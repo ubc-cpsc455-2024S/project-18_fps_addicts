@@ -25,14 +25,15 @@ const sessionConfig = {
     cookie: {
         maxAge: 24 * 60 * 60 * 1000, // 1 day
         secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax'
+        sameSite: 'none'
     }
 };
 
 router.use(session(sessionConfig));
 
 router.use((req, res, next) => {
-    console.log('Session cookie:', JSON.stringify(req.session.cookie));
+    console.log('Session:', req.session);
+    console.log('Session ID:', req.sessionID);
     next();
 });
 
