@@ -129,9 +129,8 @@ router.get('/auth/logout', async (req, res, next) => {
 });
 
 router.get('/api/user', async (req, res) => {
-    console.log(req.sessionID);
     let auth = await Auth.findById( req.sessionID );
-    console.log(auth);
+    console.log(Auth.collection.collectionName);
 
     if (!auth || !auth.session || !auth.session.tokens) {
         return res.status(401).json({ error: 'Not authenticated' });
