@@ -130,7 +130,11 @@ router.get('/auth/logout/:id', async (req, res, next) => {
 
 router.get('/api/user/:id', async (req, res) => {
     let auth = await Auth.findById( req.params.id );
+    console.log(req.params.id);
     console.log(await Auth.find({}));
+    console.log(auth);
+
+
 
     if (!auth || !auth.session || !auth.session.tokens) {
         return res.status(401).json({ error: 'Not authenticated' });
