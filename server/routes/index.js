@@ -28,7 +28,7 @@ router.use(cors({
     credentials: true // Allow credentials (cookies) to be sent
 }));
 
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(r =>
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(() =>
 {
     console.log("mongoDB connection successful");
 });
@@ -62,6 +62,7 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store tokens in session
         req.session.tokens = tokens;
+        console.log('Tokens saved to session:', req.session);
 
         const oauth2 = google.oauth2({ version: 'v2', auth: oauth2Client });
         const { data } = await oauth2.userinfo.get();
@@ -82,13 +83,7 @@ router.get('/auth/google/callback', async (req, res) => {
         req.session.user = user;
         console.log('User saved to session:', req.session.user);
 
-        req.session.save((err) => {
-            if (err) {
-                console.error('Error saving session:', err);
-                return res.status(500).json({ message: 'Error saving session' });
-            }
-            res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
-        });
+        res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
     } catch (error) {
         console.error('Error getting tokens:', error);
         res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
