@@ -103,7 +103,7 @@ router.get('/auth/google/callback', async (req, res) => {
 router.get('/auth/logout', async (req, res, next) => {
     if (req.session) {
         // Destroy the session
-        // Auth.deleteOne({_id: req.sessionID}).then(r=>{
+        // Auth.findByIdAndDelete(_id: req.sessionID).then(r=>{
         //     //connect-mongo session successfully deleted
         // }).catch(e=>{
         //     console.error('Error destroying session:', err);
@@ -129,7 +129,7 @@ router.get('/auth/logout', async (req, res, next) => {
 });
 
 router.get('/api/user', async (req, res) => {
-    let auth = await Auth.findOne( req.sessionID );
+    let auth = await Auth.findById( req.sessionID );
 
     if (!auth || !auth.session || !auth.session.tokens) {
         return res.status(401).json({ error: 'Not authenticated' });
