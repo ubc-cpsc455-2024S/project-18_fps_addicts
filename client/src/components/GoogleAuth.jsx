@@ -29,8 +29,20 @@ const GoogleAuth = () => {
         }
     };
 
-    const handleLogin = () => {
-        window.location.href = 'https://study-spotter-google-auth.onrender.com/auth/google';
+    const handleLogin = async () => {
+        try {
+            const response = await fetch('https://study-spotter-google-auth.onrender.com/auth/google/initiate', {
+                credentials: 'include' // Important for including cookies
+            });
+            if (response.ok) {
+                const { url } = await response.json();
+                window.location.href = url;
+            } else {
+                console.error('Failed to initiate login');
+            }
+        } catch (error) {
+            console.error('Error initiating login:', error);
+        }
     };
 
     const handleLogout = async () => {
