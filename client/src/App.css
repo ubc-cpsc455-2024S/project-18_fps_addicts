@@ -489,3 +489,8 @@ h3 {
   opacity: 1;
   transform: translateY(0);
 }
+
+.about-text {
+  text-align: center;
+  padding: 10px;
+}
