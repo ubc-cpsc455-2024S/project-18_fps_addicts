@@ -1,20 +1,29 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Cookies from 'js-cookie';
 import {loginFailure, loginSuccess, logout} from "../redux/users/authSlice.js";
+import {sessionReceived} from "../redux/users/sessionSlice.js";
 
 const GoogleAuth = () => {
     const dispatch = useDispatch();
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-    const user = useSelector((state) => state.auth.user);
+    const session = useSelector((state) => state.session.sessionID);
 
     useEffect(() => {
         // Check if user is authenticated on component mount
         checkAuthStatus();
     }, []);
 
+    useEffect(() => {
+        const sessionId = Cookies.get('sessionId');
+        if (sessionId) {
+            dispatch(sessionReceived(sessionId));
+        }
+    }, [dispatch]);
+
     const checkAuthStatus = async () => {
         try {
-            const response = await fetch(`https://study-spotter-google-auth.onrender.com/api/user/${user.session}`, {
+            const response = await fetch(`https://study-spotter-google-auth.onrender.com/api/user/${session}`, {
                 credentials: 'include' // Important for including cookies
             });
             if (response.ok) {
@@ -35,7 +44,7 @@ const GoogleAuth = () => {
 
     const handleLogout = async () => {
         try {
-            await fetch(`https://study-spotter-google-auth.onrender.com/auth/logout/${user.session}`, { credentials: 'include' });
+            await fetch(`https://study-spotter-google-auth.onrender.com/auth/logout/${session}`, { credentials: 'include' });
             dispatch(logout());
         } catch (error) {
             console.error('Error logging out:', error);
