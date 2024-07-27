@@ -91,8 +91,7 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store session info in cookie
         const sessionId = req.sessionID;
-
-        res.redirect(`https://ubcstudyspotterclient.onrender.com/profile?sessionId=${sessionID}`);
+        res.redirect(`https://ubcstudyspotterclient.onrender.com/profile?sessionId=${sessionId}`);
     } catch (error) {
         console.error('Error getting tokens:', error);
         res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
