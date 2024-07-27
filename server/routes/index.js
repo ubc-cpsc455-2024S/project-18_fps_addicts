@@ -24,7 +24,6 @@ const sessionConfig = {
     }),
     cookie: {
         maxAge: 24 * 60 * 60 * 1000, // 1 day
-        httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax'
     }
@@ -54,7 +53,7 @@ router.get("/", (req, res) => {
 });
 
 // Define routes
-router.get('/auth/google/initiate', (req, res) => {
+router.get('/auth/google', (req, res) => {
     const url = oauth2Client.generateAuthUrl({
         access_type: 'offline',
         scope: ['profile', 'email'],
