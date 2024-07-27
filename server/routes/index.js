@@ -133,8 +133,9 @@ router.get('/api/user/:id', async (req, res) => {
 
     console.log(auth);
     console.log(auth.session);
-    console.log(auth.tokens);
+    console.log(auth.session.tokens);
     if (!auth || !auth.session || !auth.session.tokens) {
+        console.log("lp");
         return res.status(401).json({ error: 'Not authenticated' });
     }
 
