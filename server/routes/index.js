@@ -14,6 +14,11 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(() =>
     console.log("mongoDB connection successful");
 });
 
+if (process.env.NODE_ENV === 'production') {
+    router.set('trust proxy', 1) // trust first proxy
+    sess.cookie.secure = true // serve secure cookies
+}
+
 // Set up session middleware
 router.use(session({
     secret: 'session_secret',
@@ -22,7 +27,13 @@ router.use(session({
     store: MongoStore.create({
         mongoUrl: process.env.MONGODB_CONNECTION_STRING,
         collectionName: 'sessions'
-    })
+    }),
+    cookie: {
+        maxAge: 24 * 60 * 60 * 1000, // 1 day
+        httpOnly: false,
+        secure: process.env.NODE_ENV === 'production', // Ensures cookies are sent over HTTPS
+        sameSite: 'lax' // Adjust based on your needs
+    }
 }));
 
 router.use(cors({
