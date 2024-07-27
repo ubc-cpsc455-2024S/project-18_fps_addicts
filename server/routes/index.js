@@ -84,14 +84,13 @@ router.get('/auth/google/callback', async (req, res) => {
                 _id: data.id,
                 email: data.email,
                 name: data.name,
-                picture: data.picture,
-                session: req.sessionID
+                picture: data.picture
             });
             await user.save();
         }
 
-        // Store user info in session
-        req.session.user = user;
+        // Store session info in cookie
+        res.cookie('sessionId', req.sessionID, { httpOnly: true, secure: true });
 
         res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
     } catch (error) {
