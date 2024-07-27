@@ -9,6 +9,11 @@ require('dotenv').config();
 const User = require('../models/User');
 const MongoStore = require("connect-mongo");
 
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(() =>
+{
+    console.log("mongoDB connection successful");
+});
+
 // Set up session middleware
 router.use(session({
     secret: 'session_secret',
@@ -17,24 +22,13 @@ router.use(session({
     store: MongoStore.create({
         mongoUrl: process.env.MONGODB_CONNECTION_STRING,
         collectionName: 'sessions'
-    }),
-    cookie: {
-        maxAge: 24 * 60 * 60 * 1000,
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
-        sameSite: 'lax'
-    }
+    })
 }));
 
 router.use(cors({
     origin: 'https://ubcstudyspotterclient.onrender.com', // Specify the frontend origin
     credentials: true // Allow credentials (cookies) to be sent
 }));
-
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(() =>
-{
-    console.log("mongoDB connection successful");
-});
 
 // Set up OAuth 2.0 client
 const oauth2Client = new google.auth.OAuth2(
@@ -48,13 +42,13 @@ router.get("/", (req, res) => {
 });
 
 // Define routes
-router.get('/auth/google', (req, res) => {
+router.get('/auth/google/initiate', (req, res) => {
     const url = oauth2Client.generateAuthUrl({
         access_type: 'offline',
         scope: ['profile', 'email'],
         prompt: 'select_account'
     });
-    res.redirect(url);
+    res.json({ url });
 });
 
 router.get('/auth/google/callback', async (req, res) => {
