@@ -2,6 +2,8 @@
 
 [![Deploy to Render](https://github.com/ubc-cpsc455-2024S/project-18_fps_addicts/actions/workflows/deploy.yml/badge.svg)](https://github.com/ubc-cpsc455-2024S/project-18_fps_addicts/actions/workflows/deploy.yml)
 
+Welcome to StudySpotter, the ultimate solution for UBC students on the hunt for the perfect study spot! Say goodbye to the frustration of wandering around campus looking for a place to study. Our app provides real-time updates on the best study locations, complete with availability, amenities, and even local chatboxes to connect with fellow students. With StudySpotter, you can effortlessly find and reserve your ideal study space, ensuring you always have the perfect environment to hit the books and ace your exams. Get ready to revolutionize your study sessions with StudySpotter!
+
 ## About our topic/interest
 
 As a UBC student, finding a place to study can be a challenging task. Despite the abundance of libraries, study lounges, and quiet spaces, prime locations often fill up quickly, especially during midterm and final season. Whether you're trying to find a spot for yourself or a group of friends, it can be a draining task to find the perfect place where everyone's needs are satisfied. From jam packed areas to a lack of available outlets, students are having to navigate around different areas of the campus to secure the right spot, which can be a time-consuming process. As such, we wish to lighten this burden by providing a tool that will help mitigate the need for students to stress over finding the perfect spot that will suit their needs.

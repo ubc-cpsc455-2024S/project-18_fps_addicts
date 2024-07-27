@@ -1,7 +1,7 @@
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Minimum viewport height */
+  min-height: 100vh; 
 }
 
 :root {
@@ -310,13 +310,13 @@ footer {
   margin-top: 0;
 }
 
-.favorite {
+/* .favorite {
   cursor: pointer;
   margin-top: 10px;
   color: gold;
   font-size: 20px;
   float: right;
-}
+} */
 
 .profile-container {
   max-width: 400px;
@@ -431,6 +431,8 @@ h3 {
   padding: 5px;
   border-radius: 2px;
   cursor: pointer;
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 .deleteButton {
@@ -488,4 +490,9 @@ h3 {
 .panel.fade-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+.about-text {
+  text-align: center;
+  padding: 10px;
 }
