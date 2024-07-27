@@ -7,6 +7,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const User = require('../models/User');
+const Auth = require('../models/Auth');
 const MongoStore = require("connect-mongo");
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(() =>
@@ -101,34 +102,42 @@ router.get('/auth/google/callback', async (req, res) => {
 
 });
 
-router.get('/auth/logout', (req, res, next) => {
+router.get('/auth/logout', async (req, res, next) => {
     if (req.session) {
         // Destroy the session
+        // Auth.deleteOne({_id: req.sessionID}).then(r=>{
+        //     //connect-mongo session successfully deleted
+        // }).catch(e=>{
+        //     console.error('Error destroying session:', err);
+        //     return res.status(500).json({message: 'Error logging out'});
+        // });
+
         req.session.destroy((err) => {
             if (err) {
                 console.error('Error destroying session:', err);
-                return res.status(500).json({ message: 'Error logging out' });
+                return res.status(500).json({message: 'Error logging out'});
             }
 
             // Clear the session cookie
             res.clearCookie('connect.sid'); // Adjust the cookie name if you're using a different one
 
             // Send a successful response
-            res.status(200).json({ message: 'Logged out successfully' });
+            res.status(200).json({message: 'Logged out successfully'});
         });
     } else {
         // If there's no session, just send a successful response
-        res.status(200).json({ message: 'Logged out successfully' });
+        res.status(200).json({message: 'Logged out successfully'});
     }
 });
 
 router.get('/api/user', async (req, res) => {
-    console.log('Session:', req.session);
-    if (!req.session.tokens) {
+    let session = await Auth.findOne( req.sessionID );
+
+    if (!session || !session.tokens) {
         return res.status(401).json({ error: 'Not authenticated' });
     }
 
-    oauth2Client.setCredentials(req.session.tokens);
+    oauth2Client.setCredentials(session.tokens);
     const oauth2 = google.oauth2({ version: 'v2', auth: oauth2Client });
 
     try {
