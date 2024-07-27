@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginFailure, loginSuccess, logout } from "../redux/users/authSlice.js";
-import { sessionReceived } from "../redux/users/sessionSlice.js";
+import {sessionLost, sessionReceived} from "../redux/users/sessionSlice.js";
 
 const GoogleAuth = () => {
     const dispatch = useDispatch();
@@ -49,6 +49,7 @@ const GoogleAuth = () => {
         try {
             await fetch(`https://study-spotter-google-auth.onrender.com/auth/logout/${session}`, { credentials: 'include' });
             dispatch(logout());
+            dispatch(sessionLost());
         } catch (error) {
             console.error('Error logging out:', error);
         }
