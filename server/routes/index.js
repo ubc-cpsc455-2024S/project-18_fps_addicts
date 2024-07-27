@@ -19,7 +19,10 @@ router.use(session({
         collectionName: 'sessions'
     }),
     cookie: {
-        maxAge: 24 * 60 * 60 * 1000 // 1 day
+        maxAge: 24 * 60 * 60 * 1000,
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production', // Set secure cookies in production
+        sameSite: 'lax'
     }
 }));
 
