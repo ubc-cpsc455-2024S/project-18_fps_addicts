@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {loginFailure, loginSuccess, logout} from "../redux/users/authSlice.js";
-import {sessionReceived} from "../redux/users/sessionSlice.js";
+import { loginFailure, loginSuccess, logout } from "../redux/users/authSlice.js";
+import { sessionReceived } from "../redux/users/sessionSlice.js";
 
 const GoogleAuth = () => {
     const dispatch = useDispatch();
@@ -9,22 +9,24 @@ const GoogleAuth = () => {
     const session = useSelector((state) => state.session.sessionID);
 
     useEffect(() => {
-        // Check if user is authenticated on component mount
-        checkAuthStatus();
-    }, [session]);
-
-    useEffect(() => {
+        // Handle session ID from URL on component mount
         const params = new URLSearchParams(window.location.search);
         const sessionId = params.get('sessionId');
         if (sessionId) {
             dispatch(sessionReceived(sessionId));
-            window.location.href = 'https://ubcstudyspotterclient.onrender.com/profile';
+            window.history.replaceState({}, document.title, window.location.pathname); // Clean the URL
         }
-    }, []);
+    }, [dispatch]);
 
-    const checkAuthStatus = async () => {
+    useEffect(() => {
+        if (session) {
+            checkAuthStatus(session);
+        }
+    }, [session]);
+
+    const checkAuthStatus = async (sessionId) => {
         try {
-            const response = await fetch(`https://study-spotter-google-auth.onrender.com/api/user/${session}`, {
+            const response = await fetch(`https://study-spotter-google-auth.onrender.com/api/user/${sessionId}`, {
                 credentials: 'include' // Important for including cookies
             });
             if (response.ok) {
@@ -57,9 +59,7 @@ const GoogleAuth = () => {
             {isAuthenticated ? (
                 <button
                     onClick={handleLogout}
-
                     className="logout-button"
-
                 >
                     <span>Logout</span>
                 </button>
@@ -67,7 +67,6 @@ const GoogleAuth = () => {
                 <button
                     onClick={handleLogin}
                     className="google-button"
-
                 >
                     <span>Login with Google</span>
                 </button>
