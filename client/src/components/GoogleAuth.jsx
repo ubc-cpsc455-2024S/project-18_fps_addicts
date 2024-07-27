@@ -11,7 +11,7 @@ const GoogleAuth = () => {
     useEffect(() => {
         // Check if user is authenticated on component mount
         checkAuthStatus();
-    }, []);
+    }, [session]);
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -20,7 +20,7 @@ const GoogleAuth = () => {
             dispatch(sessionReceived(sessionId));
             window.location.href = 'https://ubcstudyspotterclient.onrender.com/profile';
         }
-    }, [dispatch]);
+    }, []);
 
     const checkAuthStatus = async () => {
         try {
