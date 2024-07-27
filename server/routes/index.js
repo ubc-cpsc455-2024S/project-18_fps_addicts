@@ -32,11 +32,11 @@ const sessionConfig = {
 
 router.use(session(sessionConfig));
 
-// router.use((req, res, next) => {
-//     console.log('Session:', req.session);
-//     console.log('Session ID:', req.sessionID);
-//     next();
-// });
+router.use((req, res, next) => {
+    console.log('Session:', req.session);
+    console.log('Session ID:', req.sessionID);
+    next();
+});
 
 router.use(cors({
     origin: 'https://ubcstudyspotterclient.onrender.com', // Specify the frontend origin
@@ -131,6 +131,8 @@ router.get('/auth/logout', async (req, res, next) => {
 router.get('/api/user', async (req, res) => {
     let auth = await Auth.findById( req.sessionID );
     console.log(Auth.collection.collectionName);
+    console.log(req.sessionID);
+    console.log(await Auth.find({}));
 
     if (!auth || !auth.session || !auth.session.tokens) {
         return res.status(401).json({ error: 'Not authenticated' });
