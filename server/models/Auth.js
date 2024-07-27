@@ -11,6 +11,6 @@ const authSchema = new mongoose.Schema({
     collection: 'sessions'
 });
 
-const Auth = mongoose.model('Auth', authSchema);
+const Auth = mongoose.model('Session', authSchema);
 
 module.exports = Auth;
