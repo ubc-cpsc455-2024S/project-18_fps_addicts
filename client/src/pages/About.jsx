@@ -75,7 +75,7 @@ const About = () => {
                 </p>
             </div> */}
             <div className="panel" ref={el => panelRefs.current[0] = el}>
-                <h3 className="about-page-text">What is UBC StudySotter?</h3>  
+                <h3 className="about-page-text">What is UBC StudySpotter?</h3>  
                 <br></br>
                 <br></br>
                 <p className='about-text'>
