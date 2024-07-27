@@ -3,7 +3,7 @@ var router = express.Router();
 const { google } = require('googleapis');
 const mongoose = require('mongoose');
 const session = require('express-session');
-const MongoStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongo');
 const cors = require('cors');
 require('dotenv').config();
 
