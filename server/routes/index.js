@@ -3,11 +3,11 @@ var router = express.Router();
 const { google } = require('googleapis');
 const mongoose = require('mongoose');
 const session = require('express-session');
-const MongoStore = require('connect-mongo');
 const cors = require('cors');
 require('dotenv').config();
 
 const User = require('../models/User');
+const MongoStore = require("connect-mongo");
 
 // Set up session middleware
 router.use(session({
@@ -16,12 +16,10 @@ router.use(session({
     saveUninitialized: true,
     store: MongoStore.create({
         mongoUrl: process.env.MONGODB_CONNECTION_STRING,
-        ttl: 14 * 24 * 60 * 60 // 14 days
+        collectionName: 'sessions'
     }),
     cookie: {
-        secure: true, // Set to true if your site is served over HTTPS
-        httpOnly: true,
-        maxAge: 14 * 24 * 60 * 60 * 1000 // 14 days
+        maxAge: 24 * 60 * 60 * 1000 // 1 day
     }
 }));
 
@@ -82,7 +80,15 @@ router.get('/auth/google/callback', async (req, res) => {
 
         // Store user info in session
         req.session.user = user;
-        res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
+        console.log('User saved to session:', req.session.user);
+
+        req.session.save((err) => {
+            if (err) {
+                console.error('Error saving session:', err);
+                return res.status(500).json({ message: 'Error saving session' });
+            }
+            res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
+        });
     } catch (error) {
         console.error('Error getting tokens:', error);
         res.redirect('https://ubcstudyspotterclient.onrender.com/profile');
@@ -113,6 +119,7 @@ router.get('/auth/logout', (req, res, next) => {
 });
 
 router.get('/api/user', async (req, res) => {
+    console.log('Session:', req.session);
     if (!req.session.tokens) {
         return res.status(401).json({ error: 'Not authenticated' });
     }
