@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const { google } = require('googleapis');
 const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo')(session);
 const session = require('express-session');
 const cors = require('cors');
 require('dotenv').config();
@@ -13,10 +14,10 @@ router.use(session({
     secret: 'session_secret',
     resave: false,
     saveUninitialized: true,
-    // store: MongoStore.create({
-    //     mongoUrl: process.env.MONGODB_CONNECTION_STRING,
-    //     ttl: 14 * 24 * 60 * 60 // 14 days
-    // }),
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGODB_CONNECTION_STRING,
+        ttl: 14 * 24 * 60 * 60 // 14 days
+    }),
     cookie: {
         secure: true, // Set to true if your site is served over HTTPS
         httpOnly: true,
