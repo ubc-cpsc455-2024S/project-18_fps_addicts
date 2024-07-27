@@ -14,7 +14,7 @@ const GoogleAuth = () => {
 
     const checkAuthStatus = async () => {
         try {
-            const response = await fetch('https://https://study-spotter-google-auth.onrender.com/api/user', {
+            const response = await fetch('https://study-spotter-google-auth.onrender.com/api/user', {
                 credentials: 'include' // Important for including cookies
             });
             if (response.ok) {
