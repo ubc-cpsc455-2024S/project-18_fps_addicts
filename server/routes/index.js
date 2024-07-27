@@ -12,7 +12,16 @@ const User = require('../models/User');
 router.use(session({
     secret: 'session_secret',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    // store: MongoStore.create({
+    //     mongoUrl: process.env.MONGODB_CONNECTION_STRING,
+    //     ttl: 14 * 24 * 60 * 60 // 14 days
+    // }),
+    cookie: {
+        secure: true, // Set to true if your site is served over HTTPS
+        httpOnly: true,
+        maxAge: 14 * 24 * 60 * 60 * 1000 // 14 days
+    }
 }));
 
 router.use(cors({
