@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Cookies from 'js-cookie';
 import {loginFailure, loginSuccess, logout} from "../redux/users/authSlice.js";
 import {sessionReceived} from "../redux/users/sessionSlice.js";
 
@@ -15,9 +14,11 @@ const GoogleAuth = () => {
     }, []);
 
     useEffect(() => {
-        const sessionId = Cookies.get('sessionId');
+        const params = new URLSearchParams(window.location.search);
+        const sessionId = params.get('sessionId');
         if (sessionId) {
             dispatch(sessionReceived(sessionId));
+            window.location.href = 'https://ubcstudyspotterclient.onrender.com/profile';
         }
     }, [dispatch]);
 
