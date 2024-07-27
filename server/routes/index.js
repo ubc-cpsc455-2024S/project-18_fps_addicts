@@ -14,11 +14,6 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING).then(() =>
     console.log("mongoDB connection successful");
 });
 
-if (process.env.NODE_ENV === 'production') {
-    router.set('trust proxy', 1) // trust first proxy
-    sess.cookie.secure = true // serve secure cookies
-}
-
 // Set up session middleware
 router.use(session({
     secret: 'session_secret',
