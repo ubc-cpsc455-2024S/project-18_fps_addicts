@@ -102,7 +102,7 @@ const ChatBox = ({ pinId }) => {
             {isAuthenticated ? (
                 <ChatInput addMessage={addMessage} />
             ) : (
-                <p>Please sign in to send messages!:3</p>
+                <p>Please sign in to send messages!</p>
             )}
         </div>
     );

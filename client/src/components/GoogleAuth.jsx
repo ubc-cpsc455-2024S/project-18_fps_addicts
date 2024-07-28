@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginFailure, loginSuccess, logout } from "../redux/users/authSlice.js";
-import {sessionLost, sessionReceived} from "../redux/users/sessionSlice.js";
+import { sessionLost, sessionReceived } from "../redux/users/sessionSlice.js";
+
 
 const GoogleAuth = () => {
     const dispatch = useDispatch();
@@ -55,15 +56,29 @@ const GoogleAuth = () => {
         }
     };
 
+    const handleBackToMap = () => {
+        
+        window.location.href = '/'; 
+    };
+
     return (
         <div className="flex justify-center">
             {isAuthenticated ? (
-                <button
-                    onClick={handleLogout}
-                    className="logout-button"
-                >
-                    <span>Logout</span>
-                </button>
+                <>
+                    <button
+                        onClick={handleLogout}
+                        className="logout-button"
+                    >
+                        <span>Logout</span>
+                    </button>
+                    <button
+                        onClick={handleBackToMap}
+                        className="back-to-map-button"
+                    >
+                        <span>Back to Map</span>
+                    </button>
+                </>
+
             ) : (
                 <button
                     onClick={handleLogin}
