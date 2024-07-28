@@ -68,7 +68,9 @@ const GoogleAuth = () => {
                         <span>Logout</span>
                     </button>
                     <Link to="/" className="back-to-map-button">
-                        <span>Back to Map</span>
+                        <button className="back-to-map-button">
+                            <span>Back to Map</span>
+                        </button>
                     </Link>
                 </>
 
