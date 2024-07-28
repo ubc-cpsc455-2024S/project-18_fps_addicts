@@ -3,6 +3,8 @@ import io from 'socket.io-client';
 import ChatInput from './ChatInput.jsx';
 import ChatMessages from './ChatMessages.jsx';
 import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
+
 
 
 
@@ -27,6 +29,7 @@ localStorage.setItem('userId', userId);
 
 const ChatBox = ({ pinId }) => {
     const [messages, setMessages] = useState([]);
+    const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
     useEffect(() => {
         socket.emit('join', { pinId, userId });
@@ -96,7 +99,11 @@ const ChatBox = ({ pinId }) => {
     return (
         <div className="chat-box">
             <ChatMessages messages={messages} onEdit={editMessage} onDeleteMessage={deleteMessage} />
-            <ChatInput addMessage={addMessage} />
+            {isAuthenticated ? (
+                <ChatInput addMessage={addMessage} />
+            ) : (
+                <p>Please sign in to send messages!:3</p>
+            )}
         </div>
     );
 };
