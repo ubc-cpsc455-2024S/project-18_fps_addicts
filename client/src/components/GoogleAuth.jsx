@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginFailure, loginSuccess, logout } from "../redux/users/authSlice.js";
 import { sessionLost, sessionReceived } from "../redux/users/sessionSlice.js";
+import { Link } from 'react-router-dom';
 
 
 const GoogleAuth = () => {
@@ -56,11 +57,6 @@ const GoogleAuth = () => {
         }
     };
 
-    const handleBackToMap = () => {
-        
-        window.location.href = '/'; 
-    };
-
     return (
         <div className="flex justify-center">
             {isAuthenticated ? (
@@ -71,12 +67,9 @@ const GoogleAuth = () => {
                     >
                         <span>Logout</span>
                     </button>
-                    <button
-                        onClick={handleBackToMap}
-                        className="back-to-map-button"
-                    >
+                    <Link to="/" className="back-to-map-button">
                         <span>Back to Map</span>
-                    </button>
+                    </Link>
                 </>
 
             ) : (
