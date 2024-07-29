@@ -102,14 +102,14 @@ import DetailsPanel from "./DetailsPanel.jsx";
 //import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.js';
 
 const MapInterface = () => {
-    const [detailsVisible, setDetailsVisible] = useState(false);
-    const [selectedPin, setSelectedPin] = useState(null);
-    const [mapCenter] = useState([49.2606, -123.246]);
-    const [mapZoom] = useState(14);
-    const [searchTerm, setSearchTerm] = useState("");
-    const [selectedPoints, setSelectedPoints] = useState([]);
-    const [distance, setDistance] = useState(null);
-    const [isDistanceActive, setIsDistanceActive] = useState(false);
+  const [detailsVisible, setDetailsVisible] = useState(false);
+  const [selectedPin, setSelectedPin] = useState(null);
+  const [mapCenter] = useState([49.2606, -123.246]);
+  const [mapZoom] = useState(14);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedPoints, setSelectedPoints] = useState([]);
+  const [distance, setDistance] = useState(null);
+  const [isDistanceActive, setIsDistanceActive] = useState(false);
 
   const handleMoreDetails = (pin, point) => {
     setSelectedPin(pin);
@@ -122,20 +122,21 @@ const MapInterface = () => {
   };
 
   useEffect(() => {
-    console.log("Selected Points in useEffect:", selectedPoints);
     if (selectedPoints.length === 2) {
       const dist = haversineDistance(selectedPoints[0], selectedPoints[1]);
       setDistance(dist);
       console.log("Distance Calculated:", dist);
     }
   }, [selectedPoints]);
-  
 
-  const handleMapClick = event => {
+  const handleMapClick = (event) => {
     if (!isDistanceActive) return;
-    const newPoint = [event.latlng.lat, event.latlng.lng];
-  
-    setSelectedPoints(prevPoints => {
+
+    const newPoint = event.latlng ? [event.latlng.lat, event.latlng.lng] : null;
+
+    if (!newPoint) return; 
+
+    setSelectedPoints((prevPoints) => {
       if (prevPoints.length < 1) {
         return [newPoint];
       } else if (prevPoints.length === 1) {
@@ -145,13 +146,10 @@ const MapInterface = () => {
         console.log("New Points:", newPoints, "Distance:", dist);
         return newPoints;
       } else {
-        // Reset if there are already two points
         return [newPoint];
       }
     });
   };
-  
-  
 
   const toggleDistanceMeasurement = () => {
     setIsDistanceActive(!isDistanceActive);
@@ -174,9 +172,6 @@ const MapInterface = () => {
     pin.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  console.log("Ready to render Polyline:", selectedPoints.length === 2, "Distance:", distance);
-  console.log("Initial State - Selected Points:", selectedPoints, "Is Distance Active:", isDistanceActive);
-
   return (
     <div className="map-interface">
       <div className="map-container">
@@ -189,27 +184,63 @@ const MapInterface = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <button onClick={toggleDistanceMeasurement}>
-          {isDistanceActive ? "Disable Distance Measurement" : "Enable Distance Measurement"}
+        <button
+          onClick={toggleDistanceMeasurement}
+          style={{
+            backgroundColor: "#4682B4",  
+            color: "white",  
+            border: "none",  
+            borderRadius: "5px",  
+            padding: "10px 10px",  
+            fontSize: "16px",  
+            cursor: "pointer",  
+            outline: "none",  
+            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",  
+          }}
+        >
+          {isDistanceActive
+            ? "Disable Distance Measurement"
+            : "Enable Distance Measurement"}
         </button>
+        {distance !== null && (
+          <span
+            className="distance-display"
+            style={{
+              marginLeft: "10px",
+              fontWeight: "bold",
+              fontSize: "16px",
+              color: "#0F52BA",
+            }}
+          >
+            Distance: {distance.toFixed(2)} km
+          </span>
+        )}
         <MapContainer
           center={mapCenter}
           zoom={mapZoom}
           style={{ height: "700px", width: "100%" }}
-          //fullscreenControl={true}
-          //fullscreenControlOptions={{ position: 'topleft' }}
+          onClick={handleMapClick}
         >
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             maxZoom={19}
           />
           {filteredPins.map((pin) => (
-            <Marker key={pin.id} position={pin.coordinates}>
+            <Marker
+              key={pin.id}
+              position={pin.coordinates}
+              eventHandlers={{ click: handleMapClick }}
+            >
               <Popup>
                 <div className="popup-content">
-                  <b>{pin.title}</b><br />
-                  {pin.description}<br /><br />
-                  <button onClick={() => handleMoreDetails(pin)}>More Details</button>
+                  <b>{pin.title}</b>
+                  <br />
+                  {pin.description}
+                  <br />
+                  <br />
+                  <button onClick={() => handleMoreDetails(pin)}>
+                    More Details
+                  </button>
                 </div>
               </Popup>
             </Marker>
@@ -220,7 +251,13 @@ const MapInterface = () => {
             </Marker>
           ))}
           {selectedPoints.length === 2 && (
-            <Polyline positions={selectedPoints} color="blue">
+            <Polyline
+              positions={selectedPoints}
+              color="#0F52BA"
+              weight={5}
+              opacity={0.8}
+              dashArray="10, 20"
+            >
               <Tooltip permanent direction="center">
                 {`${distance.toFixed(2)} km`}
               </Tooltip>
@@ -228,11 +265,6 @@ const MapInterface = () => {
           )}
         </MapContainer>
       </div>
-      {distance !== null && (
-        <div className="distance-display">
-          Distance between points: {distance.toFixed(2)} km
-        </div>
-      )}
       {detailsVisible && selectedPin && (
         <div className="overlay" onClick={handleCloseDetails}>
           <div className="details-panel" onClick={(e) => e.stopPropagation()}>
@@ -242,7 +274,9 @@ const MapInterface = () => {
               <img
                 src={selectedPin.imageUrl}
                 alt={selectedPin.title}
-                onError={() => (this.onerror = null, this.src = '../assets/ubc_logo.jpg')}
+                onError={() => (
+                  (this.onerror = null), (this.src = "../assets/ubc_logo.jpg")
+                )}
                 style={{ width: "100%", height: "auto" }}
               />
             )}
@@ -260,7 +294,7 @@ const MapInterface = () => {
             </div>
             <button className="close-button" onClick={handleCloseDetails}>
               Close
-              </button>
+            </button>
           </div>
         </div>
       )}
@@ -275,10 +309,10 @@ function haversineDistance(coords1, coords2, isMiles = false) {
     return (x * Math.PI) / 180;
   }
 
-  var lon1 = coords1.lon;
-  var lat1 = coords1.lat;
-  var lon2 = coords2.lon;
-  var lat2 = coords2.lat;
+  var lat1 = coords1[0];
+  var lon1 = coords1[1];
+  var lat2 = coords2[0];
+  var lon2 = coords2[1];
 
   var R = 6371; // Radius of the Earth in km
   if (isMiles) R = 3959; // Radius of the Earth in miles
