@@ -98,6 +98,8 @@ import { FaStar, FaRegStar } from "react-icons/fa";
 import pins from "../assets/updated-waypoints.json";
 // import ChatBox from './Chatbox.jsx';
 import DetailsPanel from "./DetailsPanel.jsx";
+import DistanceDisplay from "./DistanceDisplay.jsx";
+import { styles } from './DistanceDisplay';
 //import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.css';
 //import '../assets/leaflet.fullscreen-3.0.2/Control.FullScreen.js';
 
@@ -110,6 +112,9 @@ const MapInterface = () => {
   const [selectedPoints, setSelectedPoints] = useState([]);
   const [distance, setDistance] = useState(null);
   const [isDistanceActive, setIsDistanceActive] = useState(false);
+  const [walkingTime, setWalkingTime] = useState(null);
+
+
 
   const handleMoreDetails = (pin, point) => {
     setSelectedPin(pin);
@@ -124,8 +129,9 @@ const MapInterface = () => {
   useEffect(() => {
     if (selectedPoints.length === 2) {
       const dist = haversineDistance(selectedPoints[0], selectedPoints[1]);
+      const time = calculateWalkingTime(dist);
       setDistance(dist);
-      console.log("Distance Calculated:", dist);
+      setWalkingTime(time);
     }
   }, [selectedPoints]);
 
@@ -134,7 +140,7 @@ const MapInterface = () => {
 
     const newPoint = event.latlng ? [event.latlng.lat, event.latlng.lng] : null;
 
-    if (!newPoint) return; 
+    if (!newPoint) return;
 
     setSelectedPoints((prevPoints) => {
       if (prevPoints.length < 1) {
@@ -143,7 +149,6 @@ const MapInterface = () => {
         const newPoints = [...prevPoints, newPoint];
         const dist = haversineDistance(prevPoints[0], newPoint);
         setDistance(dist);
-        console.log("New Points:", newPoints, "Distance:", dist);
         return newPoints;
       } else {
         return [newPoint];
@@ -155,6 +160,7 @@ const MapInterface = () => {
     setIsDistanceActive(!isDistanceActive);
     setSelectedPoints([]);
     setDistance(null);
+    setWalkingTime(null);
   };
 
   // const toggleFavorite = (pinId) => {
@@ -184,37 +190,16 @@ const MapInterface = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <button
+        <button style={styles.button}
           onClick={toggleDistanceMeasurement}
-          style={{
-            backgroundColor: "#4682B4",  
-            color: "white",  
-            border: "none",  
-            borderRadius: "5px",  
-            padding: "10px 10px",  
-            fontSize: "16px",  
-            cursor: "pointer",  
-            outline: "none",  
-            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",  
-          }}
         >
           {isDistanceActive
             ? "Disable Distance Measurement"
             : "Enable Distance Measurement"}
         </button>
-        {distance !== null && (
-          <span
-            className="distance-display"
-            style={{
-              marginLeft: "10px",
-              fontWeight: "bold",
-              fontSize: "16px",
-              color: "#0F52BA",
-            }}
-          >
-            Distance: {distance.toFixed(2)} km
-          </span>
-        )}
+         {distance && walkingTime && (
+        <DistanceDisplay distance={distance} walkingTime={walkingTime} />
+      )}
         <MapContainer
           center={mapCenter}
           zoom={mapZoom}
@@ -259,7 +244,7 @@ const MapInterface = () => {
               dashArray="10, 20"
             >
               <Tooltip permanent direction="center">
-                {`${distance.toFixed(2)} km`}
+                {`${distance.toFixed(2)} m`}
               </Tooltip>
             </Polyline>
           )}
@@ -314,8 +299,8 @@ function haversineDistance(coords1, coords2, isMiles = false) {
   var lat2 = coords2[0];
   var lon2 = coords2[1];
 
-  var R = 6371; // Radius of the Earth in km
-  if (isMiles) R = 3959; // Radius of the Earth in miles
+  var R = 6371000; // Radius of the Earth in meters
+  if (isMiles) R = 3959 * 1609.34; // Radius of the Earth in meters (when miles are needed)
 
   var dLat = toRad(lat2 - lat1);
   var dLon = toRad(lon2 - lon1);
@@ -326,5 +311,10 @@ function haversineDistance(coords1, coords2, isMiles = false) {
       Math.sin(dLon / 2) *
       Math.sin(dLon / 2);
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return R * c; // Distance in km (or miles)
+  return R * c; // Distance in meters
+}
+
+function calculateWalkingTime(distance) {
+  const secondsPer100Meters = 71.4;
+  return (distance / 100) * secondsPer100Meters; // seconds
 }
