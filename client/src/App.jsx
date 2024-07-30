@@ -10,6 +10,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useState, useEffect } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import io from 'socket.io-client';
+import logo from './assets/ubcspotter-logo-final.png';
 import './App.css';
 
 const App = () => {
@@ -73,7 +74,8 @@ const App = () => {
             <Router>
                 <header className='title'>
 
-                    <h1 className="typewriter">UBC StudySpotter</h1>
+                    {/* <h1 className="typewriter">UBC StudySpotter</h1> */}
+                    <img className="ubc-logo" src={logo} alt="studyspotter" style={{ width: '400px', height: 'auto' }} />
                     <button className="mode-toggle" onClick={toggleDarkMode}>
                         {darkMode ? <FiSun /> : <FiMoon />}
                     </button>

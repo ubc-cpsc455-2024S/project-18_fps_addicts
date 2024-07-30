@@ -10,14 +10,13 @@
   --background-dark: #222222;
   --text-dark: #eaecef;
   --primary-color: #0d2b4c;
-  --header-background-light: #40B4E5;
+  --header-background-light: #6EC4E8;
   --header-background-dark: #002145;
 }
 
 .mode-toggle {
   float: right;
 }
-
 
 body {
   background-color: var(--background-light);
@@ -35,6 +34,7 @@ body.dark-mode {
 
 .dark-mode header {
   background-color: var(--header-background-dark);
+
 }
 
 .dark-mode .navbar {
@@ -116,9 +116,8 @@ ul li a:active {
 }
 
 .burger:hover {
-  background: #172b4d;
+  background: #cbd8ed;
   cursor: pointer;
-  border: 2px solid #172b4d;
   border-radius: 6px;
 }
 
@@ -217,40 +216,26 @@ footer {
   text-align: center;
 }
 
-/* @keyframes typewriter {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 28%;
-  }
-}
-
-@keyframes cursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-
-  to {
-    border-right-color: transparent;
-  }
-} */
-
 .typewriter {
   float: inline-start;
   overflow: hidden;
-  /* border-right: .15em solid rgba(255, 255, 255, 0.75); */
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .08em;
-  /* animation:
-    typewriter 4s steps(40, end) 1s 1 normal both,
-    cursor 500ms steps(40, end) infinite normal; */
+
 }
 
 .title {
   height: 10px;
+}
+
+.dark-mode .ubc-logo {
+  margin-left: 400px;
+  filter: invert(1);
+}
+
+.ubc-logo {
+  margin-left: 400px;
 }
 
 .content {
@@ -304,6 +289,8 @@ footer {
   width: 80%;
   color: #1e1e1e;
   position: relative;
+  max-height: 90vh; 
+  overflow-y: auto; 
 }
 
 .details-panel h2 {
