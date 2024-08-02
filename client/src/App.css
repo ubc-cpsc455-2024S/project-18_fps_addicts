@@ -18,6 +18,10 @@
   float: right;
 }
 
+h1 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
 body {
   background-color: var(--background-light);
   box-sizing: border-box;
@@ -51,7 +55,7 @@ body.dark-mode {
 
 header {
   background-color: var(--header-background-light);
-  height: 20px;
+  height: 25px;
   padding: 20px;
 }
 
@@ -229,13 +233,19 @@ footer {
   height: 10px;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
 .dark-mode .ubc-logo {
-  margin-left: 400px;
+  margin: auto;
   filter: invert(1);
 }
 
 .ubc-logo {
-  margin-left: 400px;
+  margin: auto;
 }
 
 .content {
@@ -297,19 +307,12 @@ footer {
   margin-top: 0;
 }
 
-/* .favorite {
-  cursor: pointer;
-  margin-top: 10px;
-  color: gold;
-  font-size: 20px;
-  float: right;
-} */
-
 .profile-container {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background-color: #002145;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -317,9 +320,10 @@ footer {
 
 .profile-header {
   font-size: 1.5rem;
-  color: #333;
+  color: #40B4E5;
   text-align: center;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .input-group {
@@ -461,7 +465,8 @@ h3 {
 
 .about-page-text {
   float: inline-start;
-  color: #FF4500;
+  color: #40B4E5;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .panel {

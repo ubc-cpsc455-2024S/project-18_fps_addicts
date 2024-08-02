@@ -74,14 +74,15 @@ const App = () => {
             <Router>
                 <header className='title'>
 
-                    {/* <h1 className="typewriter">UBC StudySpotter</h1> */}
+                    <div className="logo-container">
                     <img className="ubc-logo" src={logo} alt="studyspotter" style={{ width: '400px', height: 'auto' }} />
-                    <button className="mode-toggle" onClick={toggleDarkMode}>
-                        {darkMode ? <FiSun /> : <FiMoon />}
-                    </button>
+                    </div>
                 </header>
                 <header className="App-header">
                     <RxHamburgerMenu className='burger' onClick={() => setDisplayNav(!displayNav)} />
+                    <button className="mode-toggle" onClick={toggleDarkMode}>
+                        {darkMode ? <FiSun /> : <FiMoon />}
+                    </button>
                 </header>
                 <NavBar display={displayNav} />
                 <div className={`content ${displayNav ? 'shifted' : ''}`}>
