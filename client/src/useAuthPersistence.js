@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { sessionLoaded } from './sessionSlice'; // Adjust the import path as needed
-import { loginSuccess, loginFailure } from './authSlice'; // Adjust the import path as needed
+import { sessionReceived } from './redux/users/sessionSlice.js';
+import { loginSuccess, loginFailure } from './redux/users/authSlice.js';
 
 export const useAuthPersistence = () => {
     const dispatch = useDispatch();
@@ -11,7 +11,7 @@ export const useAuthPersistence = () => {
     useEffect(() => {
         const storedSessionId = localStorage.getItem('sessionID');
         if (storedSessionId && !session) {
-            dispatch(sessionLoaded(storedSessionId));
+            dispatch(sessionReceived(storedSessionId));
         }
     }, [dispatch, session]);
 
