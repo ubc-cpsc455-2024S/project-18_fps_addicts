@@ -22,6 +22,7 @@ const authSlice = createSlice({
             state.isAuthenticated = false;
             state.user = null;
             state.error = null;
+            localStorage.removeItem('sessionID');
         },
     },
 });

@@ -16,6 +16,7 @@ const GoogleAuth = () => {
         const sessionId = params.get('sessionId');
         if (sessionId) {
             dispatch(sessionReceived(sessionId));
+            localStorage.setItem('sessionID', sessionId);
             window.history.replaceState({}, document.title, window.location.pathname); // Clean the URL
         }
     }, [dispatch]);

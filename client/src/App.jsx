@@ -12,8 +12,10 @@ import { FiSun, FiMoon } from 'react-icons/fi';
 import io from 'socket.io-client';
 import logo from './assets/ubcspotter-logo-final.png';
 import './App.css';
+import {useAuthPersistence} from "./useAuthPersistence.js";
 
 const App = () => {
+    useAuthPersistence();
     const [displayNav, setDisplayNav] = useState(false);
     const [serverIp, setServerIp] = useState('');
     const [darkMode, setDarkMode] = useState(() => {
