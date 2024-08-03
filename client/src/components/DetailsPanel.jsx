@@ -15,3 +15,4 @@ const DetailsPanel = ({ pin }) => {
 
 export default DetailsPanel;
 
+
