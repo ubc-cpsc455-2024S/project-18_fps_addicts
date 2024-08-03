@@ -27,6 +27,11 @@ h1 {
   transition: box-shadow 0.3s;
 }
 
+.booking-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .booking-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -59,3 +64,5 @@ a {
 a:hover {
   color: #0056b3;
 }
+
+

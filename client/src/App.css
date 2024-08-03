@@ -149,6 +149,16 @@ ul li a:active {
   text-align: left;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* {chat-generated} */
 .chat-box {
@@ -389,6 +399,10 @@ p {
 .update-button {
   margin-bottom: 20px;
   margin-top: 20px;;
+}
+
+h2 {
+  color: white;
 }
 
 h3 {
