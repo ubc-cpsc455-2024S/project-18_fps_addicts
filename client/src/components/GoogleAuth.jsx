@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginFailure, loginSuccess, logout } from "../redux/users/authSlice.js";
-import { sessionLost, sessionReceived } from "../redux/users/sessionSlice.js";
+import {sessionCleared, sessionReceived, validateAndSetSession} from '../redux/users/sessionSlice';
 import { Link } from 'react-router-dom';
 
 
 const GoogleAuth = () => {
     const dispatch = useDispatch();
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-    const session = useSelector((state) => state.session.sessionID);
+    const sessionStatus = useSelector(state => state.session.status);
+    const session = useSelector(state => state.session.sessionID);
 
     useEffect(() => {
         // Handle session ID from URL on component mount
@@ -17,12 +18,15 @@ const GoogleAuth = () => {
         if (sessionId) {
             dispatch(sessionReceived(sessionId));
             window.history.replaceState({}, document.title, window.location.pathname); // Clean the URL
+        } else if (sessionStatus === 'idle') {
+            // Validate stored session
+            dispatch(validateAndSetSession());
         }
-    }, [dispatch]);
+    }, [dispatch, sessionStatus]);
 
-    useEffect(() => {
+    useEffect(async() => {
         if (session) {
-            checkAuthStatus(session);
+            await checkAuthStatus(session);
         }
     }, [session]);
 
@@ -51,7 +55,7 @@ const GoogleAuth = () => {
         try {
             await fetch(`https://study-spotter-google-auth.onrender.com/auth/logout/${session}`, { credentials: 'include' });
             dispatch(logout());
-            dispatch(sessionLost());
+            dispatch(sessionCleared());
         } catch (error) {
             console.error('Error logging out:', error);
         }
