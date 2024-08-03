@@ -592,8 +592,8 @@
     "capacity": "16",
     "link": "https://learningspaces.ubc.ca/classrooms/orch-3rd-floor-high-tech-study-nook",
     "coordinates": [
-      49.2605697,
-      -123.2491685
+      49.26032483209428, 
+      -123.25079785212279
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ORCH%203rd%20High%20Tech%20%283%29-3.JPG?itok=CL0i5AGT&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -605,8 +605,8 @@
     "capacity": "14",
     "link": "https://learningspaces.ubc.ca/classrooms/orch-4th-floor-high-tech-study-nook",
     "coordinates": [
-      49.2608697,
-      -123.2491685
+      49.26032483209428, 
+      -123.25079785212279
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ORCH%204th-1-2.JPG?itok=roOfTtnQ&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -618,8 +618,8 @@
     "capacity": "12",
     "link": "https://learningspaces.ubc.ca/classrooms/orch-alcove-study-nook",
     "coordinates": [
-      49.2600697,
-      -123.2491685
+      49.2600738424845, 
+      -123.2509426141952
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Orch%20Alcove-2.JPG?itok=SCB6yxvf&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -631,8 +631,8 @@
     "capacity": "100",
     "link": "https://learningspaces.ubc.ca/classrooms/orch-dining-hall",
     "coordinates": [
-      49.2604697,
-      -123.2491685
+      49.2600738424845, 
+      -123.2509426141952
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ORCH%20Dining%20Hall-2.JPG?itok=6tOfyyC5&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -644,8 +644,8 @@
     "capacity": "40",
     "link": "https://learningspaces.ubc.ca/classrooms/orch-study-lounge",
     "coordinates": [
-      49.2605697,
-      -123.2491685
+      49.2600738424845, 
+      -123.2509426141952
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/orch%20inf-3_0.JPG?itok=phWrOC1H&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -735,8 +735,8 @@
     "capacity": "36",
     "link": "https://learningspaces.ubc.ca/classrooms/pcw-mercante-café",
     "coordinates": [
-      49.2595529,
-      -123.2532179
+      49.26366750458137, 
+      -123.25525509348645
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Mercante-1.JPG?itok=GxgYQlOR&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -813,8 +813,8 @@
     "capacity": "20",
     "link": "https://learningspaces.ubc.ca/classrooms/swng-2nd-floor-concourse",
     "coordinates": [
-      49.2620965,
-      -123.254339
+      49.2629469168851, 
+      -123.25429483070533
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/SWNG%202nd%20ILS-2.JPG?itok=Sa8Zx57K&c=46fa2529ee97ff9f82a833771ba8b390"
   }
