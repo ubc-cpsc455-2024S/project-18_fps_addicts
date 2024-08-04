@@ -410,8 +410,8 @@
     "capacity": "44",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-3rd-floor-study-lounge",
     "coordinates": [
-      49.2611513,
-      -123.2491887
+      49.2611562,
+      -123.2494869
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20X351.JPG?itok=SF_99L_7&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -423,8 +423,8 @@
     "capacity": "36",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-alcove-booths",
     "coordinates": [
-      49.2611513,
-      -123.2491887
+      49.2611993,
+      -123.2493108
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/icics%20Booth%20%282%29-2.JPG?itok=UdBT6f5x&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -436,8 +436,8 @@
     "capacity": "40",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-atrium",
     "coordinates": [
-      49.2611513,
-      -123.2491887
+      49.2611249,
+      -123.2493517
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20Concourse-2.JPG?itok=dmK0Jh7f&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -449,8 +449,8 @@
     "capacity": "40",
     "link": "https://my.cs.ubc.ca/students/ta-hours",
     "coordinates": [
-      49.2611513,
-      -123.2491887
+      49.2609648,
+      -123.2489762
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Demco-2.JPG?itok=BsFNz_Yg&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -462,8 +462,8 @@
     "capacity": "50",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-lounge",
     "coordinates": [
-      49.2612513,
-      -123.2491887
+      49.2608221,
+      -123.2491157
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/icics-1.JPG?itok=88N5JYWT&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -475,8 +475,8 @@
     "capacity": "20",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-study-stairs",
     "coordinates": [
-      49.2611513,
-      -123.2491887
+      49.2609083,
+      -123.2490667
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20Study%20Stairs.JPG?itok=JACCfXqk&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -488,8 +488,8 @@
     "capacity": "44",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-undergraduate-lab",
     "coordinates": [
-      49.2611513,
-      -123.2491887
+      49.2610628,
+      -123.2488897
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20X350%20Undergrad%20Lab_.JPG?itok=sj7qVOLj&c=46fa2529ee97ff9f82a833771ba8b390"
   },
