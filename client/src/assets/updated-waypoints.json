@@ -397,8 +397,8 @@
     "capacity": "20",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-2nd-floor-atrium",
     "coordinates": [
-      49.2611513,
-      -123.2491887
+      49.26118116,
+      -123.24912596
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%202nd%20Floor.JPG?itok=v78VGxAB&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -410,8 +410,8 @@
     "capacity": "44",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-3rd-floor-study-lounge",
     "coordinates": [
-      49.2611562,
-      -123.2494869
+      49.2610628,
+      -123.2488897
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20X351.JPG?itok=SF_99L_7&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -423,8 +423,8 @@
     "capacity": "36",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-alcove-booths",
     "coordinates": [
-      49.2611993,
-      -123.2493108
+      49.26123738,
+      -123.249023
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/icics%20Booth%20%282%29-2.JPG?itok=UdBT6f5x&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -436,8 +436,8 @@
     "capacity": "40",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-atrium",
     "coordinates": [
-      49.2611249,
-      -123.2493517
+      49.26114284,
+      -123.24923815
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20Concourse-2.JPG?itok=dmK0Jh7f&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -462,8 +462,8 @@
     "capacity": "50",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-lounge",
     "coordinates": [
-      49.2608221,
-      -123.2491157
+      49.26083189,
+      -123.24898245
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/icics-1.JPG?itok=88N5JYWT&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -488,8 +488,8 @@
     "capacity": "44",
     "link": "https://learningspaces.ubc.ca/classrooms/iccs-undergraduate-lab",
     "coordinates": [
-      49.2610628,
-      -123.2488897
+      49.26131408,
+      -123.24853195
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ICICS%20X350%20Undergrad%20Lab_.JPG?itok=sj7qVOLj&c=46fa2529ee97ff9f82a833771ba8b390"
   },
