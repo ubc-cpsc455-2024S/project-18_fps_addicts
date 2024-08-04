@@ -670,8 +670,8 @@
     "capacity": "49",
     "link": "https://learningspaces.ubc.ca/classrooms/phrm-3rd-floor-study-lounge",
     "coordinates": [
-      49.2622565,
-      -123.24329295568945
+      49.26216471,
+      -123.24364756
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Phrm%203rd%20Floor-2.JPG?itok=YeC68QP9&c=46fa2529ee97ff9f82a833771ba8b390"
   },
@@ -696,7 +696,7 @@
     "capacity": "45",
     "link": "https://learningspaces.ubc.ca/classrooms/phrm-mezzanine",
     "coordinates": [
-      49.2624565,
+      49.2622565,
       -123.24329295568945
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Phrm%202nd%20Floor-2_0.JPG?itok=-hp2Ojmq&c=d2065bc566c2f98ce11dcf9826ce5272"
@@ -709,7 +709,7 @@
     "capacity": "25",
     "link": "https://learningspaces.ubc.ca/classrooms/phrm-study-nook",
     "coordinates": [
-      49.2622565,
+      49.2624565,
       -123.24329295568945
     ],
     "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/Phrm%20ILS%20%283%29-2.JPG?itok=54g0ib40&c=46fa2529ee97ff9f82a833771ba8b390"
