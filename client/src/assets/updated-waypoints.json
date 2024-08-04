@@ -371,23 +371,10 @@
     "capacity": "24",
     "link": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/rooms/ANGUS-CONCOURSE/index.html",
     "coordinates": [
-      49.2655242,
-      -123.2538704
-    ],
-    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ANGU%20CPA-2.JPG?itok=JNcwExrJ&c=46fa2529ee97ff9f82a833771ba8b390"
-  },
-  {
-    "id": "henry-angus-(angu)---sauder-exchange-café",
-    "title": "Henry Angus (ANGU) - Sauder Exchange Café",
-    "address": "2053 Main Mall, Vancouver, BC V6T 1Z2",
-    "description": "A café on the first floor of Henry Angus. With group tables and lounge styled seating, this is a great spot for individual study or group work.",
-    "capacity": "25",
-    "link": "https://learningspaces.ubc.ca/classrooms/angu-sauder-exchange-café",
-    "coordinates": [
       49.26489116743561, 
       -123.2537419958665
     ],
-    "imageUrl": "https://learningspaces.ubc.ca"
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ANGU%20CPA-2.JPG?itok=JNcwExrJ&c=46fa2529ee97ff9f82a833771ba8b390"
   },
   {
     "id": "institute-for-computing-(icics/cs)-(iccs)---2nd-floor-atrium",
