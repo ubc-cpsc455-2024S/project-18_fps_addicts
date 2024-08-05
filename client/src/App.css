@@ -278,7 +278,7 @@ footer {
 }
 
 .popup-content{
-  max-width: 100%; 
+  max-width: 70%; 
   box-sizing: border-box; 
   overflow-wrap: break-word;
 }
