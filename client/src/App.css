@@ -267,6 +267,16 @@ footer {
   transition: all 1s ease;
 }
 
+.leaflet-popup-content-wrapper {
+  width: auto; /* Default width */
+  max-width: 300px; /* Adjust as needed for larger screens */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-wrap: break-word; /* Ensures long text wraps correctly */
+}
+
 @media (max-width: 768px) {
   .navbar {
     width: 100%;
@@ -275,6 +285,14 @@ footer {
   .chat-box {
     width: 100%; /* Full width on mobile screens */
     max-width: 90%; /* Max-width to keep some margin */
+  }
+
+  .leaflet-popup-content-wrapper {
+    width: 90%; /* Take up 90% of the screen width */
+    max-width: none; /* Remove max-width to allow full responsiveness */
+    padding: 10px; /* Adjust padding for better spacing on mobile */
+    margin: 0 auto; /* Center the popup */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for visibility */
   }
 
 }
