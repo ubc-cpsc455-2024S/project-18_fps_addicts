@@ -34,7 +34,7 @@ const ProfileComponent = () => {
 
     return (
         <div className="profile-container">
-            <h2>User Profile</h2>
+            <h2 className="user-profile-title">User Profile</h2>
             <div>
                 <img src={user.picture} alt="Profile" />
                 <input

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './RoomBookings.css';
 
 const bookingLinks = [
@@ -21,13 +21,48 @@ const bookingLinks = [
         name: "Sauder School of Business Room Bookings",
         url: "https://booking.sauder.ubc.ca/",
         img: "https://www.sauder.ubc.ca/sites/default/files/dynamic_styles/scale/750/public/2019-05/about-ubc-sauder-hero.png"
+    },
+    {
+        name: "UBC ICICS Room Bookings",
+        url: "https://my.cs.ubc.ca/docs/reserving-room",
+        img: "https://pbs.twimg.com/media/GIfV7jaWsAAazgr?format=jpg&name=4096x4096"
     }
 ];
 
 const BookingLinks = () => {
+    useEffect(() => {
+        const handleScroll = () => {
+            const cards = document.querySelectorAll('.booking-card');
+            const triggerBottom = window.innerHeight / 5 * 4;
+
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+
+                if (cardTop < triggerBottom) {
+                    card.classList.add('visible');
+                } else {
+                    card.classList.remove('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
         <h1>Book a Study Room</h1>
+        <div className="bookings-desc">
+            <p>
+                Need to book a room? no problem! Visit one of these room booking sites and 
+                reserve your spot now!
+            </p>
+        </div>
         <div className="booking-links-container">
             <div className="booking-cards">
                 {bookingLinks.map((link, index) => (
@@ -46,3 +81,4 @@ const BookingLinks = () => {
 };
 
 export default BookingLinks;
+
