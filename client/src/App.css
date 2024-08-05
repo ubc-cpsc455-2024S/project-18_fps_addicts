@@ -277,6 +277,12 @@ footer {
   overflow-wrap: break-word; 
 }
 
+.popup-content{
+  max-width: 100%; 
+  box-sizing: border-box; 
+  overflow-wrap: break-word;
+}
+
 @media (max-width: 768px) {
   .navbar {
     width: 100%;
@@ -298,6 +304,11 @@ footer {
   .map-interface {
     height: calc(100vh - 50px);
     padding-bottom: 20px; 
+  }
+
+  .popup-content{
+    max-width: 100%;
+    padding: 5px;
   }
 
 }
