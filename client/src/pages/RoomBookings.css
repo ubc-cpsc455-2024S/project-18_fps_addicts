@@ -25,6 +25,14 @@ h1 {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.booking-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .booking-card:hover {
@@ -59,3 +67,9 @@ a {
 a:hover {
   color: #0056b3;
 }
+
+.bookings-desc {
+  text-align: center;
+}
+
+
