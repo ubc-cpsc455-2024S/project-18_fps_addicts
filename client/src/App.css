@@ -272,6 +272,10 @@ footer {
     width: 100%;
     left: -250%;
   }
+  .chat-box {
+    width: 100%; /* Full width on mobile screens */
+    max-width: 90%; /* Max-width to keep some margin */
+  }
 
 }
 
