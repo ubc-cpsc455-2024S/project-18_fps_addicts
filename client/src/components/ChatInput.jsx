@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-{/*chat-generated */}
-{/*chatserver-generated*/}
+{/*chat-generated see Chatbox.jsx*/}
+{/*chatserver-generated see Chatbox.jsx*/}
+// Creats the box to write the message
 const ChatInput = ({ addMessage }) => {
     const [input, setInput] = useState('');
 
+    //opon submit, send the message to the server
     const handleSubmit = (e) => {
         e.preventDefault();
         if (input.trim()) {

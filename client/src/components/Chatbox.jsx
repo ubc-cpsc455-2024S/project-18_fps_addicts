@@ -13,6 +13,7 @@ import { useSelector } from 'react-redux';
           The prompt used was: how to make a local chatbox appear on other local intances.
          modifcations were made to intergrate it to the porject, put most of the structure remains intact */}
 
+//connect the chatbox to the server
 const socket = io('https://ubcstudyspotterserver.onrender.com', {
     transports: ['websocket', 'polling', 'flashsocket']
 });
@@ -20,13 +21,18 @@ const socket = io('https://ubcstudyspotterserver.onrender.com', {
 const userId = localStorage.getItem('userId') || uuidv4();
 localStorage.setItem('userId', userId);
 
+//given pinID, managae the chatBox for that particular pin
 const ChatBox = ({ pinId }) => {
     const [messages, setMessages] = useState([]);
+    
+    //only enable the chat when user is signed in
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
     useEffect(() => {
+        //when joining the server, define the userID and tell it which pin is connecting
         socket.emit('join', { pinId, userId });
 
+        //send all the all messages that have been sent already to a new client that has joined
         socket.on('init', (initialMessages) => {
             const parsedMessages = initialMessages.map((msg) => ({
                 ...msg,
@@ -35,6 +41,7 @@ const ChatBox = ({ pinId }) => {
             setMessages(parsedMessages);
         });
 
+        //on message, add it to the list of messages for that chatBox
         socket.on('message', (message) => {
             const parsedMessage = {
                 ...message,
@@ -43,6 +50,7 @@ const ChatBox = ({ pinId }) => {
             setMessages((prevMessages) => [...prevMessages, parsedMessage]);
         });
 
+        //when i recived a new edited message, add it to list of server.
         socket.on('edit-message', (editedMessage) => {
             const parsedMessage = {
                 ...editedMessage,
@@ -52,13 +60,15 @@ const ChatBox = ({ pinId }) => {
                 prevMessages.map((msg) => (msg.id === editedMessage.id ? parsedMessage : msg))
             );
         });
-
+        
+        //remove message slated for deltation from list in chatBox
         socket.on('delete-message', ({ messageId }) => {
             setMessages((prevMessages) =>
                 prevMessages.filter((msg) => msg.id !== messageId)
             );
         });
-
+        
+        //cleanup sockets when leaving chatbox
         return () => {
             socket.emit('leave', pinId);
             socket.off('init');
@@ -68,11 +78,13 @@ const ChatBox = ({ pinId }) => {
         };
     }, [pinId]);
 
+    //send a new message to the server. Give it a unique id in the form of uuidv4
     const addMessage = (message) => {
         const newMessage = { ...message, id: uuidv4(), pinId, userId, editable: true };
         socket.emit('message', newMessage);
     };
 
+    //take the edited message and send it to the server
     const editMessage = (messageId, newText) => {
         const editedMessage = {
             id: messageId,
@@ -85,6 +97,7 @@ const ChatBox = ({ pinId }) => {
         socket.emit('edit-message', editedMessage);
     };
 
+    //tell the server which message to delete.
     const deleteMessage = (messageId) => {
         socket.emit('delete-message', { pinId, messageId, userId });
     };
@@ -92,6 +105,7 @@ const ChatBox = ({ pinId }) => {
     return (
         <div className="chat-box">
             <ChatMessages messages={messages} onEdit={editMessage} onDeleteMessage={deleteMessage} />
+            {/* if authenticatd, allow messages to be sent */}
             {isAuthenticated ? (
                 <ChatInput addMessage={addMessage} />
             ) : (

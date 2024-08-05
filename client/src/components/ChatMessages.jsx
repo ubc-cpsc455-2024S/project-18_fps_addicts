@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
-{/*chat-generated */}
+{/*chat-generated: see Chatbox.jsx */}
 const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
+
+    //usisng the id of the messageID, save the new text from an editited message to be sent to the server
     const [editingMessageId, setEditingMessageId] = useState(null);
     const [editText, setEditText] = useState('');
 
-    const userId = localStorage.getItem('userId'); // Retrieve the current user's ID
+    // Retrieve the current user's ID
+    const userId = localStorage.getItem('userId'); 
 
+    //only allow owner of message to edit it
     const handleEditClick = (message) => {
         if (!message.editable || message.userId !== userId) return;
         setEditingMessageId(message.id);
         setEditText(message.text);
     };
 
+    //handles the save button when a message is edited. 
     const handleSaveClick = (message) => {
         onEdit(message.id, editText);
         setEditingMessageId(null);
@@ -22,8 +27,9 @@ const ChatMessages = ({ messages, onEdit, onDeleteMessage }) => {
         <div className="chat-messages">
             {messages.map((msg, index) => {
                 const isCurrentUser = msg.userId === userId;
+                // if a message belongs to the owner, display the buttons to edit, save, delete, and cancel edit buttons.
+                //otherwise show a plain message sent by others. 
                 const messageStyle = isCurrentUser ? { backgroundColor: '#97D4E9' } : { backgroundColor: '#ffffff' };
-
                 const messageContent = editingMessageId === msg.id ? (
                     <>
                         <input
