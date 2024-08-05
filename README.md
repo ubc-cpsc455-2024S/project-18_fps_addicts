@@ -2,31 +2,29 @@
 
 [![Deploy to Render](https://github.com/ubc-cpsc455-2024S/project-18_fps_addicts/actions/workflows/deploy.yml/badge.svg)](https://github.com/ubc-cpsc455-2024S/project-18_fps_addicts/actions/workflows/deploy.yml)
 
-Welcome to StudySpotter, the ultimate solution for UBC students on the hunt for the perfect study spot! Say goodbye to the frustration of wandering around campus looking for a place to study. Our app provides real-time updates on the best study locations, complete with availability, amenities, and even local chatboxes to connect with fellow students. With StudySpotter, you can effortlessly find and reserve your ideal study space, ensuring you always have the perfect environment to hit the books and ace your exams. Get ready to revolutionize your study sessions with StudySpotter!
+## Project Description
 
-## About our topic/interest
+Welcome to StudySpotter, the ultimate solution for UBC students 
+on the hunt for the perfect study spot! Say goodbye to the frustration 
+of wandering around campus looking for a place to study. Our app provides 
+real-time updates on the best study locations, complete with amenities, a local chat box 
+to connect with fellow students, and the ability to calculate the walking distance between 
+two spots. With StudySpotter, you can effortlessly find and reserve your ideal study space, 
+ensuring you always have the perfect environment to hit the books and ace your exams. 
+Get ready to revolutionize your study sessions with StudySpotter!
+
+## Why did we create this?
 
 As a UBC student, finding a place to study can be a challenging task. Despite the abundance of libraries, study lounges, and quiet spaces, prime locations often fill up quickly, especially during midterm and final season. Whether you're trying to find a spot for yourself or a group of friends, it can be a draining task to find the perfect place where everyone's needs are satisfied. From jam packed areas to a lack of available outlets, students are having to navigate around different areas of the campus to secure the right spot, which can be a time-consuming process. As such, we wish to lighten this burden by providing a tool that will help mitigate the need for students to stress over finding the perfect spot that will suit their needs.
-
-## Team Members
-
-- Dylan Zhang: Black Ops III enthusiast.
-- Gurmandeep Bal: Minecraft Architect
-- Crystal Yim: Squishmallow connoisseur 
-- Allison Kong: Just your average gamer :)
-- Linus Chen: Has an unused Playstation
-
-## Project Description:
-The UBC Study Spot Tracker App, designed for students at the University of British Columbia, facilitates the location and reservation of study spots on campus. It will store and display information about study spots, including availability, location, and amenities, allowing users to view maps, reserve spaces, and communicate via local chatboxes for each study location. Users can manage their reservations and navigate to different spots directly within the app. Depending on time availability, the app will focus on core functionalities like mapping and booking, with optional features like user authentication for chatboxes and distance measurements between spots considered as enhancements if time permits.
 
 ## Project task requirements:
 
 - Minimal requirements:
   * A map of campus which highlights all known study spots.
-  * The ability to select each study spot and be provided with basic information such as lighting, power port availibilty, etc
+  * The ability to select each study spot and be provided with basic information such as capacity, power port availibilty, etc
   * A robust interface for desktop users
 - Standard requirements:
-  * A local chatbox for each study spot where users can talk to eachother.
+  * A local chatbox for each study spot where users can chat with each other.
   * Robustness for mobile browsers
   * Ability to select distance from one study spot to another point on the map.
   * Addition of study spots booking links from various websites, such as the UBC library website.
@@ -49,8 +47,6 @@ The UBC Study Spot Tracker App, designed for students at the University of Briti
   3. Implement functionality to fetch study spot information from the backend based on user selection and display this information on the frontend.
   4. Enable users to click or tap on study spots on the map, triggering a request for spot information, which is then displayed in a user-friendly format on the interface.
  
-
-
 ## Images
 ### Landing Page
 <img src="images/sketch_1.jpg" width="300px">
@@ -60,6 +56,18 @@ The UBC Study Spot Tracker App, designed for students at the University of Briti
 
 ### Create an Account 
 <img src="images/sketch_3.jpg" width="300px">
+
+## Test Account Credentials:
+**email:** studyspotteruser@gmail.com
+**password:** Studyspottertest18!
+
+## Team Members
+
+- Dylan Zhang: Black Ops III enthusiast.
+- Gurmandeep Bal: Minecraft Architect
+- Crystal Yim: Squishmallow connoisseur 
+- Allison Kong: Just your average gamer :)
+- Linus Chen: Has an unused Playstation
 
 ## References
 
