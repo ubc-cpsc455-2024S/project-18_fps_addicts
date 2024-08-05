@@ -358,23 +358,10 @@
     "capacity": "42",
     "link": "https://learningspaces.ubc.ca/classrooms/henn-foyer",
     "coordinates": [
-      49.26653415,
-      -123.25221415008912
-    ],
-    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_0984.JPG?itok=2ea4ZiKy&c=7be2f6cdbb90aff70a0b287448f71256"
-  },
-  {
-    "id": "henry-angus-(angu)---concourse",
-    "title": "Henry Angus (ANGU) - Concourse",
-    "address": "2053 Main Mall, Vancouver, BC V6T 1Z2",
-    "description": "A lively study spot on the first floor of Henry Angus, connected to the Bruce R. Birmingham Undergraduate Centre and Sauder Exchange Café Lounge.\n360° VIEW",
-    "capacity": "24",
-    "link": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/rooms/ANGUS-CONCOURSE/index.html",
-    "coordinates": [
       49.26489116743561, 
       -123.2537419958665
     ],
-    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/ANGU%20CPA-2.JPG?itok=JNcwExrJ&c=46fa2529ee97ff9f82a833771ba8b390"
+    "imageUrl": "https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/classroom-images/IMG_0984.JPG?itok=2ea4ZiKy&c=7be2f6cdbb90aff70a0b287448f71256"
   },
   {
     "id": "institute-for-computing-(icics/cs)-(iccs)---2nd-floor-atrium",
