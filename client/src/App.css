@@ -298,14 +298,9 @@ footer {
 
   .map-interface {
     height: calc(100vh - 60px); 
-    padding: 10px; 
-    overflow: hidden;
-  }
-
-  .map-interface {
-    height: 100vh;
     padding: 0;
     margin: 0; 
+    overflow: hidden;
   }
 
 
