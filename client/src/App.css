@@ -87,7 +87,7 @@ header svg {
   position: absolute;
   height: max-content;
   padding: 0 20px;
-  left: -200%;
+  left: -100%;
   transition: all 0.8s ease;
   z-index: 1000;
 }
@@ -270,7 +270,7 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     width: 100%;
-    left: -100%;
+    left: -250%;
   }
 
 }
