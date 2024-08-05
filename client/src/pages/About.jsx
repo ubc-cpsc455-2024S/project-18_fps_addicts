@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import main from '../assets/main.png';
 import waypoint from '../assets/waypoint.png';
+import chat from '../assets/chat.png';
 
 const About = () => {
     const panelRefs = useRef([]);
@@ -44,8 +45,9 @@ const About = () => {
                 Welcome to StudySpotter, the ultimate solution for UBC students 
                 on the hunt for the perfect study spot! Say goodbye to the frustration 
                 of wandering around campus looking for a place to study. Our app provides 
-                real-time updates on the best study locations, complete with availability, amenities, and even local chatboxes 
-                to connect with fellow students. With StudySpotter, you can effortlessly find and reserve your ideal study space, 
+                real-time updates on the best study locations, complete with amenities, a local chat box 
+                to connect with fellow students, and the ability to calculate the walking distance between 
+                two spots. With StudySpotter, you can effortlessly find and reserve your ideal study space, 
                 ensuring you always have the perfect environment to hit the books and ace your exams. 
                 Get ready to revolutionize your study sessions with StudySpotter!
                 </p>
@@ -56,7 +58,11 @@ const About = () => {
             </div>
             <div className="panel" ref={el => panelRefs.current[2] = el}>
                 <h3 className="about-page-text">Get information on the hottest study spots!</h3>
-                <img src={waypoint} alt="waypoint" style={{ width: '100%', height: 'auto' }} />
+                <img src={waypoint} alt="waypoint" style={{ width: '70%', height: 'auto' }} />
+            </div>
+            <div className="panel" ref={el => panelRefs.current[3] = el}>
+                <h3 className="about-page-text">Chat and make new friends!</h3>
+                <img src={chat} alt="waypoint" style={{ width: '60%', height: 'auto' }} />
             </div>
         </div>
     );
