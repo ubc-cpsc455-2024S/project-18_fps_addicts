@@ -38,6 +38,7 @@ const Profile = () => {
         <ProfileComponent />
         <GoogleAuth />
       </div>
+      <Footer />
     </>
   );
 };

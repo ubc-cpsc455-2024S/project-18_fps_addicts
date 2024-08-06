@@ -76,6 +76,7 @@ const BookingLinks = () => {
                 ))}
             </div>
         </div>
+        <Footer />
         </>
     );
 };

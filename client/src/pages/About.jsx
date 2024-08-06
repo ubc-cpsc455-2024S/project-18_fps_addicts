@@ -64,6 +64,7 @@ const About = () => {
                 <h3 className="about-page-text">Chat and make new friends!</h3>
                 <img src={chat} alt="waypoint" style={{ width: '60%', height: 'auto' }} />
             </div>
+            <Footer />
         </div>
     );
 };

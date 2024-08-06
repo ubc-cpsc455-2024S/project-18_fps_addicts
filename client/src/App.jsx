@@ -98,7 +98,7 @@ const App = () => {
                         <Route path="/room-bookings" element={<RoomBookings />} />
                         <Route path="/profile" element={<Profile />} />
                     </Routes>
-                    <Footer />
+                    
                 </div>
             </Router>
             {/*<div id="signInDiv"></div>*/}
