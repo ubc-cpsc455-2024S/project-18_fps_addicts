@@ -92,6 +92,12 @@ header svg {
   z-index: 1000;
 }
 
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .navbar.active {
   left: 0;
 }
