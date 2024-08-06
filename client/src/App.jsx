@@ -90,7 +90,7 @@ const App = () => {
                         {darkMode ? <FiSun /> : <FiMoon />}
                     </button>
                 </header>
-                <NavBar display={displayNav} hideNav={toggleNavBar} />
+                <NavBar display={displayNav} hideNavBar={toggleNavBar} />
                 <div className={`content ${displayNav ? 'shifted' : ''}`}>
                     <Routes>
                         <Route path="/" element={<Home />} />
