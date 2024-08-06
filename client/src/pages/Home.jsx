@@ -1,6 +1,6 @@
 import React from 'react';
 import MapInterface from '../components/MapInterface';
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 
 const Home = () => {
     return (
