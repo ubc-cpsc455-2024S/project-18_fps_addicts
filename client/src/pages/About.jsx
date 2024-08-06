@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import main from '../assets/main.png';
 import waypoint from '../assets/waypoint.png';
 import chat from '../assets/chat.png';
+import Footer from './components/Footer';
 
 const About = () => {
     const panelRefs = useRef([]);

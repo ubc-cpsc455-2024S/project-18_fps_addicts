@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import '../App.css';
 import GoogleAuth from "../components/GoogleAuth.jsx";
 import ProfileComponent from "../components/ProfileComponent.jsx";
+import Footer from './components/Footer';
 
 const Profile = () => {
   const session = useSelector((state) => state.session.sessionID);
