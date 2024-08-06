@@ -12,7 +12,7 @@ const Filter = require('bad-words');
 
 //using cors to communicate between frontend and backend
 const corsOptions = {
-    origin: "https://ubcstudyspotter.onrender.com", // frontend URI (ReactJS)
+    origin: "https://ubcstudyspotterclient.onrender.com", // frontend URI (ReactJS)
 
     methods: ['GET', 'POST'],
     credentials: true,
@@ -30,7 +30,7 @@ const server = http.createServer(router);
 //Create a new server and set its origin to the client
 const io = new Server(server, {
     cors: {
-        origin: 'https://ubcstudyspotter.onrender.com', // Allow all origins (You can specify the origin you want to allow)
+        origin: 'https://ubcstudyspotterclient.onrender.com', // Allow all origins (You can specify the origin you want to allow)
         methods: ['GET', 'POST'],
     },
 });
