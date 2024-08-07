@@ -294,7 +294,7 @@ footer {
     max-width: 90%; 
   }
 
-  .leaflet-popup-content-wrapper, .leaflet-popup  .leaflet-zoom-animated {
+  .leaflet-popup-content-wrapper, .leaflet-popup  .leaflet-zoom-animated,.leaflet-popup-close-button {
     width: 70%; 
     max-width: 70%; 
     padding: 4px; 
