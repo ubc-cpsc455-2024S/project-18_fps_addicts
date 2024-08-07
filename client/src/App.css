@@ -474,12 +474,18 @@ p {
 
 }
 
-.update-button, .moreDetailsButton {
+.update-button {
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 5px;
   padding: 8px;
   background-color: #97D4E9;
+  color: #002145;
+}
+
+.moreDetailsButton {
+  padding: 4px;
+  background-color: #5fd3fa;
   color: #002145;
 }
 
