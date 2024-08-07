@@ -295,16 +295,16 @@ footer {
   }
 
   .leaflet-popup-content-wrapper, .leaflet-popup  .leaflet-zoom-animated {
-    width: 60%; 
-    max-width: 60%; 
-    padding: 8px; 
+    width: 70%; 
+    max-width: 70%; 
+    padding: 4px; 
     margin: 0 auto; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
   }
 
   .popup-content{
-    width: 50%;
-    max-width: 50%;
+    width: 60%;
+    max-width: 60%;
   }
 
   .map-interface {
