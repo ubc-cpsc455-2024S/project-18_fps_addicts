@@ -48,7 +48,7 @@ const fetchMainPage = async () => {
   }
 };
 
-// call geocoding api to get lat and lon coordinates 
+// function for getting lat and lon coordinates for each spot
 const getGeocode = async (address) => {
   const url = `https://geocode.maps.co/search?q=${encodeURIComponent(address)}&api_key=${API_KEY}`;
   try {
@@ -110,7 +110,7 @@ const fetchRoomData = async (transformed) => {
         }
       });
 
-      // resolve geocodes
+      // call geocode api
       const geocode = await getGeocode(address);
       await delay(1000); 
 
