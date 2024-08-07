@@ -24,8 +24,7 @@ const MapInterface = () => {
   const [isDistanceActive, setIsDistanceActive] = useState(false);
   const [walkingTime, setWalkingTime] = useState(null);
 
-
-
+  
   const handleMoreDetails = (pin, point) => {
     setSelectedPin(pin);
     setDetailsVisible(true);

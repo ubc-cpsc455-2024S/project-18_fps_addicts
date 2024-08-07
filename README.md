@@ -2,6 +2,7 @@
 
 [![Deploy to Render](https://github.com/ubc-cpsc455-2024S/project-18_fps_addicts/actions/workflows/deploy.yml/badge.svg)](https://github.com/ubc-cpsc455-2024S/project-18_fps_addicts/actions/workflows/deploy.yml)
 
+
 ## Project Description
 
 Welcome to StudySpotter, the ultimate solution for UBC students 
@@ -20,34 +21,66 @@ As a UBC student, finding a place to study can be a challenging task. Despite th
 ## Project task requirements:
 
 - Minimal requirements:
-  * A map of campus which highlights all known study spots.
-  * The ability to select each study spot and be provided with basic information such as capacity, power port availibilty, etc
-  * A robust interface for desktop users
+  * A map of campus which highlights all known study spots. ✅
+  * The ability to select each study spot and be provided with basic information such as capacity, power port availibilty, etc ✅
+  * A robust interface for desktop users ✅
 - Standard requirements:
-  * A local chatbox for each study spot where users can chat with each other.
-  * Robustness for mobile browsers
-  * Ability to select distance from one study spot to another point on the map.
-  * Addition of study spots booking links from various websites, such as the UBC library website.
+  * A local chatbox for each study spot where users can chat with each other. ✅
+  * Robustness for mobile browsers ✅
+  * Ability to select distance from one study spot to another point on the map. ✅
+  * Addition of study spots booking links from various websites, such as the UBC library website. ✅
 - Stretch requirements:
-  * Account creations and authenication via student email to keep chatbox free of bots
-  * Implement frequency of study spots display on maps
-  * Chat auto moderation
+  * Account creations and authenication via student email to keep chatbox free of bots ✅
+  * Implement frequency of study spots display on maps ❌
+  * Chat auto moderation ✅
 
-## Two Minimal Requirements broken down:
-* A map of campus which highlights all known study spots.
-  1. Set Up the Frontend Environment (using React.js and Node.js).
-  2. Create the necessary backend endpoints to handle study spot data.
-  3. Embed the Google Maps component in the React front end and ensure it displays the map centered on UBC.
-  4. Create React components to display the map and interact with the study spot data.
-  5. Ensure the frontend communicates with the backend to fetch and display study spots dynamically.
+## Units 1-5 Tech
+- **Unit 1 HTML, CSS, & Javascript:**
+  -  Our entire codebase uses aspects of HTML and CSS (styling). All backend is done using Javascript (e.g. web scraping script, NodeJS)
+- **Unit 2 React and Redux:**
+  - The entire front-end is implemented using React components. As for redux, we have a store that contains a reducer for the user, profile, and session slices.
+- **Unit 3 Express and NodeJS:**
+  - We used Express and NodeJS for implementing the backend servers for the chat box and users.
+- **Unit 4 NoSQL and MongoDB:**
+  - We used MongoDB to store all user information who log into our web app via the Google Authentication API.
+- **Unit 5 Release Engineering:**
+  - We deployed our project on render.com using GitHub actions.
 
-* The ability to select each study spot and be provided with basic information such as lighting, power port availibilty, etc
-  1. Determine and Compile information on various study spots such as lighting, availability of power ports, noise level, and seating for each location.
-  2. Set up MongoDB to store study spot data and create an Express.js API to handle CRUD operations for study spots.
-  3. Implement functionality to fetch study spot information from the backend based on user selection and display this information on the frontend.
-  4. Enable users to click or tap on study spots on the map, triggering a request for spot information, which is then displayed in a user-friendly format on the interface.
+## Our Above and Beyond Feature
+We implemented a local chat box for each study spot available on the map. This feature allows user to chat with other students in that area, facilitating possible new connections.
+
+The main technology used to implement this was socketIO. When a message is sent, it generates a unique UUID. This message is then sent to the server where it is broadcasted to all other connected clients. One of the biggest issues that we encountered while implementing this feature was getting multiple clients to connect to the server over the network. To overcome this, we used concepts from the DHCP protocol, which is how computers connect to the wifi. Adapting this, our server is able to broadcast the ip address to the network where another client can receive it and in response, send its ip address to the destination that the server sent out. Once the server acquires the ip address of the client, it can establish a connection to it and begin sending messages to and from it. 
+
+
+## Future Improvements and Next Steps
+- The ability to favourite spots and display them on the user's profile.
+- Parse Room Booking websites so that users can do bookings through our website.
+- Ability for users to add their reviews to the study spots.
+
+One of our stretch goals was to provide live statistics of the study spot but found that there were many complications that came with it. Thus, this is a feature we would like to implement in the future so that users can gauge the busyness of their desired study spot.
+
+## Team Members and Contributions
+
+- Dylan Zhang: Black Ops III enthusiast.
+  - Worked on setting up Google Authentication and MongoDB to store all users who log into our web app.
+- Gurmandeep Bal: Minecraft Architect
+  - Worked on the local chat box for each study spot, troubleshooting and ensuring that multiple clients were able to connect to the server over the network. Also, deployed the project on render.
+- Crystal Yim: Squishmallow connoisseur 
+  - Worked on the distance measurement feature, allowing users to estimate their walking distance and time between two study spots.
+- Allison Kong: Just your average gamer :)
+  - Worked on obtaining the study spot data by writing a script that scrapes information from the UBC learning spaces website. Also worked on the About page.
+- Linus Chen: Has an unused Playstation
+  - Worked on Room Bookings and Gtihub actions for deployment.
+
+
+## Test Account Credentials:
+
+**email:** studyspotteruser@gmail.com
+
+**password:** Studyspottertest18!
+
  
-## Images
+## Prototype Images
 ### Landing Page
 <img src="images/sketch_1.jpg" width="300px">
 
@@ -57,18 +90,17 @@ As a UBC student, finding a place to study can be a challenging task. Despite th
 ### Create an Account 
 <img src="images/sketch_3.jpg" width="300px">
 
-## Test Account Credentials:
-**email:** studyspotteruser@gmail.com
-**password:** Studyspottertest18!
-
-## Team Members
-
-- Dylan Zhang: Black Ops III enthusiast.
-- Gurmandeep Bal: Minecraft Architect
-- Crystal Yim: Squishmallow connoisseur 
-- Allison Kong: Just your average gamer :)
-- Linus Chen: Has an unused Playstation
 
 ## References
 
-{Add your stuff here}
+**For Google Authentication API:**
+
+https://developers.google.com/identity/protocols/oauth2/web-server
+
+**For Geocoding API:**
+
+https://maps.co/help/
+
+
+
+
