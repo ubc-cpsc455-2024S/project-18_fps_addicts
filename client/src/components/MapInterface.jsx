@@ -123,7 +123,7 @@ const MapInterface = () => {
                   {pin.description}
                   <br />
                   <br />
-                  <button onClick={() => handleMoreDetails(pin)}>
+                  <button className= "moreDetailsButton" onClick={() => handleMoreDetails(pin)}>
                     More Details
                   </button>
                 </div>
