@@ -300,6 +300,7 @@ footer {
     max-width: 75%; 
   }
   .leaflet-popup-content-wrapper{
+    position: relative;
     width: 60%; 
     max-width: 60%; 
     padding: 4px; 
