@@ -2,6 +2,8 @@
 
 [![Deploy to Render](https://github.com/ubc-cpsc455-2024S/project-18_fps_addicts/actions/workflows/deploy.yml/badge.svg)](https://github.com/ubc-cpsc455-2024S/project-18_fps_addicts/actions/workflows/deploy.yml)
 
+URL: ubcstudyspotterclient.onrender.com
+
 
 ## Project Description
 
