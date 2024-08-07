@@ -38,18 +38,18 @@ As a UBC student, finding a place to study can be a challenging task. Despite th
 - **Unit 1 HTML, CSS, & Javascript:**
   -  Our entire codebase uses aspects of HTML and CSS (styling). All backend is done using Javascript (e.g. web scraping script, NodeJS)
 - **Unit 2 React and Redux:**
-  - The entire front-end is implemented using React components. As for redux, we have a store that contains a reducer for the user, profile, and session slices.
+  - The entire front-end is implemented using React components. As for Redux, we have a store that contains a reducer for the user, profile, and session slices.
 - **Unit 3 Express and NodeJS:**
   - We used Express and NodeJS for implementing the backend servers for the chat box and users.
 - **Unit 4 NoSQL and MongoDB:**
   - We used MongoDB to store all user information who log into our web app via the Google Authentication API.
 - **Unit 5 Release Engineering:**
-  - We deployed our project on render.com using GitHub actions.
+  - We deployed our project on render.com using GitHub Actions.
 
 ## Our Above and Beyond Feature
 We implemented a local chat box for each study spot available on the map. This feature allows user to chat with other students in that area, facilitating possible new connections.
 
-The main technology used to implement this was socketIO. When a message is sent, it generates a unique UUID. This message is then sent to the server where it is broadcasted to all other connected clients. One of the biggest issues that we encountered while implementing this feature was getting multiple clients to connect to the server over the network. To overcome this, we used concepts from the DHCP protocol, which is how computers connect to the wifi. Adapting this, our server is able to broadcast the ip address to the network where another client can receive it and in response, send its ip address to the destination that the server sent out. Once the server acquires the ip address of the client, it can establish a connection to it and begin sending messages to and from it. 
+The main technology used to implement this was socketIO. When a message is sent, it generates a unique UUID. This message is then sent to the server where it is broadcasted to all other connected clients. One of the biggest issues that we encountered while implementing this feature was getting multiple clients to connect to the server over the network. To overcome this, we used concepts from the DHCP protocol, which is how computers connect to the wifi. Adapting this, our server is able to broadcast the ip address to the network where another client can receive it and in response, send its ip address to the destination that the server sent out. Once the server acquires the IP address of the client, it can establish a connection to it and begin sending messages to and from it. 
 
 
 ## Future Improvements and Next Steps
@@ -69,8 +69,8 @@ One of our stretch goals was to provide live statistics of the study spot but fo
   - Worked on the distance measurement feature, allowing users to estimate their walking distance and time between two study spots.
 - Allison Kong: Just your average gamer :)
   - Worked on obtaining the study spot data by writing a script that scrapes information from the UBC learning spaces website. Also worked on the About page.
-- Linus Chen: Has an unused Playstation
-  - Worked on Room Bookings and Gtihub actions for deployment.
+- Linus Chen: Mobile games?
+  - Worked on Room Bookings and Github Actions for deployment.
 
 
 ## Test Account Credentials:
