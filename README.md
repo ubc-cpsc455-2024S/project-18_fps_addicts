@@ -69,7 +69,7 @@ One of our stretch goals was to provide live statistics of the study spot but fo
   - Worked on the distance measurement feature, allowing users to estimate their walking distance and time between two study spots.
 - Allison Kong: Just your average gamer :)
   - Worked on obtaining the study spot data by writing a script that scrapes information from the UBC learning spaces website. Also worked on the About page.
-- Linus Chen: Has an unused Playstation
+- Linus Chen: Mobile games?
   - Worked on Room Bookings and Github Actions for deployment.
 
 
