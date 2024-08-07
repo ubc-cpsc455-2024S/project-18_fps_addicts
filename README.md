@@ -49,13 +49,14 @@ As a UBC student, finding a place to study can be a challenging task. Despite th
 ## Our Above and Beyond Feature
 We implemented a local chat box for each study spot available on the map. This feature allows user to chat with other students in that area, facilitating possible new connections.
 
-The main technology used to implement this was socketIO. When a message is sent, it generates a unique UUID. This message is then sent to the server where it is broadcasted to all other connected clients. One of the biggest issues that we encountered while implementing this feature was getting multiple clients to connect to the server over the network. To overcome this, we used concepts from the DHCP protocol, which is how computers connect to the wifi. Adapting this, our server is able to broadcast the ip address to the network where another client can receive it and in response, send its ip address to the destination that the server sent out. Once the server acquires the IP address of the client, it can establish a connection to it and begin sending messages to and from it. 
+The main technology used to implement this was socketIO. This message is then sent to the server where it is broadcasted to all other connected clients. One of the biggest issues that we encountered before deployment when implementing this feature was getting multiple clients to connect to the server over the network. To overcome this, we used concepts from the DHCP protocol. In essence, this protocal is how computers connect to the wifi. Adapting this, our server is able to broadcast its IP address to the network where clients can receive it and in response and send its IP address to the destination that the server sent out. Once the server acquires the IP address of the client, it can establish a connection to it and begin sending messages to and from it. Deployment has simplified this IP handshake between server and client, but it still may have uses as described in the next section.
 
 
 ## Future Improvements and Next Steps
 - The ability to favourite spots and display them on the user's profile.
 - Parse Room Booking websites so that users can do bookings through our website.
 - Ability for users to add their reviews to the study spots.
+- Using the server IP handsake method, only allow IPs orginating from UBC to enhance security
 
 One of our stretch goals was to provide live statistics of the study spot but found that there were many complications that came with it. Thus, this is a feature we would like to implement in the future so that users can gauge the busyness of their desired study spot.
 
