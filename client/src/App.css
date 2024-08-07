@@ -474,7 +474,7 @@ p {
 
 }
 
-.update-button {
+.update-button, .moreDetailsButton {
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 5px;
