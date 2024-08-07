@@ -303,8 +303,8 @@ footer {
     position: relative;
     width: 60%; 
     max-width: 60%; 
-    padding: 4px; 
-    margin: 0 auto; 
+    padding: 2px; 
+    margin: 0; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
   }
 
