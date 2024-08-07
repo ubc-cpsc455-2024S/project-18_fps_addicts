@@ -484,7 +484,8 @@ p {
 }
 
 .moreDetailsButton {
-  padding: 4px;
+  border-radius: 5px;
+  padding: 8px;
   background-color: #5fd3fa;
   color: #002145;
 }
