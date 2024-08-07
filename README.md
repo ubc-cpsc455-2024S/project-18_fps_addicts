@@ -106,6 +106,9 @@ https://maps.co/help/
 
 https://leafletjs.com/reference.html
 
+**Informal Learning Spaces**
+
+https://learningspaces.ubc.ca/find-space/informal-learning-spaces
 
 
 
