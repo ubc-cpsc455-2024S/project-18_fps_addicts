@@ -1,7 +1,7 @@
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 :root {
@@ -71,12 +71,12 @@ header svg {
 }
 
 .search-bar {
-  width: 80%; 
-  padding: 10px; 
+  width: 80%;
+  padding: 10px;
   font-size: 16px;
   border: 2px solid black;
   background: white;
-  border-radius: 4px; 
+  border-radius: 4px;
   color: black;
   /* margin-bottom: 20px */
 }
@@ -251,8 +251,8 @@ footer {
 
 .logo-container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 .dark-mode .ubc-logo {
@@ -274,13 +274,13 @@ footer {
 }
 
 .leaflet-popup-content-wrapper {
-  width: auto; 
-  max-width: 300px; 
+  width: auto;
+  max-width: 300px;
   padding: 10px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   z-index: 1000;
 }
 
@@ -289,52 +289,67 @@ footer {
     width: 100%;
     left: -250%;
   }
+
   .chat-box {
-    width: 100%; 
-    max-width: 90%; 
+    width: 100%;
+    max-width: 90%;
   }
 
 
-  .leaflet-popup  .leaflet-zoom-animated {
-    width: 75%; 
-    max-width: 75%; 
-  }
-  .leaflet-popup-content-wrapper{
-    position: relative;
-    width: 60%; 
-    max-width: 60%; 
-    padding: 2px; 
-    margin: 0; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+  .leaflet-popup .leaflet-zoom-animated {
+    width: 90%;
+    max-width: 90%;
   }
 
-  .popup-content, .leaflet-popup-content{
-    width: 50%;
-    max-width: 50%;
+  .leaflet-popup-content-wrapper {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .popup-content,
+  .leaflet-popup-content {
+    width: 100%;
+    max-width: 100%;
   }
 
   .map-interface {
-    height: calc(100vh - 60px); 
+    height: calc(100vh - 60px);
     padding: 0;
-    margin: 0; 
+    margin: 0;
     overflow: hidden;
   }
 
+}
 
+@media (max-width: 480px) {
+  .leaflet-popup .leaflet-zoom-animated {
+      width: 95%; 
+      max-width: 95%; 
+  }
+
+  .leaflet-popup-content-wrapper {
+      width: 95%; 
+      max-width: 95%; 
+  }
+
+  .popup-content, .leaflet-popup-content {
+      width: 100%;
+      max-width: 100%;
+  }
 }
 
 .map-interface {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 100vh;
   position: relative;
-  box-sizing: border-box; 
-  padding: 20px; 
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .map-container {
-  width: 70%; 
+  width: 70%;
   height: 100%;
 }
 
@@ -359,8 +374,8 @@ footer {
   width: 80%;
   color: #1e1e1e;
   position: relative;
-  max-height: 90vh; 
-  overflow-y: auto; 
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .details-panel h2 {
@@ -456,7 +471,7 @@ p {
   padding: 8px;
   background-color: #97D4E9;
   color: #002145;
-  
+
 }
 
 .update-button {
@@ -482,11 +497,11 @@ h3 {
 
 
 .close-button {
-  position: fixed; 
+  position: fixed;
   top: 20px;
-  right: 20px; 
+  right: 20px;
   z-index: 1000;
-  background-color: #ff4444; 
+  background-color: #ff4444;
   color: white;
   border: none;
   padding: 10px;
@@ -496,9 +511,9 @@ h3 {
 
 .editButton {
   top: 10px;
-  right: 10px; 
+  right: 10px;
   z-index: 1000;
-  background-color: #00A7E1; 
+  background-color: #00A7E1;
   color: white;
   border: none;
   padding: 5px;
@@ -508,11 +523,12 @@ h3 {
   margin-right: 5px;
 }
 
-.deleteButton,.cancelButton {
+.deleteButton,
+.cancelButton {
   top: 10px;
-  right: 10px; 
+  right: 10px;
   z-index: 1000;
-  background-color: #002145; 
+  background-color: #002145;
   color: white;
   border: none;
   padding: 5px;
@@ -522,9 +538,9 @@ h3 {
 
 .saveButton {
   top: 10px;
-  right: 10px; 
+  right: 10px;
   z-index: 1000;
-  background-color: #88ff88; 
+  background-color: #88ff88;
   color: black;
   border: none;
   padding: 5px;
@@ -542,7 +558,8 @@ h3 {
   opacity: 0;
   width: 70%;
   margin: auto;
-  margin-top: 50px;;
+  margin-top: 50px;
+  ;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transform: translateY(20px);
