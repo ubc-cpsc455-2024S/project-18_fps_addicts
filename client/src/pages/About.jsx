@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import main from '../assets/main.png';
 import waypoint from '../assets/waypoint.png';
 import chat from '../assets/chat.png';
+import distance_measurement from '../assets/distance_measurement.png';
 import Footer from '../components/Footer';
 
 const About = () => {
@@ -63,7 +64,11 @@ const About = () => {
             </div>
             <div className="panel" ref={el => panelRefs.current[3] = el}>
                 <h3 className="about-page-text">Chat and make new friends!</h3>
-                <img src={chat} alt="waypoint" style={{ width: '60%', height: 'auto' }} />
+                <img src={chat} alt="chatbox" style={{ width: '50%', height: 'auto' }} />
+            </div>
+            <div className="panel" ref={el => panelRefs.current[4] = el}>
+                <h3 className="about-page-text">Use our distance measurement feature to estimate walking distance and time!</h3>
+                <img src={distance_measurement} alt="distance_measurement" style={{ width: '80%', height: 'auto' }} />
             </div>
             <Footer />
         </div>
