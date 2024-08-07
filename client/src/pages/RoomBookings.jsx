@@ -30,6 +30,7 @@ const bookingLinks = [
     }
 ];
 
+// display each booking link card on scroll
 const BookingLinks = () => {
     useEffect(() => {
         const handleScroll = () => {

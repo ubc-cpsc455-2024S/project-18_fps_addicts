@@ -9,6 +9,7 @@ const Profile = () => {
   const session = useSelector((state) => state.session.sessionID);
   const profileContainerRef = useRef(null);
 
+  // animate in
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {

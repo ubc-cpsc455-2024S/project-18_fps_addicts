@@ -2,16 +2,20 @@ import axios from 'axios';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
 
+/* NOTE: this code takes inspiration from my 310 project code from winter term 1 2023 session */
+
 const mainUrl = 'https://learningspaces.ubc.ca/find-space/informal-learning-spaces';
 const baseUrl = 'https://learningspaces.ubc.ca/classrooms/';
 
+
+// fetch main page and transform title for url
 const fetchMainPage = async () => {
   try {
     const { data } = await axios.get(mainUrl);
     const dom = new JSDOM(data);
     const document = dom.window.document;
 
-    const elements = document.querySelectorAll('.h4');
+    const elements = document.querySelectorAll('.h4'); // fetch all h4 elements
     const transformed = [];
 
     elements.forEach(element => {
@@ -44,6 +48,7 @@ const fetchMainPage = async () => {
   }
 };
 
+// fetch room data for each spot from ubc learning spaces
 const fetchRoomData = async (transformed) => {
   const waypointData = [];
 
@@ -88,6 +93,7 @@ const fetchRoomData = async (transformed) => {
         imageUrl = imgTag.src;
       }
 
+      // create new waypoint 
       const waypoint = {
         id: room.replace(/\s+/g, '-').toLowerCase(),
         title: room,
@@ -107,6 +113,7 @@ const fetchRoomData = async (transformed) => {
   return waypointData;
 };
 
+// write to json file
 const saveDataToJson = (data, filePath) => {
   try {
     const jsonData = JSON.stringify(data, null, 2);
@@ -117,6 +124,7 @@ const saveDataToJson = (data, filePath) => {
   }
 };
 
+// main call for fetching data and writing data to file
 const fetchData = async () => {
   const transformed = await fetchMainPage();
   if (transformed && transformed.length > 0) {

@@ -7,15 +7,17 @@ const API_KEY = '66a03f9cbd992332062485lfbe62813';
 const mainUrl = 'https://learningspaces.ubc.ca/find-space/informal-learning-spaces';
 const baseUrl = 'https://learningspaces.ubc.ca/classrooms/';
 
+// fetch main page and transfrom title for building url
 const fetchMainPage = async () => {
   try {
     const { data } = await axios.get(mainUrl);
     const dom = new JSDOM(data);
     const document = dom.window.document;
 
-    const elements = document.querySelectorAll('.h4');
+    const elements = document.querySelectorAll('.h4'); // get h4 elements
     const transformed = [];
 
+    // pull building code for url for transformation
     elements.forEach(element => {
       const original = element.textContent.trim();
       const buildingCodeMatch = original.match(/\([A-Z]+\)/);
@@ -46,6 +48,7 @@ const fetchMainPage = async () => {
   }
 };
 
+// call geocoding api to get lat and lon coordinates 
 const getGeocode = async (address) => {
   const url = `https://geocode.maps.co/search?q=${encodeURIComponent(address)}&api_key=${API_KEY}`;
   try {
@@ -65,8 +68,9 @@ const getGeocode = async (address) => {
   }
 };
 
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms)); // for geocoding api limit
 
+// fetch room data from DOM tree table
 const fetchRoomData = async (transformed) => {
   const waypointData = [];
 
@@ -77,7 +81,7 @@ const fetchRoomData = async (transformed) => {
       const dom = new JSDOM(data);
       const document = dom.window.document;
 
-      const tableRows = document.querySelectorAll('tr');
+      const tableRows = document.querySelectorAll('tr'); // fields for each waypoint
       let room = '', address = '', capacity = '', moreInfo = '', link = '', imageUrl = '';
 
       tableRows.forEach(row => {
@@ -106,8 +110,7 @@ const fetchRoomData = async (transformed) => {
         }
       });
 
-      // console.log(`Extracted address: "${address}"`);
-
+      // resolve geocodes
       const geocode = await getGeocode(address);
       await delay(1000); 
 
@@ -116,8 +119,7 @@ const fetchRoomData = async (transformed) => {
         imageUrl = imgTag.src;
       }
 
-      // console.log(`Geocode result for "${address}":`, geocode);
-
+      // create a new waypoint with fetched data
       const waypoint = {
         id: room.replace(/\s+/g, '-').toLowerCase(),
         title: room,
@@ -129,6 +131,7 @@ const fetchRoomData = async (transformed) => {
         imageUrl: imageUrl.startsWith('http') ? imageUrl : `https://learningspaces.ubc.ca${imageUrl}`
       };
 
+      // add new waypoint
       waypointData.push(waypoint);
     } catch (error) {
       console.error(`Error fetching data from ${pageUrl}:`, error);
@@ -138,6 +141,7 @@ const fetchRoomData = async (transformed) => {
   return waypointData;
 };
 
+// write to json file
 const saveDataToJson = (data, filePath) => {
   try {
     const jsonData = JSON.stringify(data, null, 2);
@@ -148,6 +152,7 @@ const saveDataToJson = (data, filePath) => {
   }
 };
 
+// main calling function 
 const fetchWaypointData = async () => {
   const transformed = await fetchMainPage();
   if (transformed && transformed.length > 0) {

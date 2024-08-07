@@ -14,6 +14,7 @@ import { styles } from './DistanceDisplay';
 
 
 const MapInterface = () => {
+// init state constants
   const [detailsVisible, setDetailsVisible] = useState(false);
   const [selectedPin, setSelectedPin] = useState(null);
   const [mapCenter] = useState([49.2606, -123.246]);
@@ -24,17 +25,19 @@ const MapInterface = () => {
   const [isDistanceActive, setIsDistanceActive] = useState(false);
   const [walkingTime, setWalkingTime] = useState(null);
 
-  
+  // handle toggle more details button
   const handleMoreDetails = (pin, point) => {
     setSelectedPin(pin);
     setDetailsVisible(true);
   };
 
+  // handle clicking on close details button
   const handleCloseDetails = () => {
     setDetailsVisible(false);
     setSelectedPin(null);
   };
 
+  // display distance and walking time on ui when points are selected
   useEffect(() => {
     if (selectedPoints.length === 2) {
       const dist = haversineDistance(selectedPoints[0], selectedPoints[1]);
@@ -44,6 +47,7 @@ const MapInterface = () => {
     }
   }, [selectedPoints]);
 
+  // call haversineDistance when 2 points are selected
   const handleMapClick = (event) => {
     if (!isDistanceActive) return;
 
@@ -65,6 +69,7 @@ const MapInterface = () => {
     });
   };
 
+  // set state of distance measurement feature
   const toggleDistanceMeasurement = () => {
     setIsDistanceActive(!isDistanceActive);
     setSelectedPoints([]);
@@ -76,6 +81,8 @@ const MapInterface = () => {
   const filteredPins = pins.filter((pin) =>
     pin.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  /* All map related code referneces the leaflet documentation that is linked in our reference section of the README */
 
   return (
     <div className="map-interface">
@@ -140,8 +147,7 @@ const MapInterface = () => {
               color="#0F52BA"
               weight={5}
               opacity={0.8}
-              dashArray="10, 20"
-            >
+              dashArray="10, 20">
               <Tooltip permanent direction="center">
                 {`${distance.toFixed(2)} m`}
               </Tooltip>
@@ -149,7 +155,8 @@ const MapInterface = () => {
           )}
         </MapContainer>
       </div>
-      {detailsVisible && selectedPin && (
+
+      {detailsVisible && selectedPin && ( // show details panel for selected point
         <div className="overlay" onClick={handleCloseDetails}>
           <div className="details-panel" onClick={(e) => e.stopPropagation()}>
             <h2>{selectedPin.title}</h2>

@@ -26,6 +26,7 @@ As a UBC student, finding a place to study can be a challenging task. Despite th
   * A robust interface for desktop users ✅
 - Standard requirements:
   * A local chatbox for each study spot where users can chat with each other. ✅
+  * Parsing UBC learning spaces for data on study spaces. ✅
   * Robustness for mobile browsers ✅
   * Ability to select distance from one study spot to another point on the map. ✅
   * Addition of study spots booking links from various websites, such as the UBC library website. ✅
@@ -102,13 +103,9 @@ https://developers.google.com/identity/protocols/oauth2/web-server
 
 https://maps.co/help/
 
-**For Leaflet API:**
-
+**For the map:**
 https://leafletjs.com/reference.html
 
-**Informal Learning Spaces**
-
-https://learningspaces.ubc.ca/find-space/informal-learning-spaces
 
 
 
