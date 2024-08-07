@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import main from '../assets/main.png';
 import waypoint from '../assets/waypoint.png';
 import chat from '../assets/chat.png';
+import Footer from '../components/Footer';
 
 const About = () => {
     const panelRefs = useRef([]);
@@ -64,6 +65,7 @@ const About = () => {
                 <h3 className="about-page-text">Chat and make new friends!</h3>
                 <img src={chat} alt="waypoint" style={{ width: '60%', height: 'auto' }} />
             </div>
+            <Footer />
         </div>
     );
 };

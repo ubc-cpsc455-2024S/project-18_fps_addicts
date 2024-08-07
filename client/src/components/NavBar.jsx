@@ -5,14 +5,14 @@ import { FaBookReader } from "react-icons/fa";
 import { IoPersonSharp } from "react-icons/io5";
 import '../App.css';
 
-const NavBar = ({display}) => {
+const NavBar = ({display, hideNavBar }) => {
     return (
         <div className={display ? "navbar active" : "navbar"}>
             <ul>
-                <li><Link to="/"><FaHome /> Home</Link></li>
-                <li><Link to="/about"><BsInfoSquareFill /> About</Link></li>
-                <li><Link to="/room-bookings"><FaBookReader /> Room Bookings</Link></li>
-                <li><Link to="/profile"><IoPersonSharp /> Profile</Link></li>
+                <li><Link to="/" onClick={hideNavBar}><FaHome /> Home</Link></li>
+                <li><Link to="/about" onClick={hideNavBar}><BsInfoSquareFill /> About</Link></li>
+                <li><Link to="/room-bookings" onClick={hideNavBar}><FaBookReader /> Room Bookings</Link></li>
+                <li><Link to="/profile" onClick={hideNavBar}><IoPersonSharp /> Profile</Link></li>
             </ul>
         </div>
     );

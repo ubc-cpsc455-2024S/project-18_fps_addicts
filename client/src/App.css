@@ -92,6 +92,12 @@ header svg {
   z-index: 1000;
 }
 
+.leaflet-container .leaflet-touch .leaflet-retina .leaflet-fade-anim .leaflet-grab .leaflet-touch-drag .leaflet-touch-zoom .leaflet-drag-target {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .navbar.active {
   left: 0;
 }
@@ -278,7 +284,7 @@ footer {
   z-index: 1000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .navbar {
     width: 100%;
     left: -250%;
@@ -439,7 +445,7 @@ p {
   padding: 8px;
   background-color: #97D4E9;
   color: #002145;
-
+  
 }
 
 .update-button {

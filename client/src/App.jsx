@@ -70,6 +70,10 @@ const App = () => {
         }
     }, [serverIp]);
 
+    const toggleNavBar = () => {
+        setDisplayNav(false);
+    };
+
 
     return (
         <div>
@@ -86,7 +90,7 @@ const App = () => {
                         {darkMode ? <FiSun /> : <FiMoon />}
                     </button>
                 </header>
-                <NavBar display={displayNav} />
+                <NavBar display={displayNav} hideNavBar={toggleNavBar} />
                 <div className={`content ${displayNav ? 'shifted' : ''}`}>
                     <Routes>
                         <Route path="/" element={<Home />} />
@@ -94,7 +98,7 @@ const App = () => {
                         <Route path="/room-bookings" element={<RoomBookings />} />
                         <Route path="/profile" element={<Profile />} />
                     </Routes>
-                    <Footer />
+                    
                 </div>
             </Router>
             {/*<div id="signInDiv"></div>*/}
